@@ -16,8 +16,7 @@
 #######################################################################
 # Find all relevant HTML files
 
-for f in $(find . -name '*.html' -print0 | xargs -0 grep -i -l "<BASE") 
-do
+for f in $(find . -name '*.html' -print0 | xargs -0 grep -i -l "<BASE"); do
 	#Uncomment the following line; replace 477grp<x> with your team number (i.e. 477grp1, 477grp2, ...
-	sed -i 's|base href="https://engineering.purdue.edu/ece477/StudentWebTemplate|base href="https://engineering.purdue.edu/477grp<x>|' ${f}
+	sed -i 's|base href="https://engineering.purdue.edu/ece477/StudentWebTemplate|base href="https://engineering.purdue.edu/477grp6 |' ${f}
 done
