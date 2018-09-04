@@ -1838,6 +1838,12 @@ footer .list1 li {
 		padding: 20px;
 		white-space: pre-wrap;
 	} */
+	.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+	}
 }
 
 /*---------------------------------------------------------------------------------------------------------------------------*/
