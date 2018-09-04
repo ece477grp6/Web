@@ -1831,13 +1831,13 @@ footer .list1 li {
 		margin-bottom: 5px;
 	}
 
-	pre code {
+	/* pre code {
 		background-color: #e8e8e8;
 		border: 1px solid #000000;
 		display: block;
 		padding: 20px;
-		white-space: nowrap;
-	}
+		white-space: pre-wrap;
+	} */
 }
 
 /*---------------------------------------------------------------------------------------------------------------------------*/
