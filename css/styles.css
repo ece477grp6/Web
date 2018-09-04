@@ -1836,7 +1836,7 @@ footer .list1 li {
 		border: 1px solid #000000;
 		display: block;
 		padding: 20px;
-		white-space: pre-wrap;
+		/* white-space: pre-wrap; */
 	}
 }
 
