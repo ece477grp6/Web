@@ -115,12 +115,15 @@ done
 				</pre>
 				The bash script was run used with the nohup command such that it is able to be run in the background from an ssh
 				session and keep on running even if the ssh session is ended by the user. It also provides a log to nohup.out so
-				that in case of any issues, I would able to debug it with the log file. Sample log shown below<br>
+				that in case of any issues, I would able to debug it with the log file. Sample log shown below.<br>
 				<img src="Team/progress/img/qianli/autoupdate_nohup_log.png" style="display:block; margin-left: auto; margin-right: auto"><br>
 
 				During this week we also looked into what parts would be used in the final project, the main concerns that we are
-				looking into are the brushless DC motors used to drive the boat. We initially looked into using propellers to drive
-				the boat such as the one showing below on the left.<br>
+				looking into are the brushless DC motors used to drive the boat. A brushless DC motor has the advantage of being
+				able to drive faster at a lower temperature than brushed counterparts which is ideal as the motor in the boat does
+				not have any moving air around it helping it to dissipate heat. Brushless motors are also lighter than brushed
+				ones, enabling us to carry more garbage on our boat compared to using brushed motors. We initially looked into
+				using propellers to drive the boat such as the one showing below on the left.<br>
 				<figure style="float:left">
 					<a href="https://i.pinimg.com/736x/f5/26/57/f526579928126cfc315b7bf342b38dc9.jpg">
 						<img src="https://i.pinimg.com/736x/f5/26/57/f526579928126cfc315b7bf342b38dc9.jpg" alt="Propeller Driven System"
@@ -139,19 +142,11 @@ done
 				However we choose to use an turbojet style system such as the one shown above to the right. A turbojet system have
 				the advantage of not being as likely to getting the propeller stuck by some aquatic plant or something like that.
 				It also provides higher thrust when compared to a propeller system making it ideal for our use case, making it able
-				to carry heavier loads and being able to drive the boat faster as well.
-				<br>
+				to carry heavier loads and being able to drive the boat faster as well.<br>
+				After comparing microcontroller specifications, we choose the STM32L496Zx over STM32F051R8T6 and STM32F756BGT6.
+				Mainly due to the low power mode, lower cost than the STM32F7 and still having much more GPIO pins and hardware
+				functions than the STM32F0.<br>
 			</div>
-
-			<!-- <li>
-				<font size="1"><cite><a href="https://www.pinterest.com/pin/860680178759327691/">Propeller
-							Driven System</a> Credit to Pinterest</cite></font>
-			</li> -->
-
-
-
-
-
 			<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
 			<div id="footer"></div>
 		</div>
