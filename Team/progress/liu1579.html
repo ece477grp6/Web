@@ -61,10 +61,8 @@ contact course staff.
 				<b>Total hours:</b> -Enter the number of hours you worked this week here-
 				<br>
 				<b>Description of design efforts:</b>
-				<br> -Discuss your design efforts here. Remember to follow the guidelines presented in the Progress Report Policy,
-				available
-				<a href="https://engineering.purdue.edu/ece477/Course/Policies/">here</a>. This is a template entry; simply
-				copy/paste
+				<br> -Discuss your design efforts here. Remember to follow the guidelines presented in the Progress Report Policy, available
+				<a href="https://engineering.purdue.edu/ece477/Course/Policies/">here</a>. This is a template entry; simply copy/paste
 				this entry when doing progress reports each week.</br>
 
 				<br>
@@ -75,28 +73,17 @@ contact course staff.
 				<b>Total hours:</b> 6
 				<br>
 				<b>Description of design efforts:</b>
-				<br> During the second week, I mainly worked on identifying major constrains and potential problems that might pose
-				potential
-				obstacles which maybe stymie our progress in the futures. I successfully identified several problems and constrains
-				such
-				as the voltage thresh-hold values potentially for the motors, the size of the battery that the boat might need, and
-				the
-				different modules that the boat might need to communicate with user interface compatibly. After identifying the
-				problems
-				and constrains, I worked with the team to select potential microcontrollers and modules for the design project. To
-				suit
-				the need of transmitting image signal and GPS coordinate signal from the boat to the user interface and meeting the
-				power
-				constrains since the boat would be powered by 18650 batteries, I selected the STM32 low power series as the main
-				microcontroller,
-				but the specific model of STM32 is still under team discussion. With the microcontroller being decided, the LTE
-				cellular
-				module was also being decided, which is STM32-C2C/LTE IoT. With those important microcontroller and modules being
-				selected
-				and putted into order, the next step of mine would be working with the team to design the actual circuit and the
-				physical
-				boat itself. Additionally, I worked on parts of the functional specification assignment with the team which is the
-				team
+				<br> During the second week, I mainly worked on identifying major constrains and potential problems that might pose potential
+				obstacles which maybe stymie our progress in the futures. I successfully identified several problems and constrains such
+				as the voltage thresh-hold values potentially for the motors, the size of the battery that the boat might need, and the
+				different modules that the boat might need to communicate with user interface compatibly. After identifying the problems
+				and constrains, I worked with the team to select potential microcontrollers and modules for the design project. To suit
+				the need of transmitting image signal and GPS coordinate signal from the boat to the user interface and meeting the power
+				constrains since the boat would be powered by 18650 batteries, I selected the STM32 low power series as the main microcontroller,
+				but the specific model of STM32 is still under team discussion. With the microcontroller being decided, the LTE cellular
+				module was also being decided, which is STM32-C2C/LTE IoT. With those important microcontroller and modules being selected
+				and putted into order, the next step of mine would be working with the team to design the actual circuit and the physical
+				boat itself. Additionally, I worked on parts of the functional specification assignment with the team which is the team
 				assignment for the week.
 
 			</div>
@@ -108,34 +95,23 @@ contact course staff.
 			<b>Total hours:</b> 10
 			<br>
 			<b>Description of design efforts:</b>
-			<br> During the first half of the week, I started to identify and select specific electronic components that the
-			project
-			needs and discussed with my team to finalize the candidate lists for each component. With the constraints of
-			voltages
-			of 3.3V to 5V, power limits since the boat and all microcontroller would be powered by the 18650 battery units,
-			numbers
-			of I/O pins, and functions of the microcontroller required because of the nature of the project involving multiple
-			components
-			and modules cooperating with each other. Thus, selecting the brushless DC motors for the boat and the garbage
-			conveyor
-			belt became a crucial step for further selections of the microcontroller with these design constraints in mind.
-			First,
-			I selected the Light Dependent Resistors as the main component of the features of detecting whether the garbage
-			storing
-			unit is full or not. since the other break beam sensors’ sensing distance is either too long or too short for the
-			needs,
-			making an LDR controlled transistor circuit with a read laser beam becomes the best option with easy controlling of
-			the
-			sensing distance. So, I built an LDR circuit making a LED lights on when the LDR could no longer detect the light
-			source.
-			The LED could be replaced by directly connecting to the microcontroller, making the LED into a merely analog output
-			value and could be converting into a digital signal value thus could be further interpreted and processed by the
-			microcontroller. In the circuit shown below, the potentiometer is used to adjust the resistance of the output
-			voltage value so the voltage/power
+			<br> During the first half of the week, I started to identify and select specific electronic components that the project
+			needs and discussed with my team to finalize the candidate lists for each component. With the constraints of voltages
+			of 3.3V to 5V, power limits since the boat and all microcontroller would be powered by the 18650 battery units, numbers
+			of I/O pins, and functions of the microcontroller required because of the nature of the project involving multiple components
+			and modules cooperating with each other. Thus, selecting the brushless DC motors for the boat and the garbage conveyor
+			belt became a crucial step for further selections of the microcontroller with these design constraints in mind. First,
+			I selected the Light Dependent Resistors as the main component of the features of detecting whether the garbage storing
+			unit is full or not. since the other break beam sensors’ sensing distance is either too long or too short for the needs,
+			making an LDR controlled transistor circuit with a read laser beam becomes the best option with easy controlling of the
+			sensing distance. So, I built an LDR circuit making a LED lights on when the LDR could no longer detect the light source.
+			The LED could be replaced by directly connecting to the microcontroller, making the LED into a merely analog output value
+			and could be converting into a digital signal value thus could be further interpreted and processed by the microcontroller.
+			In the circuit shown below, the potentiometer is used to adjust the resistance of the output voltage value so the voltage/power
 			output would not exceed the microcontroller's limit.
 			<figure>
 				<a href="http://www.build-electronic-circuits.com/ldr-circuit-diagram"><img src="Team/progress/img/liushuang/LDR circuit1.jpg"
-					    style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					 style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
 				<figcaption style="text-align: center;">
 					<font size="2"><i>Personal modified LDR circuit for the break beam sensor via Build electronic circuit website </i></font>
 				</figcaption>
