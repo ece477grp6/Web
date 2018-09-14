@@ -148,9 +148,65 @@ contact course staff.
 			with team members.
 
 		</div>
+		<h4>Week 4:</h4>
+		<b>Date:</b> 9/14/2018
+		<br>
+		<b>Total hours:</b> 15
+		<br>
+		<b>Description of design efforts:</b>
+		<br> For the first half of the week, I started to build the prototype circuit of the Light Dependent Resistor for detecting
+		the capacity of the circuit. The design was relatively simple in designing phase involving an essential Light Dependent
+		Resistor connecting with the base of the a 2N3906 PNP transistor and a 1K ohm resistor and a 2K ohm resistor; the emitter
+		end is connected directly to the battery, and the collector is attached with a red LED to indicate the sensing of the Light
+		Dependent Resistor. The PNP transistor on this particular circuit functions more like a switch which will output a low
+		voltage value 0.32V and turn off the LED when the LDR detects a direct light source and output a relatively high voltage
+		value 1.67V and turn on the LED when the LDR could not detect any direct light source. To interface this circuit with the
+		microcontroller and make it work as a capacity indicator, the microcontroller could be connected in parallel with the LED
+		output thus monitoring and recording the analog voltage value. In the microcontroller, the analog voltage output gets converted
+		to the digital data and store in a memory address which will be sent to the user-interface through UART peripheral via
+		WiFi communication. I got the LDR from the ECE supply room, the resistance of the LDR when detecting no light is about
+		4K ohm and the resistance of the LDR when detect a direct light source is about 0.15K ohm. The PNP transistor used is 2N3906,
+		which is different from the original design component. Thus, the design for the break beam sensing circuit is modified
+		to accommodate the existing components, and the 10K ohm potentiometer is removed since there will be no need to adjust
+		the voltage output of the LED after team discussion about the microcontroller interfacing. The circuit schematic and graphical
+		demonstrations are shown below.
 
-		<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
-		<div id="footer"></div>
+		<figure>
+			<img src="Team/progress/img/liushuang/LDR-modified.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+			<figcaption style="text-align: center;">
+				<font size="2"><i>Modified break beam sensing circuit</i></font>
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="Team/progress/img/liushuang/LEDon.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+			<figcaption style="text-align: center;">
+				<font size="2"><i>LED on when no direct light to the LDR</i></font>
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="Team/progress/img/liushuang/LEDoff.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+			<figcaption style="text-align: center;">
+				<font size="2"><i>LED off when direct light into the LDR</i></font>
+			</figcaption>
+		</figure>
+		<br>Beside modifying and building the break beam sensing circuit, I also started to design the circuit for connecting the
+		motor with the ESC and to the microcontroller. By researching the brushless DC motor and the ESC, turns out that some ESCs
+		require special receivers to program the ESCs first to drive the motors with the ESCs. More researches and progresses will
+		be made during the weekend to program the ESCs so both motors could be driven by the ESCs.
+		<figure>
+			<a href="http://www.headsuphobby.com/Connecting-an-ESC-to-Motor-Battery-Receiver_ep_55-1.html"><img src="Team/progress/img/liushuang/sample ESC circuit.jpg"
+				 style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+			<figcaption style="text-align: center;">
+				<font size="2"><i>Sample ESC circuit I looked up</i></font>
+			</figcaption>
+		</figure>
+		<br>For next week, I will start to work on making the actual boat using wood with teammates. I will also start to interface
+		electrical components with the microcontroller through multiple peripherals once the development environment being set
+		up by the teammates.
+
+	</div>
+	<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
+	<div id="footer"></div>
 	</div>
 	</div>
 
