@@ -54,6 +54,7 @@ contact course staff.
 			and include things such as a file lister (for listing out homework assignments or tutorials)
 		-->
 			<div id="content">
+				<!-- week 1 -->
 				<div>
 					<h2>Qianli Ma</h2>
 
@@ -72,6 +73,7 @@ contact course staff.
 					</ul>
 					<br>
 				</div>
+				<!-- week 2 -->
 				<div>
 					<h4>Week 2:</h4>
 					<b>Date:</b> Aug 31, 2018
@@ -93,6 +95,7 @@ contact course staff.
 						<li><a href="Files/docs/FunctionalSpecification.pdf">Functional Specifications</a></li>
 					</ul> <br>
 				</div>
+				<!-- week 3 -->
 				<div>
 					<h4>Week 3:</h4>
 					<b>Date:</b> Sept 7, 2018
@@ -156,48 +159,72 @@ done
 						<li><a href="Files/docs/reference/Compass_Heading_Using_Magnetometers.pdf">Compass Heading Using Magnetometers</a></li>
 					</ul>
 				</div>
+				<!-- week 4 -->
 				<div>
-					<h4>Week 4:</h4>
-					<b>Date:</b> Sept 14, 2018
-					<br>
-					<b>Total hours:</b> 8
-					<b>Description of design efforts:</b>
-					<br> During this week I purchased some of the needed parts for our prototype, including our ESC and BLDC combo,
-					LiPo batteries for prototyping, battery chargers, ESC programming boardsm and a balanced charger for our battery.
-					The parts that we selected are shown below.<br>
-				</div>
-				<div>
-					<figure style="float:left">
-						<a href="https://i.ebayimg.com/images/g/9aAAAOSwnTdZ-EP0/s-l1600.jpg">
-							<img src="https://i.ebayimg.com/images/g/9aAAAOSwnTdZ-EP0/s-l1600.jpg" alt="9T 4370KV Brushless Motor+60A ESC Speed Controller Combo ME720 for 1/10 RC Car"
-							 height="300"></a>
-						<figcaption style="text-align: center;">
-							<font size="1"><i>9T 4370KV Brushless Motor+60A ESC Speed <br>Controller Combo ME720 for 1/10 RC Car via eBay</i></font>
-						</figcaption>
-					</figure>
-					<figure style="float:right">
-						<a href="https://images-na.ssl-images-amazon.com/images/I/71Vfa%2BQxMcL._SL1200_.jpg"><img src="https://images-na.ssl-images-amazon.com/images/I/71Vfa%2BQxMcL._SL1200_.jpg"
-							 alt="Floureon 2 Packs 3S 11.1V 3000mAh 30C Lipo Battery with Dean-Style T Connector for RC Airplane Helicopter Boat Drone and FPV (5.35x1.69x0.83 Inch)"
-							 height="300"></a>
-						<figcaption style="text-align:center">
-							<font size="1"><i>Floureon 2 Packs 3S 11.1V 3000mAh 30C Lipo Battery<br> with Dean-Style T Connector for RC
-									Airplane Helicopter Boat <br> Drone and FPV (5.35x1.69x0.83 Inch) via Amazon
-								</i></font>
-						</figcaption>
-					</figure>
-				</div>
-				<div>
-					The reason that we need an program card for our ESC is because that we do not have an actual RC controller and
-					receiver to do the programming through the controller.
-					<br>
-					During this week I came up an idea of using a MOSFET to control our Rasperry Pi's power supply as for low power
-					operation mode of our boat, we like to preserve as much power as possible, that means turning off our video stream
-					as well. Using a MOSFET we would be able to directly perform a hardware turnoff on our Rasperry Pi and since
-					Rasperry Pi's turn on itself whenever it recives power from a power supply, we would be able to turn it back on
-					using our micro when needed. A script with our video streaming service would be added to init.d so that it would
-					run each time the Rasperry Pi powers on. This we the Rasperry Pi can be powerd on directly in case that there is
-					no cellular radio/WiFi conncetivity when the boat runs into a low power mode.
-					<br>
+					<div>
+						<h4>Week 4:</h4>
+						<b>Date:</b> Sept 14, 2018
+						<br>
+						<b>Total hours:</b> 8
+						<b>Description of design efforts:</b>
+						<br> During this week I purchased some of the needed parts for our prototype, including our ESC and BLDC combo,
+						LiPo batteries for prototyping, battery chargers, ESC programming boardsm and a balanced charger for our battery.
+						The parts that we selected are shown below.<br>
+					</div>
+					<div>
+						<figure style="float:left">
+							<a href="https://i.ebayimg.com/images/g/9aAAAOSwnTdZ-EP0/s-l1600.jpg">
+								<img src="https://i.ebayimg.com/images/g/9aAAAOSwnTdZ-EP0/s-l1600.jpg" alt="9T 4370KV Brushless Motor+60A ESC Speed Controller Combo ME720 for 1/10 RC Car"
+								 height="370"></a>
+							<figcaption style="text-align: center;">
+								<font size="1"><i>9T 4370KV Brushless Motor+60A ESC Speed <br>Controller Combo ME720 for 1/10 RC Car via eBay</i></font>
+							</figcaption>
+						</figure>
+						<figure style="float:right">
+							<a href="https://images-na.ssl-images-amazon.com/images/I/71Vfa%2BQxMcL._SL1200_.jpg"><img src="https://images-na.ssl-images-amazon.com/images/I/71Vfa%2BQxMcL._SL1200_.jpg"
+								 alt="Floureon 2 Packs 3S 11.1V 3000mAh 30C Lipo Battery with Dean-Style T Connector for RC Airplane Helicopter Boat Drone and FPV (5.35x1.69x0.83 Inch)"
+								 height="370"></a>
+							<figcaption style="text-align:center">
+								<font size="1"><i>Floureon 2 Packs 3S 11.1V 3000mAh 30C Lipo Battery<br> with Dean-Style T Connector for RC
+										Airplane Helicopter Boat <br> Drone and FPV (5.35x1.69x0.83 Inch) via Amazon
+									</i></font>
+							</figcaption>
+						</figure>
+					</div>
+					<div>
+						<figure style="float:left"><a href="https://images-na.ssl-images-amazon.com/images/I/71aOOaF2vwL._SL1200_.jpg"><img
+								 src="https://images-na.ssl-images-amazon.com/images/I/71aOOaF2vwL._SL1200_.jpg" alt="Keenstone Lipo Battery Charger/Discharger with Low Voltage Checker, 10A 100W AC/DC 1S-6S Digital Battery Balance Charger for Li-Po Li-Hv Li-Ion Li-Fe NiMH Ni-Cd Pb"
+								 height=" 300"></a>
+							<figcaption style="text-align:center">
+								<font size="1"><i>Keenstone Lipo Battery Charger/Discharger with Low Voltage Checker, 10A 100W AC/DC 1S-6S
+										Digital Battery Balance Charger for Li-Po Li-Hv Li-Ion Li-Fe NiMH Ni-Cd Pb via Amazon</i></font>
+							</figcaption>
+						</figure>
+						<figure style="float:right"><a href="https://images-na.ssl-images-amazon.com/images/I/51GjY%2BypAML._SL1200_.jpg"><img
+								 src="https://images-na.ssl-images-amazon.com/images/I/51GjY%2BypAML._SL1200_.jpg" alt="RC Program Card Electronic Speed Controller Programmer for RC Car 25A- 120A ESC"
+								 height=" 300"></a>
+							<figcaption style="text-align:center">
+								<font size="1"><i>RC Program Card Electronic Speed Controller Programmer for RC Car 25A- 120A ESC via Amazon</i></font>
+							</figcaption>
+						</figure>
+					</div>
+					<div>
+						The reason that we need an program card for our ESC is because that we do not have an actual RC controller and
+						receiver to do the programming through the controller.
+						<br>
+						During this week I came up an idea of using a MOSFET to control our Rasperry Pi's power supply as for low power
+						operation mode of our boat, we like to preserve as much power as possible, that means turning off our video
+						stream
+						as well. Using a MOSFET we would be able to directly perform a hardware turnoff on our Rasperry Pi and since
+						Rasperry Pi's turn on itself whenever it recives power from a power supply, we would be able to turn it back on
+						using our micro when needed. A script with our video streaming service would be added to init.d so that it would
+						run each time the Rasperry Pi powers on. This we the Rasperry Pi can be powerd on directly in case that there is
+						no cellular radio/WiFi conncetivity when the boat runs into a low power mode.
+						<br>
+						I also found a 3D model of the waterjet drive unit on <a href="https://www.thingiverse.com/thing:153579">Thingiverse</a>
+						by user <a href="https://www.thingiverse.com/benny90/about">Ben Murphy</a> which we submitted for 3D printing at
+						BIDC so we can test out if this waterjet system is feasible or not.
+					</div>
 				</div>
 			</div>
 			<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
