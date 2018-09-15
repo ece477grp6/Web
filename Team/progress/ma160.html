@@ -72,38 +72,37 @@ contact course staff.
 					</ul>
 					<br>
 				</div>
-			</div>
-			<div>
-				<h4>Week 2:</h4>
-				<b>Date:</b> Aug 31, 2018
-				<br>
-				<b>Total hours:</b> 4
-				<br>
+				<div>
+					<h4>Week 2:</h4>
+					<b>Date:</b> Aug 31, 2018
+					<br>
+					<b>Total hours:</b> 4
+					<br>
 
-				<b>Description of design efforts:</b>
-				<br> This week I continued on maintaining the team website, updating the PSSC and project description on the team
-				website. During this week I was able to get the entire website online on the schools server. I also helped work on
-				the functional specification with my team, going over the documentation with them.I looked into what
-				microcontroller to be used and some other parts that could be used in our design, I have also started doing some
-				research on what batteries to use along with solar charging solutions that could be used in our
-				design.<br>
-				The following documents were added to the website
-				<ul>
-					<li><a href="Files/docs/InitialProjectProposal.pdf">Initial Project Proposal</a></a></li>
-					<li><a href="Files/docs/FinalProjectProposal.pdf">Final Project Proposal</a></li>
-					<li><a href="Files/docs/FunctionalSpecification.pdf">Functional Specifications</a></li>
-				</ul> <br>
-			</div>
-			<div>
-				<h4>Week 3:</h4>
-				<b>Date:</b> Sept 7, 2018
-				<br>
-				<b>Total hours:</b> 5
-				<b>Description of design efforts:</b>
-				<br> This week I wrote a short script in bash enabling the schools server to pull from our Github repo every
-				second so that every time a team member pushes to our repo reducing the number of times needed to manually log in
-				or ssh into our team account and performing a git pull from Github. Following is the code snippet that I wrote:<br>
-				<pre class="prettyprint linenums ">
+					<b>Description of design efforts:</b>
+					<br> This week I continued on maintaining the team website, updating the PSSC and project description on the team
+					website. During this week I was able to get the entire website online on the schools server. I also helped work on
+					the functional specification with my team, going over the documentation with them.I looked into what
+					microcontroller to be used and some other parts that could be used in our design, I have also started doing some
+					research on what batteries to use along with solar charging solutions that could be used in our
+					design.<br>
+					The following documents were added to the website
+					<ul>
+						<li><a href="Files/docs/InitialProjectProposal.pdf">Initial Project Proposal</a></a></li>
+						<li><a href="Files/docs/FinalProjectProposal.pdf">Final Project Proposal</a></li>
+						<li><a href="Files/docs/FunctionalSpecification.pdf">Functional Specifications</a></li>
+					</ul> <br>
+				</div>
+				<div>
+					<h4>Week 3:</h4>
+					<b>Date:</b> Sept 7, 2018
+					<br>
+					<b>Total hours:</b> 5
+					<b>Description of design efforts:</b>
+					<br> This week I wrote a short script in bash enabling the schools server to pull from our Github repo every
+					second so that every time a team member pushes to our repo reducing the number of times needed to manually log in
+					or ssh into our team account and performing a git pull from Github. Following is the code snippet that I wrote:<br>
+					<pre class="prettyprint linenums ">
 #!/bin/bash
 while :
 do
@@ -112,97 +111,98 @@ do
 	sleep 1
 done
 				</pre>
-				The bash script was run used with the nohup command such that it is able to be run in the background from an ssh
-				session and keep on running even if the ssh session is ended by the user. It also provides a log to nohup.out so
-				that in case of any issues, I would able to debug it with the log file. Sample log shown below.<br>
-				<img src="Team/progress/img/qianli/autoupdate_nohup_log.png" style="display:block; margin-left: auto; margin-right: auto"><br>
+					The bash script was run used with the nohup command such that it is able to be run in the background from an ssh
+					session and keep on running even if the ssh session is ended by the user. It also provides a log to nohup.out so
+					that in case of any issues, I would able to debug it with the log file. Sample log shown below.<br>
+					<img src="Team/progress/img/qianli/autoupdate_nohup_log.png" style="display:block; margin-left: auto; margin-right: auto"><br>
 
-				During this week we also looked into what parts would be used in the final project, the main concerns that we are
-				looking into are the brushless DC motors used to drive the boat. A brushless DC motor has the advantage of being
-				able to drive faster at a lower temperature than brushed counterparts which is ideal as the motor in the boat does
-				not have any moving air around it helping it to dissipate heat. Brushless motors are also lighter than brushed
-				ones, enabling us to carry more garbage on our boat compared to using brushed motors. We initially looked into
-				using propellers to drive the boat such as the one showing below on the left.<br>
-				<div>
-					<figure style="float:left">
-						<a href="https://i.pinimg.com/736x/f5/26/57/f526579928126cfc315b7bf342b38dc9.jpg">
-							<img src="https://i.pinimg.com/736x/f5/26/57/f526579928126cfc315b7bf342b38dc9.jpg" alt="Propeller Driven System"
-							 height="300"></a>
-						<figcaption style="text-align: center;">
-							<font size="1"><i>550 RC Boat motor with Drive shaft propeller bushing kit via Pinterest</i></font>
-						</figcaption>
-					</figure>
-					<figure style="float:right"><a href="https://images-na.ssl-images-amazon.com/images/I/71dW3xH636L._SL1500_.jpg">
-							<img src="https://images-na.ssl-images-amazon.com/images/I/71dW3xH636L._SL1500_.jpg" alt="LK 2016 RC Boat Turbo JET Part with Motor and Water Cooling System"
-							 height="300"></a>
-						<figcaption style="text-align: center;">
-							<font size="1"><i>LK 2016 RC Boat Turbo JET Part with Motor and Water Cooling System via Aamzon</i></font>
-						</figcaption>
-					</figure>
+					During this week we also looked into what parts would be used in the final project, the main concerns that we are
+					looking into are the brushless DC motors used to drive the boat. A brushless DC motor has the advantage of being
+					able to drive faster at a lower temperature than brushed counterparts which is ideal as the motor in the boat does
+					not have any moving air around it helping it to dissipate heat. Brushless motors are also lighter than brushed
+					ones, enabling us to carry more garbage on our boat compared to using brushed motors. We initially looked into
+					using propellers to drive the boat such as the one showing below on the left.<br>
+					<div>
+						<figure style="float:left">
+							<a href="https://i.pinimg.com/736x/f5/26/57/f526579928126cfc315b7bf342b38dc9.jpg">
+								<img src="https://i.pinimg.com/736x/f5/26/57/f526579928126cfc315b7bf342b38dc9.jpg" alt="Propeller Driven System"
+								 height="300"></a>
+							<figcaption style="text-align: center;">
+								<font size="1"><i>550 RC Boat motor with Drive shaft propeller bushing kit via Pinterest</i></font>
+							</figcaption>
+						</figure>
+						<figure style="float:right"><a href="https://images-na.ssl-images-amazon.com/images/I/71dW3xH636L._SL1500_.jpg">
+								<img src="https://images-na.ssl-images-amazon.com/images/I/71dW3xH636L._SL1500_.jpg" alt="LK 2016 RC Boat Turbo JET Part with Motor and Water Cooling System"
+								 height="300"></a>
+							<figcaption style="text-align: center;">
+								<font size="1"><i>LK 2016 RC Boat Turbo JET Part with Motor and Water Cooling System via Aamzon</i></font>
+							</figcaption>
+						</figure>
+					</div>
+					However we choose to use an turbojet style system such as the one shown above to the right. A turbojet system have
+					the advantage of not being as likely to getting the propeller stuck by some aquatic plant or something like that.
+					It also provides higher thrust when compared to a propeller system making it ideal for our use case, making it
+					able
+					to carry heavier loads and being able to drive the boat faster as well.<br>
+					After comparing microcontroller specifications, we choose the STM32L496Zx over STM32F051R8T6 and STM32F756BGT6.
+					Mainly due to the low power mode, lower cost than the STM32F7 and still having much more GPIO pins and hardware
+					functions than the STM32F0. This week I also setup my development environment for STM32 platform using eclipse and
+					STM32CubeMX.<br>
+					Following files were added and updated on team website:<br>
+					<ul>
+						<li><a href="Files/docs/FinalProjectProposal.pdf">Final Project Proposal</a> Updated PSSC</li>
+						<li><a href="Files/docs/SoftwareOverview.pdf">Software Overview</a> </li>
+						<li><a href="Files/docs/ComponentAnalysis.pdf">Component Analysis</a></li>
+						<li><a href="Files/docs/reference/Compass_Heading_Using_Magnetometers.pdf">Compass Heading Using Magnetometers</a></li>
+					</ul>
 				</div>
-				However we choose to use an turbojet style system such as the one shown above to the right. A turbojet system have
-				the advantage of not being as likely to getting the propeller stuck by some aquatic plant or something like that.
-				It also provides higher thrust when compared to a propeller system making it ideal for our use case, making it able
-				to carry heavier loads and being able to drive the boat faster as well.<br>
-				After comparing microcontroller specifications, we choose the STM32L496Zx over STM32F051R8T6 and STM32F756BGT6.
-				Mainly due to the low power mode, lower cost than the STM32F7 and still having much more GPIO pins and hardware
-				functions than the STM32F0. This week I also setup my development environment for STM32 platform using eclipse and
-				STM32CubeMX.<br>
-				Following files were added and updated on team website:<br>
-				<ul>
-					<li><a href="Files/docs/FinalProjectProposal.pdf">Final Project Proposal</a> Updated PSSC</li>
-					<li><a href="Files/docs/SoftwareOverview.pdf">Software Overview</a> </li>
-					<li><a href="Files/docs/ComponentAnalysis.pdf">Component Analysis</a></li>
-					<li><a href="Files/docs/reference/Compass_Heading_Using_Magnetometers.pdf">Compass Heading Using Magnetometers</a></li>
-				</ul>
-			</div>
-			<div>
-				<h4>Week 4:</h4>
-				<b>Date:</b> Sept 14, 2018
-				<br>
-				<b>Total hours:</b> 8
-				<b>Description of design efforts:</b>
-				<br> During this week I purchased some of the needed parts for our prototype, including our ESC and BLDC combo,
-				LiPo batteries for prototyping, battery chargers, ESC programming boardsm and a balanced charger for our battery.
-				The parts that we selected are shown below.<br>
 				<div>
-					<figure style="float:left">
-						<a href="https://i.ebayimg.com/images/g/9aAAAOSwnTdZ-EP0/s-l1600.jpg">
-							<img src="https://i.ebayimg.com/images/g/9aAAAOSwnTdZ-EP0/s-l1600.jpg" alt="9T 4370KV Brushless Motor+60A ESC Speed Controller Combo ME720 for 1/10 RC Car"
-							 width="355"></a>
-						<figcaption style="text-align: center;">
-							<font size="1"><i>9T 4370KV Brushless Motor+60A ESC Speed <br>Controller Combo ME720 for 1/10 RC Car via eBay</i></font>
-						</figcaption>
-					</figure>
+					<h4>Week 4:</h4>
+					<b>Date:</b> Sept 14, 2018
+					<br>
+					<b>Total hours:</b> 8
+					<b>Description of design efforts:</b>
+					<br> During this week I purchased some of the needed parts for our prototype, including our ESC and BLDC combo,
+					LiPo batteries for prototyping, battery chargers, ESC programming boardsm and a balanced charger for our battery.
+					The parts that we selected are shown below.<br>
+					<div>
+						<figure style="float:left">
+							<a href="https://i.ebayimg.com/images/g/9aAAAOSwnTdZ-EP0/s-l1600.jpg">
+								<img src="https://i.ebayimg.com/images/g/9aAAAOSwnTdZ-EP0/s-l1600.jpg" alt="9T 4370KV Brushless Motor+60A ESC Speed Controller Combo ME720 for 1/10 RC Car"
+								 width="355"></a>
+							<figcaption style="text-align: center;">
+								<font size="1"><i>9T 4370KV Brushless Motor+60A ESC Speed <br>Controller Combo ME720 for 1/10 RC Car via eBay</i></font>
+							</figcaption>
+						</figure>
+					</div>
+					<br>
+					The reason that we need an program card for our ESC is because that we do not have an actual RC controller and
+					receiver to do the programming through the controller.
+					<br>
+					During this week I came up an idea of using a MOSFET to control our Rasperry Pi's power supply as for low power
+					operation mode of our boat, we like to preserve as much power as possible, that means turning off our video stream
+					as well. Using a MOSFET we would be able to directly perform a hardware turnoff on our Rasperry Pi and since
+					Rasperry Pi's turn on itself whenever it recives power from a power supply, we would be able to turn it back on
+					using our micro when needed. A script with our video streaming service would be added to init.d so that it would
+					run each time the Rasperry Pi powers on. This we the Rasperry Pi can be powerd on directly in case that there is
+					no cellular radio/WiFi conncetivity when the boat runs into a low power mode.
+					<br>
 				</div>
-				<br>
-				The reason that we need an program card for our ESC is because that we do not have an actual RC controller and
-				receiver to do the programming through the controller.
-				<br>
-				During this week I came up an idea of using a MOSFET to control our Rasperry Pi's power supply as for low power
-				operation mode of our boat, we like to preserve as much power as possible, that means turning off our video stream
-				as well. Using a MOSFET we would be able to directly perform a hardware turnoff on our Rasperry Pi and since
-				Rasperry Pi's turn on itself whenever it recives power from a power supply, we would be able to turn it back on
-				using our micro when needed. A script with our video streaming service would be added to init.d so that it would
-				run each time the Rasperry Pi powers on. This we the Rasperry Pi can be powerd on directly in case that there is
-				no cellular radio/WiFi conncetivity when the boat runs into a low power mode.
-				<br>
 			</div>
-		</div>
-	</div>
+			<!-- </div> -->
 
-	<!--JS-->
-	<script src="js/jquery.js"></script>
-	<script src="js/jquery-migrate-1.1.1.js"></script>
-	<!-- Google prettify using sons-of-obsidian source:https://github.com/google/code-prettify -->
-	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$("#header").load("header.html");
-			$("#menu").load("navbar.html");
-			$("#footer").load("footer.html");
-		});
-	</script>
+			<!--JS-->
+			<script src="js/jquery.js"></script>
+			<script src="js/jquery-migrate-1.1.1.js"></script>
+			<!-- Google prettify using sons-of-obsidian source:https://github.com/google/code-prettify -->
+			<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
+			<script type="text/javascript">
+				$(document).ready(function () {
+					$("#header").load("header.html");
+					$("#menu").load("navbar.html");
+					$("#footer").load("footer.html");
+				});
+			</script>
 </body>
 
 </html>
