@@ -105,29 +105,32 @@ contact course staff.
 				<br>
 				<b>Total hours:</b> 15
 				<br>This week I was mainly working on the Graphical User Interface. I used PyQt to make the GUI. The interface mainly contains a web engine for the google map interface, a GraphicsView for the camera, a GraphicsView for the compass, an info board and two tabs that switch between the two operation mode. All the components are put in some kind of Layout such that it will adjust the size in proportion to the window size. Layout stretch is used to adjust the scale of the components inside the layout. One challenging part of the GUI is to interface with the google map API. I managed to set up a web view using JavaScript and stored as HTML inside the python code in order to display the actual map. There were many problems encountered during the process since Qt5.5 deleted the web widget and created a web engine class instead. All the functions inside this class were changed and thus all the existing codes interfacing with the google map cannot execute. The way to solve this problem is to use a call back function to collect the return value of the function since the run javascript function of qt5.5 is asynchronous. In order to use the Google Map API, one must register for a API key. I got a one-year free trial and every time Google Map API was used, it would be recorded as shown below. Makers can be added by clicking on the map and the coordinates values will be reported.<br>
-
-				<img src="Team/progress/img/peiyuan/GUI1.png" height="300">
-				<figcaption style="text-align: center;">
-					<font size="1"><i>GUI</i></font>
-				</figcaption>
-
+				
 				<br>
 				<div>
 					<figure style="float:left">
+						<img src="Team/progress/img/peiyuan/GUI1.png"
+						 height="300">
+						<figcaption style="text-align: center;">
+							<font size="1"><i>GUI</i></font>
+						</figcaption>
+					</figure>
+					<figure style="float:right">
 						<img src="Team/progress/img/peiyuan/GUI2.png"
 						 height="300">
 						<figcaption style="text-align: center;">
 							<font size="1"><i>GUI with working markers</i></font>
 						</figcaption>
 					</figure>
-					<figure style="float:right">
-						<img src="Team/progress/img/peiyuan/Coords.png"
-						 height="300">
-						<figcaption style="text-align: center;">
-							<font size="1"><i>Marker coordinates printed on the terminal</i></font>
-						</figcaption>
-					</figure>
 				</div>
+
+				<img src="Team/progress/img/peiyuan/Coords.png">
+				<figcaption style="text-align: center;">
+					<font size="1"><i>Marker coordinates printed on the terminal</i></font>
+				</figcaption>
+
+				<br>
+				
 				<br>In addition, we went to find a lake for our boat to test the GPS functionality. There is a lake call lake harner in Lafayette. The coordinates of this lake is {lat: 40.450, lng: -86.870}. I set the default location for our google map interface to be this lake. 
 				<br>
 				<div>
