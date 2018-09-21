@@ -66,9 +66,9 @@ contact course staff.
 					<b>Description of design efforts:</b>
 					<br>
 					<ul>
-						<li>Setup <a href="https://github.com/ece477grp6">Github</a> project for the team and added team members ssh-key
-							along with team account's ssh-key to the Github account so everyone has access to the source code for the entire
-							project including the website</li>
+						<li>Setup
+							<a href="https://github.com/ece477grp6">Github</a> project for the team and added team members ssh-key along with team account's ssh-key to the Github account
+							so everyone has access to the source code for the entire project including the website</li>
 						<li>Setup team website</li>
 					</ul>
 					<br>
@@ -82,18 +82,25 @@ contact course staff.
 					<br>
 
 					<b>Description of design efforts:</b>
-					<br> This week I continued on maintaining the team website, updating the PSSC and project description on the team
-					website. During this week I was able to get the entire website online on the schools server. I also helped work on
-					the functional specification with my team, going over the documentation with them.I looked into what
-					microcontroller to be used and some other parts that could be used in our design, I have also started doing some
-					research on what batteries to use along with solar charging solutions that could be used in our
-					design.<br>
-					The following documents were added to the website
+					<br> This week I continued on maintaining the team website, updating the PSSC and project description on the team website.
+					During this week I was able to get the entire website online on the schools server. I also helped work on the functional
+					specification with my team, going over the documentation with them.I looked into what microcontroller to be used and
+					some other parts that could be used in our design, I have also started doing some research on what batteries to use
+					along with solar charging solutions that could be used in our design.
+					<br> The following documents were added to the website
 					<ul>
-						<li><a href="Files/docs/InitialProjectProposal.pdf">Initial Project Proposal</a></a></li>
-						<li><a href="Files/docs/FinalProjectProposal.pdf">Final Project Proposal</a></li>
-						<li><a href="Files/docs/FunctionalSpecification.pdf">Functional Specifications</a></li>
-					</ul> <br>
+						<li>
+							<a href="Files/docs/InitialProjectProposal.pdf">Initial Project Proposal</a>
+							</a>
+						</li>
+						<li>
+							<a href="Files/docs/FinalProjectProposal.pdf">Final Project Proposal</a>
+						</li>
+						<li>
+							<a href="Files/docs/FunctionalSpecification.pdf">Functional Specifications</a>
+						</li>
+					</ul>
+					<br>
 				</div>
 				<!-- week 3 -->
 				<div>
@@ -102,9 +109,10 @@ contact course staff.
 					<br>
 					<b>Total hours:</b> 5
 					<b>Description of design efforts:</b>
-					<br> This week I wrote a short script in bash enabling the schools server to pull from our Github repo every
-					second so that every time a team member pushes to our repo reducing the number of times needed to manually log in
-					or ssh into our team account and performing a git pull from Github. Following is the code snippet that I wrote:<br>
+					<br> This week I wrote a short script in bash enabling the schools server to pull from our Github repo every second so that
+					every time a team member pushes to our repo reducing the number of times needed to manually log in or ssh into our team
+					account and performing a git pull from Github. Following is the code snippet that I wrote:
+					<br>
 					<pre class="prettyprint linenums ">
 #!/bin/bash
 while :
@@ -113,50 +121,62 @@ do
 	git pull
 	sleep 1
 done
-				</pre>
-					The bash script was run used with the nohup command such that it is able to be run in the background from an ssh
-					session and keep on running even if the ssh session is ended by the user. It also provides a log to nohup.out so
-					that in case of any issues, I would able to debug it with the log file. Sample log shown below.<br>
-					<img src="Team/progress/img/qianli/autoupdate_nohup_log.png" style="display:block; margin-left: auto; margin-right: auto"><br>
-
-					During this week we also looked into what parts would be used in the final project, the main concerns that we are
-					looking into are the brushless DC motors used to drive the boat. A brushless DC motor has the advantage of being
-					able to drive faster at a lower temperature than brushed counterparts which is ideal as the motor in the boat does
-					not have any moving air around it helping it to dissipate heat. Brushless motors are also lighter than brushed
-					ones, enabling us to carry more garbage on our boat compared to using brushed motors. We initially looked into
-					using propellers to drive the boat such as the one showing below on the left.<br>
+				</pre> The bash script was run used with the nohup command such that it is able to be run in the background from an ssh session
+					and keep on running even if the ssh session is ended by the user. It also provides a log to nohup.out so that in case
+					of any issues, I would able to debug it with the log file. Sample log shown below.
+					<br>
+					<img src="Team/progress/img/qianli/autoupdate_nohup_log.png" style="display:block; margin-left: auto; margin-right: auto">
+					<br> During this week we also looked into what parts would be used in the final project, the main concerns that we are looking
+					into are the brushless DC motors used to drive the boat. A brushless DC motor has the advantage of being able to drive
+					faster at a lower temperature than brushed counterparts which is ideal as the motor in the boat does not have any moving
+					air around it helping it to dissipate heat. Brushless motors are also lighter than brushed ones, enabling us to carry
+					more garbage on our boat compared to using brushed motors. We initially looked into using propellers to drive the boat
+					such as the one showing below on the left.
+					<br>
 					<div>
 						<figure style="float:left">
 							<a href="https://i.pinimg.com/736x/f5/26/57/f526579928126cfc315b7bf342b38dc9.jpg">
-								<img src="https://i.pinimg.com/736x/f5/26/57/f526579928126cfc315b7bf342b38dc9.jpg" alt="Propeller Driven System"
-								 height="300"></a>
+								<img src="https://i.pinimg.com/736x/f5/26/57/f526579928126cfc315b7bf342b38dc9.jpg" alt="Propeller Driven System" height="300">
+							</a>
 							<figcaption style="text-align: center;">
-								<font size="1"><i>550 RC Boat motor with Drive shaft propeller bushing kit via Pinterest</i></font>
+								<font size="1">
+									<i>550 RC Boat motor with Drive shaft propeller bushing kit via Pinterest</i>
+								</font>
 							</figcaption>
 						</figure>
-						<figure style="float:right"><a href="https://images-na.ssl-images-amazon.com/images/I/71dW3xH636L._SL1500_.jpg">
+						<figure style="float:right">
+							<a href="https://images-na.ssl-images-amazon.com/images/I/71dW3xH636L._SL1500_.jpg">
 								<img src="https://images-na.ssl-images-amazon.com/images/I/71dW3xH636L._SL1500_.jpg" alt="LK 2016 RC Boat Turbo JET Part with Motor and Water Cooling System"
-								 height="300"></a>
+								    height="300">
+							</a>
 							<figcaption style="text-align: center;">
-								<font size="1"><i>LK 2016 RC Boat Turbo JET Part with Motor and Water Cooling System via Aamzon</i></font>
+								<font size="1">
+									<i>LK 2016 RC Boat Turbo JET Part with Motor and Water Cooling System via Aamzon</i>
+								</font>
 							</figcaption>
 						</figure>
 					</div>
-					However we choose to use an turbojet style system such as the one shown above to the right. A turbojet system have
-					the advantage of not being as likely to getting the propeller stuck by some aquatic plant or something like that.
-					It also provides higher thrust when compared to a propeller system making it ideal for our use case, making it
-					able
-					to carry heavier loads and being able to drive the boat faster as well.<br>
-					After comparing microcontroller specifications, we choose the STM32L496Zx over STM32F051R8T6 and STM32F756BGT6.
-					Mainly due to the low power mode, lower cost than the STM32F7 and still having much more GPIO pins and hardware
-					functions than the STM32F0. This week I also setup my development environment for STM32 platform using eclipse and
-					STM32CubeMX.<br>
-					Following files were added and updated on team website:<br>
+					However we choose to use an turbojet style system such as the one shown above to the right. A turbojet system have the advantage
+					of not being as likely to getting the propeller stuck by some aquatic plant or something like that. It also provides
+					higher thrust when compared to a propeller system making it ideal for our use case, making it able to carry heavier
+					loads and being able to drive the boat faster as well.
+					<br> After comparing microcontroller specifications, we choose the STM32L496Zx over STM32F051R8T6 and STM32F756BGT6. Mainly
+					due to the low power mode, lower cost than the STM32F7 and still having much more GPIO pins and hardware functions than
+					the STM32F0. This week I also setup my development environment for STM32 platform using eclipse and STM32CubeMX.
+					<br> Following files were added and updated on team website:
+					<br>
 					<ul>
-						<li><a href="Files/docs/FinalProjectProposal.pdf">Final Project Proposal</a> Updated PSSC</li>
-						<li><a href="Files/docs/SoftwareOverview.pdf">Software Overview</a> </li>
-						<li><a href="Files/docs/ComponentAnalysis.pdf">Component Analysis</a></li>
-						<li><a href="Files/docs/reference/Compass_Heading_Using_Magnetometers.pdf">Compass Heading Using Magnetometers</a></li>
+						<li>
+							<a href="Files/docs/FinalProjectProposal.pdf">Final Project Proposal</a> Updated PSSC</li>
+						<li>
+							<a href="Files/docs/SoftwareOverview.pdf">Software Overview</a>
+						</li>
+						<li>
+							<a href="Files/docs/ComponentAnalysis.pdf">Component Analysis</a>
+						</li>
+						<li>
+							<a href="Files/docs/reference/Compass_Heading_Using_Magnetometers.pdf">Compass Heading Using Magnetometers</a>
+						</li>
 					</ul>
 					<br>
 				</div>
@@ -168,74 +188,96 @@ done
 						<br>
 						<b>Total hours:</b> 8
 						<b>Description of design efforts:</b>
-						<br> During this week I purchased some of the needed parts for our prototype, including our ESC and BLDC combo,
-						LiPo batteries for prototyping, battery chargers, ESC programming boardsm and a balanced charger for our battery.
-						The parts that we selected are shown below.<br>
+						<br> During this week I purchased some of the needed parts for our prototype, including our ESC and BLDC combo, LiPo batteries
+						for prototyping, battery chargers, ESC programming boardsm and a balanced charger for our battery. The parts that we
+						selected are shown below.
+						<br>
 					</div>
 					<div>
 						<div>
 							<figure style="float:left">
 								<a href="https://i.ebayimg.com/images/g/9aAAAOSwnTdZ-EP0/s-l1600.jpg">
 									<img src="https://i.ebayimg.com/images/g/9aAAAOSwnTdZ-EP0/s-l1600.jpg" alt="9T 4370KV Brushless Motor+60A ESC Speed Controller Combo ME720 for 1/10 RC Car"
-									 height="370"></a>
+									    height="370">
+								</a>
 								<figcaption style="text-align: center;">
-									<font size="1"><i>9T 4370KV Brushless Motor+60A ESC Speed <br>
-											Controller Combo ME720 for 1/10 RC Car via eBay<br><br></i></font>
+									<font size="1">
+										<i>9T 4370KV Brushless Motor+60A ESC Speed
+											<br> Controller Combo ME720 for 1/10 RC Car via eBay
+											<br>
+											<br>
+										</i>
+									</font>
 								</figcaption>
 							</figure>
 							<figure style="float:right">
-								<a href="https://images-na.ssl-images-amazon.com/images/I/71Vfa%2BQxMcL._SL1200_.jpg"><img src="https://images-na.ssl-images-amazon.com/images/I/71Vfa%2BQxMcL._SL1200_.jpg"
-									 alt="Floureon 2 Packs 3S 11.1V 3000mAh 30C Lipo Battery with Dean-Style T Connector for RC Airplane Helicopter Boat Drone and FPV (5.35x1.69x0.83 Inch)"
-									 height="370"></a>
+								<a href="https://images-na.ssl-images-amazon.com/images/I/71Vfa%2BQxMcL._SL1200_.jpg">
+									<img src="https://images-na.ssl-images-amazon.com/images/I/71Vfa%2BQxMcL._SL1200_.jpg" alt="Floureon 2 Packs 3S 11.1V 3000mAh 30C Lipo Battery with Dean-Style T Connector for RC Airplane Helicopter Boat Drone and FPV (5.35x1.69x0.83 Inch)"
+									    height="370">
+								</a>
 								<figcaption style="text-align:center">
-									<font size="1"><i>Floureon 2 Packs 3S 11.1V 3000mAh 30C Lipo Battery with <br>
-											Dean-Style T Connector for RC Airplane Helicopter Boat Drone and FPV <br>
-											(5.35x1.69x0.83 Inch) via Amazon
-										</i></font>
+									<font size="1">
+										<i>Floureon 2 Packs 3S 11.1V 3000mAh 30C Lipo Battery with
+											<br> Dean-Style T Connector for RC Airplane Helicopter Boat Drone and FPV
+											<br> (5.35x1.69x0.83 Inch) via Amazon
+										</i>
+									</font>
 								</figcaption>
 							</figure>
 						</div>
 						<div>
-							<figure style="float:left"><a href="https://images-na.ssl-images-amazon.com/images/I/71aOOaF2vwL._SL1200_.jpg"><img
-									 src="https://images-na.ssl-images-amazon.com/images/I/71aOOaF2vwL._SL1200_.jpg" alt="Keenstone Lipo Battery Charger/Discharger with Low Voltage Checker, 10A 100W AC/DC 1S-6S Digital Battery Balance Charger for Li-Po Li-Hv Li-Ion Li-Fe NiMH Ni-Cd Pb"
-									 height=" 370"></a>
+							<figure style="float:left">
+								<a href="https://images-na.ssl-images-amazon.com/images/I/71aOOaF2vwL._SL1200_.jpg">
+									<img src="https://images-na.ssl-images-amazon.com/images/I/71aOOaF2vwL._SL1200_.jpg" alt="Keenstone Lipo Battery Charger/Discharger with Low Voltage Checker, 10A 100W AC/DC 1S-6S Digital Battery Balance Charger for Li-Po Li-Hv Li-Ion Li-Fe NiMH Ni-Cd Pb"
+									    height=" 370">
+								</a>
 								<figcaption style="text-align:center">
-									<font size="1"><i>Keenstone Lipo Battery Charger/Discharger with Low Voltage Checker,<br>
-											10A 100W AC/DC 1S-6S digital Battery Balance Charger <br>
-											for Li-Po Li-Hv Li-Ion Li-Fe NiMH Ni-Cd Pb via Amazon</i></font>
+									<font size="1">
+										<i>Keenstone Lipo Battery Charger/Discharger with Low Voltage Checker,
+											<br> 10A 100W AC/DC 1S-6S digital Battery Balance Charger
+											<br> for Li-Po Li-Hv Li-Ion Li-Fe NiMH Ni-Cd Pb via Amazon</i>
+									</font>
 								</figcaption>
 							</figure>
-							<figure style="float:right"><a href="https://images-na.ssl-images-amazon.com/images/I/51GjY%2BypAML._SL1200_.jpg"><img
-									 src="https://images-na.ssl-images-amazon.com/images/I/51GjY%2BypAML._SL1200_.jpg" alt="RC Program Card Electronic Speed Controller Programmer for RC Car 25A- 120A ESC"
-									 height=" 370"></a>
+							<figure style="float:right">
+								<a href="https://images-na.ssl-images-amazon.com/images/I/51GjY%2BypAML._SL1200_.jpg">
+									<img src="https://images-na.ssl-images-amazon.com/images/I/51GjY%2BypAML._SL1200_.jpg" alt="RC Program Card Electronic Speed Controller Programmer for RC Car 25A- 120A ESC"
+									    height=" 370">
+								</a>
 								<figcaption style="text-align:center">
-									<font size="1"><i>RC Program Card Electronic Speed Controller<br>
-											Programmer for RC Car 25A- 120A ESC <br>
-											via Amazon</i></font>
+									<font size="1">
+										<i>RC Program Card Electronic Speed Controller
+											<br> Programmer for RC Car 25A- 120A ESC
+											<br> via Amazon</i>
+									</font>
 								</figcaption>
 							</figure>
 						</div>
 					</div>
 					<div>
-						The reason that we need an program card for our ESC is because that we do not have an actual RC controller and
-						receiver to do the programming through the controller.
-						<br>
-						During this week I came up an idea of using a MOSFET to control our Rasperry Pi's power supply as for low power
-						operation mode of our boat, we like to preserve as much power as possible, that means turning off our video
-						stream as well. Using a MOSFET we would be able to directly perform a hardware turnoff on our Rasperry Pi and
-						since Rasperry Pi's turn on itself whenever it recives power from a power supply, we would be able to turn it
-						back on using our micro when needed. A script with our video streaming service would be added to init.d so that
-						it would run each time the Rasperry Pi powers on. This we the Rasperry Pi can be powerd on directly in case that
-						there is no cellular radio/WiFi conncetivity when the boat runs into a low power mode.
-						<br>
-						I also found a 3D model of the waterjet drive unit on <a href="https://www.thingiverse.com/thing:153579">Thingiverse</a>
-						by user <a href="https://www.thingiverse.com/benny90/about">Ben Murphy</a> which we submitted for 3D printing at
-						BIDC so we can test out if this waterjet system is feasible or not.<br>
-						Following files were added to the team website:
+						The reason that we need an program card for our ESC is because that we do not have an actual RC controller and receiver to
+						do the programming through the controller.
+						<br> During this week I came up an idea of using a MOSFET to control our Rasperry Pi's power supply as for low power operation
+						mode of our boat, we like to preserve as much power as possible, that means turning off our video stream as well. Using
+						a MOSFET we would be able to directly perform a hardware turnoff on our Rasperry Pi and since Rasperry Pi's turn on
+						itself whenever it recives power from a power supply, we would be able to turn it back on using our micro when needed.
+						A script with our video streaming service would be added to init.d so that it would run each time the Rasperry Pi powers
+						on. This we the Rasperry Pi can be powerd on directly in case that there is no cellular radio/WiFi conncetivity when
+						the boat runs into a low power mode.
+						<br> I also found a 3D model of the waterjet drive unit on
+						<a href="https://www.thingiverse.com/thing:153579">Thingiverse</a>
+						by user
+						<a href="https://www.thingiverse.com/benny90/about">Ben Murphy</a> which we submitted for 3D printing at BIDC so we can test out if this waterjet system is feasible or
+						not.
+						<br> Following files were added to the team website:
 						<br>
 						<ul>
-							<li><a href="Files/docs/BillOfMaterials.pdf">Bill of Materials</a></li>
-							<li><a href="Files/docs/ElectricalOverview.pdf">Electrical Overview</a> </li>
+							<li>
+								<a href="Files/docs/BillOfMaterials.pdf">Bill of Materials</a>
+							</li>
+							<li>
+								<a href="Files/docs/ElectricalOverview.pdf">Electrical Overview</a>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -247,37 +289,119 @@ done
 						<br>
 						<b>Total hours:</b> 10
 						<b>Description of design efforts:</b>
-						<br>During this week I started looking into how to drive our brushless motors, after experimenting with my
-						teammates we were able to drive the motor with an Arduino using online code, however we were not able to drive it
-						with our micro or using the function generator on the oscilloscope. When tinkering around I noticed the PWM
-						signal from the Arduino was at 5 V while the PWM signal from our ESC was only at 3V, thus in order to drive our
-						ESC, we needed to control the ESC with an MOSFET to provide the right amount of voltage. This week I also started
-						planning out our physical PCB layout, determining where to put our high-power circuitry, where to put our
-						switching power regulators, and where to put our numerous connectors as we want most of our project to be modular
-						for easier debugging purpose. This week I compiled opencv for our Rasperry Pi and succeeded in streaming video
-						over a socket connection which both the server and client are running python making it easy for us to include the
-						video stream in our python based user interface. For easier debugging and remote accessing to our Rasperry Pi I
-						have teamviewer, xrdp, and a automatic script that runs at startup to send me an email with the raspi internal
-						and external IP's code is shown below:
+						<br>During this week I started looking into how to drive our brushless motors, after experimenting with my teammates we
+						were able to drive the motor with an Arduino using online code, however we were not able to drive it with our micro
+						or using the function generator on the oscilloscope. When tinkering around I noticed the PWM signal from the Arduino
+						was at 5 V while the PWM signal from our ESC was only at 3V, thus in order to drive our ESC, we needed to control the
+						ESC with an MOSFET to provide the right amount of voltage. This week I also started planning out our physical PCB layout,
+						determining where to put our high-power circuitry, where to put our switching power regulators, and where to put our
+						numerous connectors as we want most of our project to be modular for easier debugging purpose. This week I compiled
+						opencv for our Rasperry Pi and succeeded in streaming video over a socket connection which both the server and client
+						are running python making it easy for us to include the video stream in our python based user interface. For easier
+						debugging and remote accessing to our Rasperry Pi I have teamviewer, xrdp, and a automatic script that runs at startup
+						to send me an email with the raspi internal and external IP's code is shown below:
 						<br>
 						<div>
 							<pre class="prettyprint linenums ">
-<!--  -->
+'''https://elinux.org/RPi_Email_IP_On_Boot_Debian'''
+
+__author__ = 'Cody Giles'
+__license__ = "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+__version__ = "1.0"
+__maintainer__ = "Cody Giles"
+__status__ = "Production"
+
+import subprocess
+import smtplib
+from email.mime.text import MIMEText
+import datetime
+# Self inserted code for WAN IP
+from requests import get
+
+
+def connect_type(word_list):
+	""" This function takes a list of words, then, depeding which key word, returns the corresponding
+	internet connection type as a string. ie) 'ethernet'.
+	"""
+	if 'wlan0' in word_list or 'wlan1' in word_list:
+		con_type = 'wifi'
+	elif 'eth0' in word_list:
+		con_type = 'ethernet'
+	else:
+		con_type = 'current'
+
+	return con_type
+
+
+# Change to your own account information
+# Account Information
+to = 'user@email'  # Email to send to.
+gmail_user = 'user@gmail.com'  # Email to send from. (MUST BE GMAIL)
+gmail_password = 'PASSWORD'  # Gmail password.
+smtpserver = smtplib.SMTP('smtp.gmail.com', 587)  # Server to use.
+
+smtpserver.ehlo()  # Says 'hello' to the server
+smtpserver.starttls()  # Start TLS encryption
+smtpserver.ehlo()
+smtpserver.login(gmail_user, gmail_password)  # Log in to server
+today = datetime.date.today()  # Get current time/date
+
+arg = 'ip route list'  # Linux command to retrieve ip addresses.
+# Runs 'arg' in a 'hidden terminal'.
+p = subprocess.Popen(arg, shell=True, stdout=subprocess.PIPE)
+data = p.communicate()  # Get data from 'p terminal'.
+# Self inserted code for wan IP
+wan_ip = get('https://api.ipify.org').text
+# Split IP text block into three, and divide the two containing IPs into words.
+ip_lines = data[0].splitlines()
+split_line_a = ip_lines[0].split()
+split_line_b = ip_lines[1].split()
+
+# con_type variables for the message text. ex) 'ethernet', 'wifi', etc.
+ip_type_a = connect_type(split_line_a)
+ip_type_b = connect_type(split_line_b)
+
+"""Because the text 'src' is always followed by an ip address,
+we can use the 'index' function to find 'src' and add one to
+get the index position of our ip.
+"""
+ipaddr_a = split_line_a[split_line_a.index('src')+1]
+ipaddr_b = split_line_b[split_line_b.index('src')+1]
+
+# Creates a sentence for each ip address.
+my_ip_a = 'Your %s ip is %s' % (ip_type_a, ipaddr_a)
+my_ip_b = 'Your %s ip is %s' % (ip_type_b, ipaddr_b)
+my_wan_ip = 'Your WAN ip is %s' % (wan_ip)
+
+# Creates the text, subject, 'from', and 'to' of the message.
+msg = MIMEText(my_ip_a + "\n" + my_ip_b + "\n" + my_wan_ip)
+msg['Subject'] = 'IPs For RaspberryPi on %s' % today.strftime('%b %d %Y')
+msg['From'] = gmail_user
+msg['To'] = to
+# Sends the message
+smtpserver.sendmail(gmail_user, [to], msg.as_string())
+# Closes the smtp server.
+smtpserver.quit()								
 							</pre>
 						</div>
-						The above code is sourced from <a href="http">RPi Email Ip on Boot Debian</a> with custom modifications for
-						external ip which uses the python request module. And here is a screen shot showing that remote video stream is
-						working across WAN<br>
+						The above code is sourced from
+						<a href="http">RPi Email Ip on Boot Debian</a> with custom modifications for external ip which uses the python request module. And
+						here is a screen shot showing that remote video stream is working across WAN
+						<br>
 						<div>
 							<figure>
-								<a href="Team/progress/img/qianli/raspi_video_streaming.png"><img src="Team/progress/img/qianli/raspi_video_streaming.png"
-									 alt="raspi video streaming over socket using opencv"></a>
+								<a href="Team/progress/img/qianli/raspi_video_streaming.png">
+									<img src="Team/progress/img/qianli/raspi_video_streaming.png" alt="raspi video streaming over socket using opencv">
+								</a>
 								<figcaption style="text-align: center;">
-									<font size="1"><i>Raspberry Pi video streaming over socket using OpenCV</i></font>
+									<font size="1">
+										<i>Raspberry Pi video streaming over socket using OpenCV</i>
+									</font>
 								</figcaption>
 							</figure>
-							Next week I will be working on our power delivery system, checking our solar charging options, and implementing
-							the video stream into our GUI.<br>
+							Next week I will be working on our power delivery system, checking our solar charging options, and implementing the video
+							stream into our GUI.
+							<br>
 						</div>
 					</div>
 				</div>
