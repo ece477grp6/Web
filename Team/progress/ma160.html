@@ -239,8 +239,52 @@ done
 						</ul>
 					</div>
 				</div>
+				<!-- Week 5 -->
+				<div>
+					<div>
+						<h4>Week 5:</h4>
+						<b>Date:</b> Sept 21, 2018
+						<br>
+						<b>Total hours:</b> 10
+						<b>Description of design efforts:</b>
+						<br>During this week I started looking into how to drive our brushless motors, after experimenting with my
+						teammates we were able to drive the motor with an Arduino using online code, however we were not able to drive it
+						with our micro or using the function generator on the oscilloscope. When tinkering around I noticed the PWM
+						signal from the Arduino was at 5 V while the PWM signal from our ESC was only at 3V, thus in order to drive our
+						ESC, we needed to control the ESC with an MOSFET to provide the right amount of voltage. This week I also started
+						planning out our physical PCB layout, determining where to put our high-power circuitry, where to put our
+						switching power regulators, and where to put our numerous connectors as we want most of our project to be modular
+						for easier debugging purpose. This week I compiled opencv for our Rasperry Pi and succeeded in streaming video
+						over a socket connection which both the server and client are running python making it easy for us to include the
+						video stream in our python based user interface. For easier debugging and remote accessing to our Rasperry Pi I
+						have teamviewer, xrdp, and a automatic script that runs at startup to send me an email with the raspi internal
+						and external IP's code is shown below:
+						<br>
+						<div>
+							<pre class="prettyprint linenums ">
+<!--  -->
+							</pre>
+						</div>
+						The above code is sourced from <a href="http">RPi Email Ip on Boot Debian</a> with custom modifications for
+						external ip which uses the python request module. And here is a screen shot showing that remote video stream is
+						working across WAN<br>
+						<div>
+							<figure>
+								<a href="Team/progress/img/qianli/raspi_video_streaming.png"><img src="Team/progress/img/qianli/raspi_video_streaming.png"
+									 alt="raspi video streaming over socket using opencv"></a>
+								<figcaption style="text-align: center;">
+									<font size="1"><i>Raspberry Pi video streaming over socket using OpenCV</i></font>
+								</figcaption>
+							</figure>
+							Next week I will be working on our power delivery system, checking our solar charging options, and implementing
+							the video stream into our GUI.<br>
+						</div>
+					</div>
+				</div>
 			</div>
-			<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
+			<!--
+									 Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html"
+									 -->
 			<div id="footer"></div>
 		</div>
 	</div>
