@@ -227,7 +227,7 @@ contact course staff.
 				<div>
 					<figure style="float:left;margin:10px">
 					<!-- <a href="https://i.pinimg.com/736x/f5/26/57/f526579928126cfc315b7bf342b38dc9.jpg"> -->
-						<img src="Team/progress/img/tianjie/week5_PWM_output.PNG" style="width:800px;height:500px;margin-right:20px"></img>
+						<img src="Team/progress/img/tianjie/week5_PWM_output.png" style="width:800px;height:500px;margin-right:20px"></img>
 						<!-- </a> -->
 					<figcaption style="text-align: center;">
 						<font size="2"><i>The PWM output from STM32F4</i></font>
@@ -243,6 +243,20 @@ contact course staff.
 						<font size="2"><i>The Putty UART interface with ESP8266 WiFi module</i></font>
 					</figcaption>
 					</figure>
+				</div>
+				<div>
+					<h4>Week 5:</h4>
+					<b>Date:</b> 9-21-2018
+					<br>
+					<b>Total hours:</b> 18
+					<br>
+					<b>Description of design efforts:</b>
+					In week 5, I set up the microcontroller, the STM32F407. Use cube and HAL library to generate the skeleton of the firmware that we are going to use. I thought about using STM32L4 and STM32F0 family, but F4 has more peripherals compared to F0 and less occupied GPIO for those peripherals compared to L4. Although I have experience in programming F0, and the library are quite similar, it still take me some time to get familiar with the library code and peripheral setting. That reminds me again that if knowledge is not being used all the time, it's quite easy to lose them. I start with a TIM interrupt and blink the LED, then go to PWM to take the work from Arduino, since previously the ESC module is controlled by the PWM signal from Arduino. At first, I found that the voltage of PWM signal is 3V which is not high enough for ESC, so I decided to use a N-MOSFET to create a 5V PWM signal with the same duty cycle. However, it either decrease the voltage or invert the duty cycle which confused me a lot. Later on, I check what I learned in ECE255 and get to know that a MOSFET can only create an inverse signal because of its intrinsic mechanism, and in the circuit, a load is very necessary to drain that voltage. As an engineering student, I feel ashamed that I forgot all of those knowledge that I should command, but in the meanwhile, I feel fortunate that I can still trace them back and gain them again.
+					<br>
+					<br>Another major task is to set up the WiFi module, which is the most important communication bridge in our project. The ESP8266 talk to machine via UART. For convenience, I used the UART module connected to PC to set up connect WiFi first. During that process, I learned that the private IP address that the router gives to a device could change in few days, and I have to assign the ESP8266 a specific IP address to prevent it from changing. After that has been done, open the ESP8266 to the public internet is also a significant step. After the private IP address device is forwarded to public, every with internet access can sent signal to the device through public IP address. All of these are working fine with UART module and Putty interface, but when switching to the STM32F4 board, there is some issue with receiving the right response, and I will keep working on that later on.
+					<br>
+					<br>Next week I'm going to fix the WiFi module problem first, and then make GPS work with the STM32F4.
+					<br>
 				</div>
 			</div>
 
