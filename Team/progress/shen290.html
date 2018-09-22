@@ -150,8 +150,33 @@ contact course staff.
 					</figure>
 				</div>
 				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-				<be>For the next week, I plan to work more on the GUI and interfacing with the Google Map. I also plan to learn about some basic on how to build a boat. We are planning to build the boat body using wood and we are going to the shop to search for appropriate wood type to work on.<br>
+				<br>For the next week, I plan to work more on the GUI and interfacing with the Google Map. I also plan to learn about some basic on how to build a boat. We are planning to build the boat body using wood and we are going to the shop to search for appropriate wood type to work on.<br>
 
+				<h4>Week 5:</h4>
+				<b>Date:</b> 09-18-2018
+				<br>
+				<b>Total hours:</b> 18
+				<br>This week, I worked on building the boat prototype and figuring out how to use PWM to send signals to the ESC to control the speed of the motor. We went to the home depot last weekend to look for the material for prototyping the boat. As searched online for some common material used to build a boat. The material used is mostly balsa, fiberboard, basswood etc. We decided to use fiberboard because it is light and easy to work with. We can cut the board easily without using any advanced machine. We cut the board and used the hot glue gun to stick the board together as shown below. A small test on waterproofing was done shown below and it was proved that the fiberboard can be glued together to make the boat.
+				<div>
+					<figure style="float:left">
+						<img src="Team/progress/img/peiyuan/boat.jpg"
+						 width="350">
+						<figcaption style="text-align: center;">
+							<font size="1"><i>the boat</i></font>
+						</figcaption>
+					</figure>
+					<figure style="float:right">
+						<img src="Team/progress/img/peiyuan/water_test.jpg"
+						 width="350">
+						<figcaption style="text-align: center;">
+							<font size="1"><i>waterproof test</i></font>
+						</figcaption>
+					</figure>
+				</div>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				<br>We were having some issue making the ESC working at the beginning of the week. With the power on and a valid PWM signal, only the fan of the ESC was working. The motor made a wired sound that does not match to any of the expected signals when connected to the power. I searched online and found an Arduino code to set up the ESC and control the speed up and down. The Arduino code worked. I measured the frequency and the duty cycle given by the Arduino and mimicked the waveform using the STM32F4. It did not work. I then realized that the voltage given from the Arduino is 5V whereas the voltage output of the STM32F4 was only 3V. I used a 2N7000 N-MOS to convert the 3V PWM to a 5V PWM with opposite duty cycle. The ESC still won’t work. The problem was that the duty cycle should increase and decrease continuously. It cannot handle a large duty cycle gap. It would stop working when suddenly change the duty cycle from 5% to 10%.
+
+				<br>For the next week, I plan to work on improving the looks of the boat, finding out ways to correctly use the ESC because for now, the initialization process has to happen at the same time when connecting the ESC to the power. I also plan to start looking at how GPS and the compass work.
 
 
 			</div>
