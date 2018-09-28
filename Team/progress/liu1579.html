@@ -270,6 +270,96 @@ contact course staff.
 				the levels of the battery units. I will also involve in helping interfacings between different components and microcontroller.
 
 			</div>
+
+			<div>
+				<h4>Week 6:</h4>
+				<b>Date:</b> 9/28/2018
+				<br>
+				<b>Total hours:</b> 14
+				<br>
+				<b>Description of design efforts:</b>
+				<br> During this week, I mainly worked and involved on four tasks. The first task I worked with Qianli Ma to develop
+				and design the power supply system that works particularly for our circuit to power the Brushless DC Motors and other
+				electronic components. After series discussion between the team and Joe, we decided to use two 8000 mAh Li-Po batteries
+				and one 3000 mAh battery instead of several 3000 mAh Li-Po batteries connecting in parallel with each other. Each Li-Po
+				battery contains three cells and powers their responsible circuit accordingly with interrupting other batteries. The
+				8000 mAh Li-Po battery will be designated to power the two brushless DC motors since these two motors will be drawing
+				most of the power. The 3000 mAh battery will be responsible for powering the conveyor belt motors and other electrical
+				components such as the sensing modules, microcontroller, and WiFi module. Since 8000mAh and 3000 mAh batteries will output
+				higher voltage values than what we required, several voltage regulators are selected to tune down the 11.1V voltage from
+				the battery to 5V and 3.3V. The selected voltage regulators for outputting 5V voltage is OKI-78SR-5/1.5-W36-C. The OKI-78SR
+				suites the project’s need because it could take a range of voltage input from 7V to 36V and regulate the voltage to 5V
+				fixed voltage, and it only draws about 8W power from the power supply. For the 3.3V voltage regulator, the LM1117-N surface
+				mounted regulator is selected since we could find these regulators in school’s electrical shop.
+				<figure>
+					<a href="https://www.digikey.com/product-detail/en/murata-power-solutions-inc/OKI-78SR-5-1.5-W36-C/811-2196-5-ND/2259781?utm_adgroup=Converters&slid=&gclid=Cj0KCQjwuafdBRDmARIsAPpBmVWS79LCsNSjipBvRCDAqgpMf3fNdfnlOLzVvAHiSxjN1CiJxF62YaIaAhVfEALw_wcB"><img
+						 src="Team/progress/img/liushuang/OKI-78SR.png" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<figcaption style="text-align: center;">
+						<font size="2"><i>Selected 5V voltage regulator</i></font>
+					</figcaption>
+				</figure>
+				<figure>
+					<a href="https://www.digikey.com/product-detail/en/texas-instruments/LM1117MPX-3.3-NOPB/LM1117MPX-3.3-NOPBCT-ND/1010516"><img
+						 src="Team/progress/img/liushuang/LM1117.png" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<figcaption style="text-align: center;">
+						<font size="2"><i>Selected 3.3V voltage regulator</i></font>
+					</figcaption>
+				</figure>
+
+				<br>To recharge these batteries from the solar panels, the recharging circuit needs to be equipped with charging protection
+				board and Li-Po battery charging board. Since the solar panels offered by school provide lower voltage output and lower
+				current output, it is necessary to boost the DC voltage up to suite the charging voltage of the Li-Po battery. Due to
+				the nature of the solar panels, the voltage and current output to the charging circuit will not be constant thus may
+				damage the batteries that require constant voltage charging. From Taobao, one DC-to-DC constant voltage constant current
+				module is found and selected to be our battery charging protection board. This module also has an automatic voltage and
+				current adjusting mode so the required voltage and current to charge the Li-Po battery could be achieved by boosting
+				the voltage output of the solar panel to the desired voltage of 12.6V for charging the Li-Po battery. Beside the protection
+				board, the project needs another charging board to support the charging of the Li-Po battery since the battery has three
+				cells. This charging module is designed to charge three cells 11.1V Li-Po battery which is exactly what we need. The
+				module also has short circuit protection which will prevent unnecessary damage to the Li-Po battery since Li-Po battery
+				is fragile and could explode if the circuit gets shorted. With these two important charging protection modules being
+				selected, designing the recharging circuit from solar panels to the Li-Po battery becomes relatively safe and easier.
+				<figure>
+					<a href="https://item.taobao.com/item.htm?spm=a1z0d.6639537.1997196601.121.24317484gihGTL&id=561222986592"><img src="Team/progress/img/liushuang/charging-board.png"
+						 style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<figcaption style="text-align: center;">
+						<font size="2"><i>Battery charging board</i></font>
+					</figcaption>
+				</figure>
+				<figure>
+					<a href="https://item.taobao.com/item.htm?spm=2013.1.20141001.2.374160b5Ya60Up&id=573200526256&scm=1007.12144.95220.42296_0&pvid=50713c99-9eaa-4ffd-bc17-1663f8ea7801&utparam=%7B%22x_hestia_source%22%3A%2242296%22%2C%22x_object_type%22%3A%22item%22%2C%22x_mt%22%3A0%2C%22x_src%22%3A%2242296%22%2C%22x_pos%22%3A2%2C%22x_pvid%22%3A%2250713c99-9eaa-4ffd-bc17-1663f8ea7801%22%2C%22x_object_id%22%3A573200526256%7D"><img
+						 src="Team/progress/img/liushuang/protection-board.png" style="display:block; margin-left: auto; margin-right: auto"
+						 height="350"></a>
+					<figcaption style="text-align: center;">
+						<font size="2"><i>Battery protection board with automatic voltage/current adjusting mode</i></font>
+					</figcaption>
+				</figure>
+				<br>For the battery monitoring IC, we decided to jettison the previous selected LTC6811 battery monitoring IC since this
+				particular IC requires about 11V reference voltage if there are less than five cells to monitor, which makes it harder
+				to design a battery monitoring circuit with this IC since the Li-Po battery has a range of voltage from 9V to 12V, therefore
+				it becomes impossible to input the enough reference voltage to the monitoring IC when the battery is low on the voltage.
+				Therefore, we revisited our designs and discussed with Joe to find more practical options for building the battery monitoring
+				circuit. We found that Differential Amplifier INA148 seems to be a good choice for building the monitoring IC since each
+				amplifier could be assigned to monitor one cell of the battery; then the differential amplifier could output voltage
+				difference in each cell based on the reference voltage which will be zero for our design monitoring circuit. The differential
+				output then will go through two 5k resistors which will lower the voltage value to the microcontroller since the microcontroller
+				only support 3.3V voltage input. Each cell outputs about 3.7V during its operating mode, so the two 5k resistor will
+				divide the output from the differential amplifier by half; and half of the output voltage could be connected into the
+				ADC channels of the microcontroller safely. In the microcontroller, the analog signal will be converted into digital
+				signal and timed two to reflect the real output voltage of the cell.
+				<figure>
+					<a href="http://www.ti.com/lit/ds/symlink/ina148.pdf"><img src="Team/progress/img/liushuang/monitor-circuit.png" style="display:block; margin-left: auto; margin-right: auto"
+						 height="350"></a>
+					<figcaption style="text-align: center;">
+						<font size="2"><i>Sample battery monitor circuit for INA148</i></font>
+					</figcaption>
+				</figure>
+
+				<br>For next week, I will continue to work on electrical schematic design and PCB layout with Qianli Ma. Also, I will
+				start to do some researches on the algorithm regarding the route-navigating according to the selected GPS location. Beside
+				these, I will also finish building the conveyor belt for the boat.
+
+			</div>
 			<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
 			<div id="footer"></div>
 		</div>
