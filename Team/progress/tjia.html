@@ -247,6 +247,37 @@ contact course staff.
 				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 				<div>
 					<h4>Week 6:</h4>
+					<b>Date:</b> 9-28-2018
+					<br>
+					<b>Total hours:</b> 18
+					<br>
+					<b>Description of design efforts:</b>
+					<br>
+					<br>In week6, I keep working on the WiFi module and the communication with the user interface. At the start, I used HTTP protocol and created a server which can be accessed with public internet. It is a very easy access, one can even use IE explorer to get a precise feedback, but the communication rate is slow because it delay for other information that is not needed in our case. Then I looked for a more convenient and economic way to communicate with the user interface. TCP protocol comes to be the best solution. With TCP protocol, the transmission rate is much faster, and neat messages are sent. The ESP8266 module can either create a server or be a client to access an external server using TCP protocol. Since the public address could change when creating a new server on the user interface with different internet connection, but the WiFi source we have on the boat is fixed. Thus making ESP8266 as a server is a clever choice. So far, the TCP signal from user interface can adjust the PWM signal to the ESC and motor rotation speed.
+					<br>
+					<br>Another major step I have is to record the voltage through ADC peripheral. It seems to be an easy step since we’ve all known how to control the brightness of an LED by a potentiometer through ATD and DTA. However, in our project we have a lot voltage need to be monitored through ADC. There are five break beam sensor made by LDR circuitry, whose voltage need to be monitored to see the fullness of the storage room. Besides we also have three battery groups and probably 9 cells in total to drive the circuity and motors, and the voltage of each of the cell needs to be monitored. We need over 10 ADC channels in total. With that amount of channels open, the sampling rate, interrupt rate and memory used are all need to be reconsidered. Now, the micro can transfer multiple channel inputs without interference, after I set the reasonable sampling cycles and open DMA mode.
+					<br>
+					<br>My next step is to get read from GPS and Compass. So far, the GPS UART transfer is done neatly, but the NMEA form is hard to parse into float coordinates. I will work on that next week.
+					<figure style="float:left;margin:10px">
+					<!-- <a href="https://i.pinimg.com/736x/f5/26/57/f526579928126cfc315b7bf342b38dc9.jpg"> -->
+						<img src="Team/progress/img/tianjie/week6_debug.PNG" style="width:958px;height:323x;margin-right:20px"></img>
+						<!-- </a> -->
+					<figcaption style="text-align: center;">
+						<font size="2"><i>The TCP received value in Debug mode</i></font>
+					</figcaption>
+					</figure>
+					<figure style="float:left;margin:10px">
+					<!-- <a href="https://i.pinimg.com/736x/f5/26/57/f526579928126cfc315b7bf342b38dc9.jpg"> -->
+						<img src="Team/progress/img/tianjie/week6_new_print_turbo.png" style="width:400px;height:300x;margin-right:20px"></img>
+						<!-- </a> -->
+					<figcaption style="text-align: center;">
+						<font size="2"><i>The newly printed turbo model</i></font>
+					</figcaption>
+					</figure>
+				</div>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				<div>
+					<h4>Week 7:</h4>
 					<b>Date:</b> 9-21-2018
 					<br>
 					<b>Total hours:</b> 18
