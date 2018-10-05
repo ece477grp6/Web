@@ -104,6 +104,8 @@ contact course staff.
 				<b>Date:</b> 09-14-2018
 				<br>
 				<b>Total hours:</b> 15
+				<br>
+				<b>Description of design efforts:</b>
 				<br>This week I was mainly working on the Graphical User Interface. I used PyQt to make the GUI. The interface mainly contains a web engine for the google map interface, a GraphicsView for the camera, a GraphicsView for the compass, an info board and two tabs that switch between the two operation mode. All the components are put in some kind of Layout such that it will adjust the size in proportion to the window size. Layout stretch is used to adjust the scale of the components inside the layout. One challenging part of the GUI is to interface with the google map API. I managed to set up a web view using JavaScript and stored as HTML inside the python code in order to display the actual map. There were many problems encountered during the process since Qt5.5 deleted the web widget and created a web engine class instead. All the functions inside this class were changed and thus all the existing codes interfacing with the google map cannot execute. The way to solve this problem is to use a call back function to collect the return value of the function since the run javascript function of qt5.5 is asynchronous. In order to use the Google Map API, one must register for a API key. I got a one-year free trial and every time Google Map API was used, it would be recorded as shown below. Makers can be added by clicking on the map and the coordinates values will be reported.<br>
 				
 				<br>
@@ -156,6 +158,8 @@ contact course staff.
 				<b>Date:</b> 09-18-2018
 				<br>
 				<b>Total hours:</b> 18<br>
+				<br>
+				<b>Description of design efforts:</b>
 				<br>This week, I worked on building the boat prototype and figuring out how to use PWM to send signals to the ESC to control the speed of the motor. We went to the home depot last weekend to look for the material for prototyping the boat. As searched online for some common material used to build a boat. The material used is mostly balsa, fiberboard, basswood etc. We decided to use fiberboard because it is light and easy to work with. We can cut the board easily without using any advanced machine. We cut the board and used the hot glue gun to stick the board together as shown below. A small test on waterproofing was done shown below and it was proved that the fiberboard can be glued together to make the boat.
 				<div>
 					<figure style="float:left">
@@ -183,6 +187,8 @@ contact course staff.
 				<b>Date:</b> 09-28-2018
 				<br>
 				<b>Total hours:</b> 20<br>
+				<br>
+				<b>Description of design efforts:</b>
 				<br>This week, I worked on developing the Graphics User Interface, communicating with the Wi-Fi module using TCP, and configuring the GPS module.<br>
 				<br>For the GUI, everytime a user clicked on the google map, a marker would be added and the latitude and the longitude would be stored. A polyline would be drawn to indicate the expected path of the boat. When right clicked on the marker, the marker would be removed from the map. All the processed related to the google map were done in Javascript and HTML and signals and channels were created to interact with the Python GUI program. The GUI also allows users to save the existing routine on the map to a file and load a file onto the map. All markers are listed on the list below the map. A compass was also added to the GUI. Every time the angle changed, the compass would update to its new position. The GUI is shown below.<br>
 				<figure>
@@ -211,18 +217,20 @@ contact course staff.
 				<b>Date:</b> 10-05-2018
 				<br>
 				<b>Total hours:</b> 20<br>
+				<br>
+				<b>Description of design efforts:</b>
 				<br>This week, I worked on configuring GPS and Wi-Fi communication, re-setting all the pin in/out on the micro for the Qianli to draw the schematic and preparing the application materials for the Cornell Cup.
 
 				<br>For the GPS module, I decided to extract $GPRMC, the Recommended Minimum sentence C, since it contains more desired information such as speed in knots. The information format is shown in the picture below. Initially, both the Wi-Fi and the GPS is using UART to receive one-byte data at a time. The GPS was working fine but the Wi-Fi module may omit some important information since the transfer rate can not deal with them both. The Wi-Fi has a random chance to be able to initialize. Therefore, I change the GPS UART to receive 512 bytes at a time to extract useful information appeared first and ignore the rest of the information. The GPS information is updating at a faster speed than our constraints, thus ignoring some updates will not cause any problem to our project. <br>
 				<figure>
-					<img src="Team/progress/img/peiyuan/GPRMC.PNG" style="width:600px; display:block; margin-left: auto; margin-right: auto">
+					<img src="Team/progress/img/peiyuan/GPRMC.PNG" style="display:block; margin-left: auto; margin-right: auto">
 					<figcaption style="text-align: center;">
 						<font size="1"><i>GPRMC</i></font>
 					</figcaption>
 				</figure>
 				<br>I realized this week that although we have 3 ADC and each ADC has 16 channels, there are only 16 ADC channels on STM32F4 instead of 48, as what we expected before. The channel 1 of  ADC1, 2 and 3 share the same pin. The only reason having 3 ADC is to increase the sample speed, which in our case become useless. Many pins on the STM32F4 Cube default layout are already occupied by peripherals like USB which is unused but took the pin for ADC channels. I disabled all the peripherals that we are not going to use and open all the pins and peripherals that we are going to use. Many existing peripherals need to change pins to enable more peripherals to the micro. The existing codes need to be modified in order to accommodate these changes.<br>
 				<figure>
-					<img src="Team/progress/img/peiyuan/micro.png" style="width:600px; display:block; margin-left: auto; margin-right: auto">
+					<img src="Team/progress/img/peiyuan/micro.png" style="width:700px; display:block; margin-left: auto; margin-right: auto">
 					<figcaption style="text-align: center;">
 						<font size="1"><i>Micro Pinout</i></font>
 					</figcaption>
