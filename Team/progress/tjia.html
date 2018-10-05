@@ -278,12 +278,33 @@ contact course staff.
 				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 				<div>
 					<h4>Week 7:</h4>
-					<b>Date:</b> 9-21-2018
+					<b>Date:</b> 10-5-2018
 					<br>
-					<b>Total hours:</b> 18
+					<b>Total hours:</b> 13
 					<br>
 					<b>Description of design efforts:</b>
 					<br>
+					<br>In week7, I work with Peiyuan together on the software part, and have done GPS communication properly. On the microcontroller, there are two UART peripheral open for GPS and Wi-Fi module. Initially, the buffer of both UART is single byte, which means, they read character by character. However, the GPS message transmission is very fast and leads to message leaking on the Wi-Fi communication. Then I change the buffer from a single byte to 512 byte, because our system does not require an extreme high speed refresh rate of GPS coordinates. A large buffer will discard some overlapped message but can at least extract one intact useful message with all the information we need. With this method, both GPS and Wi-Fi module can talk to micro well.
+					<br>
+					<br>Another aspect of the communication is between the micro and the user interface. On the micro side, every time it reboots, ESP8266 will be reset and get ready to be connected, once “OK” message is received. It is constantly hearing from the user interface, and once receive “command” from the user interface, it sends a series of information including GPS, compass, battery, and fullness of storage to the user interface. If the interface cannot connect to ESP8266, or any error or exception happens during the communication, it will print “connection error”. If interface successfully sends the message but cannot hear from the microcontroller, it will try to reconnect the Wi-Fi module and keep sending a message.
+					<br>
+					<br>Besides software part, I also help design the MOSFET switching circuit, and test the IC and other components we have. Next week I will prepare for the design review and test the Compass module.
+					<figure style="float:left;margin:10px">
+					<a href="https://www.amazon.com/Proto-Advantage-QFN-16-DIP-16-Adapter-pitch/dp/B00JU3I316">
+						<img src="Team/progress/img/tianjie/QFN_16_0.5mm_3x3.jpg" style="width:425px;height:340x"></img>
+						</a>
+					<figcaption style="text-align: center;">
+						<font size="2"><i>TProto-Advantage QFN-16 to DIP-16 SMT Adapter</i></font>
+					</figcaption>
+					</figure>
+					<figure style="float:left;margin:10px">
+					<!-- <a href="https://i.pinimg.com/736x/f5/26/57/f526579928126cfc315b7bf342b38dc9.jpg"> -->
+						<img src="Team/progress/img/tianjie/MOSFET circuit.png" style="width:400px;height:300x;margin-right:20px"></img>
+						<!-- </a> -->
+					<figcaption style="text-align: center;">
+						<font size="2"><i>The newly printed turbo model</i></font>
+					</figcaption>
+					</figure>
 				</div>
 			</div>
 
