@@ -365,6 +365,181 @@ contact course staff.
 		</div>
 	</div>
 
+	<div>
+		<h4>Week 7:</h4>
+		<b>Date:</b> 10/05/2018
+		<br>
+		<b>Total hours:</b> 20
+		<br>
+		<b>Description of design efforts:</b>
+		<br> For this week, I mainly worked on building the prototype conveyor belt for collecting the garbage and building actual
+		circuit models for testing the functionality of each designed circuit. During the first half of the week, building the
+		prototype conveyor belt was my primary objective. Since building this prototype involved cooperating with the other parts
+		of the boat, I had to look up the CAD models and made the length of the conveyor belt long enough to ensure the smooth
+		transportation of garbage from the water surface to the garbage storing unit. The prototype conveyor belt dimension would
+		be 30cm*28cm; two motors driven by the 5V voltage would be equipped to on the top of the conveyor belt system to ensure
+		maximum torque and rotate the top bearing bar of the conveyor belt. The top and bottom bearing bars were hollow round shape
+		and made of plastic. Only one 30cm long metal bar was needed and inserted into the bottom plastic tube to ensure the rotation
+		of the bottom bar since the top bearing bar was rotated by the motion of the motors. Between the top and bottom bearing
+		bars, I used Polyester Heavy Duty Tablecloth with holes to ensure maximum friction to ensure the transporting garbage could
+		stay on the belt while being lifted up to the top. After finished the building process, Qianli and I tested the capability
+		of the conveyor and confirmed that the conveyor could transport trashes such as water bottle. But after several runs of
+		test, the motors started to lose tight on the plastic nob I used to stabilize and attach the motors to the plastic tube
+		bearing since the motors were only hot glutted to the nobs due to the strong torque posed by the motors. I discovered that
+		the motor was actually D shape; therefore, a special nob with D shape opening needed to be made to suite the motor so the
+		motors will not lose tight to the nob and provide constant strong torque to the top bearing of the conveyor belt. The team
+		is still waiting on the special nobs to be 3D printed.
+
+		<figure>
+			<img src="Team/progress/img/liushuang/conveyorbelt.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+			<figcaption style="text-align: center;">
+				<font size="2"><i>Prototyped Conveyor Belt</i></font>
+			</figcaption>
+		</figure>
+		<br>After building the conveyor belt, the team met a problem with designing a switch that will turn off the conveyor belt
+		motor when the battery output voltage drop down to 9V meaning the battery is low on battery life. When the battery is fully
+		charged, the battery unit could output about 12V; when the battery is on its normal operating voltage, the voltage output
+		will be 11.1V; and when the battery life is low, only about 9V voltage will be outputted by the battery. Since the 5V voltage
+		regulator only requires about 7V-8V of voltage to output constant 5V voltage and the battery runs low voltage output of
+		9V, the motor would not be shut off by itself when the battery is low on its life. Therefore, a switch that could shut
+		down the conveyor belt motors when the microcontroller detects a 9V low voltage output from the battery is much needed,
+		since we want to avoid drawing voltage from the battery by the motors continuously. I consulted with Joe to discuss our
+		problem and found a solution of utilizing a NMOSFET that could input wide ranges of current and voltage, so the NMOSFET
+		could be turned on when the Gate takes a high voltage or signal (1) and turned off when the Gate receives a low voltage
+		or signal (0). The conveyor belt motors are connected between the input voltage and the Drain of the NMOSFET, and the Source
+		of the NMOSFET will be connected to the ground. By utlizing this switch circuit, the microcontroller could send a simple
+		signal to the Gate of the NMOSFET and turn off the motor when the battery is low on voltage. This circuit was built and
+		tested as shown, but the microcontroller was not involved in the testing yet.
+		<figure>
+			<img src="Team/progress/img/liushuang/motorswitch.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+			<figcaption style="text-align: center;">
+				<font size="2"><i>Motor NMOSFET switch circuit</i></font>
+			</figcaption>
+		</figure>
+		<br>After the switch circuit designing and constructing, I started to work on soldering the circuit for battery monitor
+		IC and USB connector circuit since the team wanted to test their functionalities before finalizing the PCB and schematic
+		designs. The battery monitor IC circuit is constructed utilizing a differential amplifier which output a voltage with 1:1
+		ratio to the input voltage value, the output voltage could be adjusted by inputting a reference voltage. The circuit was
+		built and tested and confirmed the output was matched to the input voltage of 5V using the power supply. After the circuit
+		testing, I found a problem with this particular differential amplifier which requires +/- voltage supply to the differential
+		amplifier which might not be easy to provide by the project’s power supply. Then I discussed this issue with my teammates
+		and decided to simply use two 10kohm resistor as voltage dividers to directly measure the voltage value of the battery
+		cell. It turns out the voltage dividers work fine and communicate with the microcontroller’s ADC without any issues; simply
+		multiply the ADC data by two will recover the voltage value of the battery cell. At the end of this week, I also soldered
+		a breakout board for testing the USB connector which powers the on-board Raspberry Pi and Wifi router. The actual picture
+		of the board and schematic is shown below. By constructing this circuit, the intention is to “trick” the Raspberry Pi and
+		Wifi router to recognize the power from battery as actual power supply. The soldered circuit worked fine and turned on
+		the Raspberry Pi as expected.
+		<figure>
+			<img src="Team/progress/img/liushuang/IC-connection.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+			<figcaption style="text-align: center;">
+				<font size="2"><i>Battery Monitor Differential Amplifier breakout board with connection</i></font>
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="Team/progress/img/liushuang/USBconnector.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+			<figcaption style="text-align: center;">
+				<font size="2"><i>USB connector breakout board</i></font>
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="Team/progress/img/liushuang/USBcircuit.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+			<figcaption style="text-align: center;">
+				<font size="2"><i>USB circuit schematic</i></font>
+			</figcaption>
+		</figure>
+		<br>For next week, I plan on preparing the prototype for the Midterm Design Review with my teammates and do more researches
+		on designing the algorithm of automatic steering and driving based on the given GPS points.
+
+	</div>
+	<div>
+		<h4>Week 7:</h4>
+		<b>Date:</b> 10/05/2018
+		<br>
+		<b>Total hours:</b> 20
+		<br>
+		<b>Description of design efforts:</b>
+		<br> For this week, I mainly worked on building the prototype conveyor belt for collecting the garbage and building actual
+		circuit models for testing the functionality of each designed circuit. During the first half of the week, building the
+		prototype conveyor belt was my primary objective. Since building this prototype involved cooperating with the other parts
+		of the boat, I had to look up the CAD models and made the length of the conveyor belt long enough to ensure the smooth
+		transportation of garbage from the water surface to the garbage storing unit. The prototype conveyor belt dimension would
+		be 30cm*28cm; two motors driven by the 5V voltage would be equipped to on the top of the conveyor belt system to ensure
+		maximum torque and rotate the top bearing bar of the conveyor belt. The top and bottom bearing bars were hollow round shape
+		and made of plastic. Only one 30cm long metal bar was needed and inserted into the bottom plastic tube to ensure the rotation
+		of the bottom bar since the top bearing bar was rotated by the motion of the motors. Between the top and bottom bearing
+		bars, I used Polyester Heavy Duty Tablecloth with holes to ensure maximum friction to ensure the transporting garbage could
+		stay on the belt while being lifted up to the top. After finished the building process, Qianli and I tested the capability
+		of the conveyor and confirmed that the conveyor could transport trashes such as water bottle. But after several runs of
+		test, the motors started to lose tight on the plastic nob I used to stabilize and attach the motors to the plastic tube
+		bearing since the motors were only hot glutted to the nobs due to the strong torque posed by the motors. I discovered that
+		the motor was actually D shape; therefore, a special nob with D shape opening needed to be made to suite the motor so the
+		motors will not lose tight to the nob and provide constant strong torque to the top bearing of the conveyor belt. The team
+		is still waiting on the special nobs to be 3D printed.
+
+		<figure>
+			<img src="Team/progress/img/liushuang/conveyorbelt.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+			<figcaption style="text-align: center;">
+				<font size="2"><i>Prototyped Conveyor Belt</i></font>
+			</figcaption>
+		</figure>
+		<br>After building the conveyor belt, the team met a problem with designing a switch that will turn off the conveyor belt
+		motor when the battery output voltage drop down to 9V meaning the battery is low on battery life. When the battery is fully
+		charged, the battery unit could output about 12V; when the battery is on its normal operating voltage, the voltage output
+		will be 11.1V; and when the battery life is low, only about 9V voltage will be outputted by the battery. Since the 5V voltage
+		regulator only requires about 7V-8V of voltage to output constant 5V voltage and the battery runs low voltage output of
+		9V, the motor would not be shut off by itself when the battery is low on its life. Therefore, a switch that could shut
+		down the conveyor belt motors when the microcontroller detects a 9V low voltage output from the battery is much needed,
+		since we want to avoid drawing voltage from the battery by the motors continuously. I consulted with Joe to discuss our
+		problem and found a solution of utilizing a NMOSFET that could input wide ranges of current and voltage, so the NMOSFET
+		could be turned on when the Gate takes a high voltage or signal (1) and turned off when the Gate receives a low voltage
+		or signal (0). The conveyor belt motors are connected between the input voltage and the Drain of the NMOSFET, and the Source
+		of the NMOSFET will be connected to the ground. By utlizing this switch circuit, the microcontroller could send a simple
+		signal to the Gate of the NMOSFET and turn off the motor when the battery is low on voltage. This circuit was built and
+		tested as shown, but the microcontroller was not involved in the testing yet.
+		<figure>
+			<img src="Team/progress/img/liushuang/motorswitch.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+			<figcaption style="text-align: center;">
+				<font size="2"><i>Motor NMOSFET switch circuit</i></font>
+			</figcaption>
+		</figure>
+		<br>After the switch circuit designing and constructing, I started to work on soldering the circuit for battery monitor
+		IC and USB connector circuit since the team wanted to test their functionalities before finalizing the PCB and schematic
+		designs. The battery monitor IC circuit is constructed utilizing a differential amplifier which output a voltage with 1:1
+		ratio to the input voltage value, the output voltage could be adjusted by inputting a reference voltage. The circuit was
+		built and tested and confirmed the output was matched to the input voltage of 5V using the power supply. After the circuit
+		testing, I found a problem with this particular differential amplifier which requires +/- voltage supply to the differential
+		amplifier which might not be easy to provide by the project’s power supply. Then I discussed this issue with my teammates
+		and decided to simply use two 10kohm resistor as voltage dividers to directly measure the voltage value of the battery
+		cell. It turns out the voltage dividers work fine and communicate with the microcontroller’s ADC without any issues; simply
+		multiply the ADC data by two will recover the voltage value of the battery cell. At the end of this week, I also soldered
+		a breakout board for testing the USB connector which powers the on-board Raspberry Pi and Wifi router. The actual picture
+		of the board and schematic is shown below. By constructing this circuit, the intention is to “trick” the Raspberry Pi and
+		Wifi router to recognize the power from battery as actual power supply. The soldered circuit worked fine and turned on
+		the Raspberry Pi as expected.
+		<figure>
+			<img src="Team/progress/img/liushuang/IC-connection.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+			<figcaption style="text-align: center;">
+				<font size="2"><i>Battery Monitor Differential Amplifier breakout board with connection</i></font>
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="Team/progress/img/liushuang/USBconnector.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+			<figcaption style="text-align: center;">
+				<font size="2"><i>USB connector breakout board</i></font>
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="Team/progress/img/liushuang/USBcircuit.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+			<figcaption style="text-align: center;">
+				<font size="2"><i>USB circuit schematic</i></font>
+			</figcaption>
+		</figure>
+		<br>For next week, I plan on preparing the prototype for the Midterm Design Review with my teammates and do more researches
+		on designing the algorithm of automatic steering and driving based on the given GPS points.
+
+	</div>
+
 	<!--JS-->
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery-migrate-1.1.1.js"></script>
