@@ -215,16 +215,16 @@ contact course staff.
 
 				<br>For the GPS module, I decided to extract $GPRMC, the Recommended Minimum sentence C, since it contains more desired information such as speed in knots. The information format is shown in the picture below. Initially, both the Wi-Fi and the GPS is using UART to receive one-byte data at a time. The GPS was working fine but the Wi-Fi module may omit some important information since the transfer rate can not deal with them both. The Wi-Fi has a random chance to be able to initialize. Therefore, I change the GPS UART to receive 512 bytes at a time to extract useful information appeared first and ignore the rest of the information. The GPS information is updating at a faster speed than our constraints, thus ignoring some updates will not cause any problem to our project. <br>
 				<figure>
-					<img src="Team/progress/img/peiyuan/GPRMC.png" style="width:600px; display:block; margin-left: auto; margin-right: auto">
+					<img src="Team/progress/img/peiyuan/GPRMC.PNG" style="width:600px; display:block; margin-left: auto; margin-right: auto">
 					<figcaption style="text-align: center;">
-						<font size="1"><i>GPS info</i></font>
+						<font size="1"><i>GPRMC</i></font>
 					</figcaption>
 				</figure>
 				<br>I realized this week that although we have 3 ADC and each ADC has 16 channels, there are only 16 ADC channels on STM32F4 instead of 48, as what we expected before. The channel 1 of  ADC1, 2 and 3 share the same pin. The only reason having 3 ADC is to increase the sample speed, which in our case become useless. Many pins on the STM32F4 Cube default layout are already occupied by peripherals like USB which is unused but took the pin for ADC channels. I disabled all the peripherals that we are not going to use and open all the pins and peripherals that we are going to use. Many existing peripherals need to change pins to enable more peripherals to the micro. The existing codes need to be modified in order to accommodate these changes.<br>
 				<figure>
 					<img src="Team/progress/img/peiyuan/micro.png" style="width:600px; display:block; margin-left: auto; margin-right: auto">
 					<figcaption style="text-align: center;">
-						<font size="1"><i>GPS info</i></font>
+						<font size="1"><i>Micro Pinout</i></font>
 					</figcaption>
 				</figure>
 				<br>We are planning to participate in the Cornell Cup. Therefore, we are now brainstorming some potential ideas, challenges, and solutions to further improve the project. I am planning to prepare for the midterm design review next week and work on the powerpoint. I also plan to modify the current code for the micro to work with the new pin layout.
