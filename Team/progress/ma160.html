@@ -448,45 +448,57 @@ smtpserver.quit()
 						</div>
 					</div>
 				</div>
+				<!-- Week 6 -->
 				<div>
+					<h4>Week 6:</h4>
+					<b>Date:</b> Sept 28, 2018
+					<br>
+					<b>Total hours:</b> 20
+					<b>Description of design efforts:</b>
+					<br> During this week I mainly worked on our PCB schematics using eagle. By this time we have most of our parts
+					wired up on the schematics. For our battery monitoring IC we decided to use an INA148 differential amplifier and
+					a voltage divider circuit to monitor each of our battery cells' voltage level. We also made the decision to use
+					two large capacity batteries for driving our two BLDC motors and one 3000mAh battery to provide power for our
+					micro, modem, Raspberry Pi, and conveyer belt. Also I managed to speed up our video stream from our Raspberry Pi
+					to our user client from under 2 frames per second to ~21 frames per second by enabling video capture on the
+					Raspberry Pi on a different thread and transferring them in the YUV colorspace. However I have not finished
+					writing
+					the code to display YUV colorspace pictures in the RGB color space yet. This is what our video feed looks right
+					now.
+					<br>
 					<div>
-						<h4>Week 4:</h4>
-						<b>Date:</b> Sept 28, 2018
-						<br>
-						<b>Total hours:</b> 20
-						<b>Description of design efforts:</b>
-						<br> During this week I mainly worked on our PCB schematics using eagle. By this time we have most of our parts
-						wired up on the schematics. For our battery monitoring IC we decided to use an INA148 differential amplifier and
-						a voltage divider circuit to monitor each of our battery cells' voltage level. We also made the decision to use
-						two large capacity batteries for driving our two BLDC motors and one 3000mAh battery to provide power for our
-						micro, modem, Raspberry Pi, and conveyer belt. Also I managed to speed up our video stream from our Raspberry Pi
-						to our user client from under 2 frames per second to ~21 frames per second by enabling video capture on the
-						Raspberry Pi on a different thread and transferring them in the YUV colorspace. However I have not finished
-						writing
-						the code to display YUV colorspace pictures in the RGB color space yet. This is what our video feed looks right
-						now.
-						<br>
-						<div>
-							<figure>
-								<a href="Team/progress/img/qianli/video_stream_yuv.png"><img src="Team/progress/img/qianli/video_stream_yuv.png"
-									 alt="raspi streaming yuv at 20fps"></a>
-								<figcaption style="text-align: center">
-									<font size="1"><i>Raspberry Pi video streaming using YUV at ~21 FPS</i></font>
-								</figcaption>
-							</figure>
-						</div>
-						<div>
-							<br> I also setup dynamic DNS service for our raspberry pi so that we do not need to worry about IP's changing
-							during reboots of our project.<br>
-							In the following week, I will be completing our schematics and doing some
-							initial layout for our PCB, also
-							finishing up the code for YUV colorspace to RGB colorspace conversion for our video stream. Then I would follow
-							up by modifying the code into functions rather just one main code that I'm running right now so I could provide
-							just one function to Peiyuan to incorporate it to our GUI instead of having her to call multiple functions and
-							passing all kind of arguments between functions.
-						</div>
+						<figure>
+							<a href="Team/progress/img/qianli/video_stream_yuv.png"><img src="Team/progress/img/qianli/video_stream_yuv.png"
+								 alt="raspi streaming yuv at 20fps"></a>
+							<figcaption style="text-align: center">
+								<font size="1"><i>Raspberry Pi video streaming using YUV at ~21 FPS</i></font>
+							</figcaption>
+						</figure>
+					</div>
+					<div>
+						<br> I also setup dynamic DNS service for our raspberry pi so that we do not need to worry about IP's changing
+						during reboots of our project.<br>
+						In the following week, I will be completing our schematics and doing some
+						initial layout for our PCB, also
+						finishing up the code for YUV colorspace to RGB colorspace conversion for our video stream. Then I would follow
+						up by modifying the code into functions rather just one main code that I'm running right now so I could provide
+						just one function to Peiyuan to incorporate it to our GUI instead of having her to call multiple functions and
+						passing all kind of arguments between functions.
 					</div>
 				</div>
+				<!-- Week 7 -->
+				<h4>Week 7:</h4>
+				<b>Date:</b> Oct 5, 2018
+				<br>
+				<b>Total hours:</b> 24
+				<b>Description of design efforts:</b>
+				<br>This week I proceeded on our schematics and layout for our PCB, changing passive components choice to make the
+				best
+				decisions based on availability and price constraints. The following images shows our first iteration of our PCB
+				design.
+				This is our power distribution schematics, it is used to power all our onboard devices including our Raspberry Pi
+				and
+
 			</div>
 			<!--
 									 Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html"
