@@ -487,22 +487,95 @@ smtpserver.quit()
 					</div>
 				</div>
 				<!-- Week 7 -->
-				<h4>Week 7:</h4>
-				<b>Date:</b> Oct 5, 2018
-				<br>
-				<b>Total hours:</b> 24
-				<b>Description of design efforts:</b>
-				<br>This week I proceeded on our schematics and layout for our PCB, changing passive components choice to make the
-				best
-				decisions based on availability and price constraints. The following images shows our first iteration of our PCB
-				design.
-				This is our power distribution schematics, it is used to power all our onboard devices including our Raspberry Pi
-				and
+				<div>
+					<h4>Week 7:</h4>
+					<b>Date:</b> Oct 5, 2018
+					<br>
+					<b>Total hours:</b> 24
+					<b>Description of design efforts:</b>
+					<br>
+					This week I proceeded on our schematics and layout for our PCB, changing passive components choice to make the
+					best
+					decisions based on availability and price constraints. The following images shows our first iteration of our PCB
+					design.
+					<br>
 
+					<div>
+						<figure><a href="Team/progress/img/qianli/pcb_v1_power.png"><img src="Team/progress/img/qianli/pcb_v1_power.png"
+								 alt="PCB Version 1 Power Distribution"></a>
+							<figcaption style="text-align:center">
+								<font size="1"><i>PCB Version 1 Power Distribution Schematics</i></font>
+							</figcaption>
+						</figure>
+					</div>
+					<div>
+						This is our power distribution schematics, it is used to power all our onboard devices including our Raspberry
+						Pi and our LTE hotspot which are both power by USB connectors. When powering the USB connectors we have to
+						provide<a href="http://obddiag.net/usb-power.html">2.7V on D+ and 2V on D- to achieve a maximum of 2.1A each
+							output</a>
+						2.7V on D+ and 2V on D- to achieve a maximum of 2.1A output on each of these two devices.
+						<br>
+						The <a href="https://power.murata.com/data/power/oki-78sr.pdf">OKI-78SR-5/1.5-W36-C</a> switching power supply
+						can
+						provide 5V 1.5A to all of our 5V devices including the <a href="http://www.advanced-monolithic.com/pdf/ds1117.pdf">AMS1117</a>
+						linear power regulator which provides 3.3V to our micro and other 3.3V peripherals.
+						<br>
+					</div>
+					<div>
+						<figure><a href="Team/progress/img/qianli/pcb_v1_batt_mon.png"><img src="Team/progress/img/qianli/pcb_v1_batt_mon.png"
+								 alt="PCB Version 1 Battery Monitor"></a>
+							<figcaption style="text-align: center">
+								<font size="1"><i>PCB Version 1 Battery Monitor Schematics</i></font>
+							</figcaption>
+						</figure>
+					</div>
+					<div>
+						<figure><a href="Team/progress/img/qianli/pcb_v1_micro.png"><img src="Team/progress/img/qianli/pcb_v1_micro.png"
+								 alt="PCB Version 1 Microcontroller">
+								<figcaption style="text-align:center">
+									<font size="1"><i>PCB Version 1 Microcontroller Connections</i></font>
+								</figcaption>
+							</a></figure>
+					</div>
+					<div>
+						<br>
+						Above shows our microcontroller layout, power regulation, oscillator setup, programming pins, reset pins, and
+						other essential circuitry to program and operate the microcontroller. The jumper pins enable us to switch between
+						OTA firmware update mode from the ESP8266 amd the onboard programming pins.
+						<br>
+					</div>
+					<div>
+						<figure><a href="Team/progress/img/qianli/pcb_v1_signals.png"><img src="Team/progress/img/qianli/pcb_v1_signals.png">
+								<figcaption style="text-align:center">
+									<font size="1"><i>PCB Version 1 Connection Schematics</i></font>
+								</figcaption>
+							</a> </figure>
+					</div>
+					<div>
+						<br>
+						Most of our parts that are used are different connectors to peripherals as we want to make the system as modular
+						as possible. I put an compass on our main PCB board so that if magnetic interface is not too powerful, we could
+						use the magnetic ic module on our main PCB instead of on our breakout board shown in the following image.
+						<br>
+					</div>
+					<div>
+						<figure><a href="Team/progress/img/qianli/pcb_v1_compass.png"><img src="Team/progress/img/qianli/pcb_v1_compass.png"
+								 alt="PCB V1 Compass">
+								<figcaption style="text-align:center">
+									<font size="1"><i>PCB Version 1 Compass Daughterboard</i></font>
+								</figcaption>
+							</a></figure>
+					</div>
+					<div>
+						<br>
+						The following week I would be revising our PCB design based on what we learned and the feedback we got. I will
+						also finish the actual layout of the baord.
+						<br>
+					</div>
+				</div>
 			</div>
-			<!--
-									 Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html"
-									 -->
+			<!-- Instantiate global footer. Any
+								 changes to the footer should be made through the top-level file "footer.html" -->
 			<div id="footer"></div>
 		</div>
 	</div>
