@@ -567,8 +567,48 @@ smtpserver.quit()
 					</div>
 					<div>
 						The following week I would be revising our PCB design based on what we learned and the feedback we got. I will
-						also finish the actual layout of the baord.
+						also finish the actual layout of the board.
 						<br>
+					</div>
+				</div>
+				<div>
+					<div>
+						<h4>Week 8 & 9:</h4>
+						<b>Date:</b> Oct 19, 2018
+						<br>
+						<b>Total hours:</b> 40
+						<b>Description of design efforts:</b>
+						<br>
+						During these two weeks, I finalized our PCB design shown in the following image.
+						<br>
+					</div>
+					<div>
+						<figure><a href="Team/progress/img/qianli/version1_final_layout.png"><img src="Team/progress/img/qianli/version1_final_layout.png"
+								 , alt="PCB V1 Final Layout" width="800"></a>
+							<figcaption style="text-align: center">
+								<font size="1"><i>PCB Version 1 Final Layout</i></font>
+							</figcaption>
+						</figure>
+					</div>
+					<div>
+						I have ordered the board from Elecrow this week. During this week I'm almost finished with the Raspberry Pi video
+						stream, I am able to convert the YUV colorspace back to RGB colorspace and almost finished converting it to a
+						standalone function for the user interface to call upon. However, I noticed an issue with our initial design
+						using
+						LTE for our onboard WiFi solution, the ISP does not provide wan address for LTE hotspot device and the hotspot
+						sits behind possibly multiple NAT's. This is an issue since that both of our user interface and the actual boat
+						is
+						most likely both on LTE connections when deployed. Thus I am setting up an forwarding server which has a direct
+						WAN ip so that both the boat and the user interface can be treated as clients, enabling TCP, UDP forwarding
+						between our devices so they can communicate. Communication routes are described below: <br>
+						ESP8266<->LTE hotspot <-> Server <-> LTE connected user interface <br>
+									Raspi -> LTE hotspot-> Server -> LTE connected user interface <br>
+									This week Shuang and I started soldering some of our power components, namely the CC-CV power supplies which
+									we
+									already adjusted to the desired voltage and the battery protection boards.<br>
+									In the following week I will be finishing the forwarding server and setting up the Raspberry Pi so it
+									automatically connects to the server and starts the video stream when the user interface is connected to the
+									server as well.<br>
 					</div>
 				</div>
 			</div>
