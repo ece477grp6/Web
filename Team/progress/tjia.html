@@ -308,10 +308,41 @@ contact course staff.
 				</div>
 				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 				<div>
-					<h4>Week 8:</h4>
-					<b>Date:</b> 10-5-2018
+					<h4>Week 9:</h4>
+					<b>Date:</b> 10-19-2018
 					<br>
-					<b>Total hours:</b> 13
+					<b>Total hours:</b> 19
+					<br>
+					<b>Description of design efforts:</b>
+					<br>
+					<br>In week9, I work on Compass module MLX90393 Magnetic Node, the last module that we need to navigate the boat. The Compass IC is a 3mm small chip, first I solder it on a breakout board to give it a test. Then, the MLX90393 supports two communication method, SPI and I2C. I first tried SPI, but somehow it didn’t give and feedback, and I think this might be caused by hardware connection issue. The failure in SPI, lead me to implement I2C, and surprising it started to give feedback. However, the value it sent back, doesn’t make any sense to me, and I stuck there for a long while. Later on, with the help of Qianli, I found a post with an appropriate reference of code of using MLX90393. After that, I realized that, before it starts to read any value, I need to write some register to set sensitivity and some other parameter to make it functional on our way.
+					<br>
+					<br>Even though the compass starts to send x and y data of magnetic intensity, I expected that could be related to north on the map, but seems like without the help of GPS, with the data from the Compass module itself, there is no way to find north. I will look more into the way to find the direction of the boat.
+					<br>
+					<br>Another thing I work on is to complete the prototype. I think the package of the boat is actually a huge issue of us. The material we are going to use should be determined soon. The weight of the boat is significantly changed, so we need to redesign the height of the boat. As to collect the garbage, I find it hard to collect plastic bottle using a inclined belt, even with a fairly large friction. All of these issues should be put on table and resolve soon.
+					<br>
+					<figure style="margin:10px">
+<!-- 					<a href="https://www.amazon.com/Proto-Advantage-QFN-16-DIP-16-Adapter-pitch/dp/B00JU3I316"> -->
+						<img src="Team/progress/img/tianjie/week9_belt.png" style="width:350px;height:500x"></img>
+<!-- 						</a> -->
+					<figcaption style="text-align: center;">
+						<font size="2"><i>The belt design to lift bottle</i></font>
+					</figcaption>
+					</figure>
+					<figure style="margin:10px">
+					<!-- <a href="https://i.pinimg.com/736x/f5/26/57/f526579928126cfc315b7bf342b38dc9.jpg"> -->
+						<img src="Team/progress/img/tianjie/week9_compass_circuitry.PNG" style="width:650px;height:400x;margin-right:20px"></img>
+						<!-- </a> -->
+					<figcaption style="text-align: center;">
+						<font size="2"><i>The I2C circuitry of MLX90393</i></font>
+					</figcaption>
+					</figure>
+				</div>
+				<div>
+					<h4>Week 10:</h4>
+					<b>Date:</b> 10-19-2018
+					<br>
+					<b>Total hours:</b> 19
 					<br>
 					<b>Description of design efforts:</b>
 					<br>

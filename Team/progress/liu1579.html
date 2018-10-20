@@ -447,6 +447,112 @@ contact course staff.
 				on designing the algorithm of automatic steering and driving based on the given GPS points.
 
 			</div>
+
+			<div>
+				<h4>Week 9:</h4>
+				<b>Date:</b> 10/19/2018
+				<br>
+				<b>Total hours:</b> 22
+				<br>
+				<b>Description of design efforts:</b>
+				<br> For this week’s progress, I mainly worked with Qianli Ma to set up the power supply system for our project, so the
+				motors and other relative electronic components could be powered on first for further testing. To set up the power supply
+				system, we needed to configure the powering and charging modules properly first, so Qianli and I went on and configured
+				the charging modules. The charging modules consist two modules: one is the charging board module and another one is the
+				protection board module. The set-up process is relatively simple since the instructions and datasheet illustrating the
+				pin-outs are already given. For setting up the charging board module, I first connected the power supply which outputs
+				regular 24V and 15A with 12AWG wires to the charging board; the reason for using 12AWG wires is that the current flowing
+				through the system is high so the wire needs to be robust and withstands 15A current. After the initial connection to
+				the charging board input pin and ground, the output pin which will be connected to the battery unit was connected to
+				the ground pin of the charging board to short the charging circuit, creating a “charging state” for the charging board
+				so the further adjustments could be made to the charging board. Then a DMM monitoring the current and voltage output
+				was connected to the charging board’s additional four pin-out to measure the current and voltage output. There are two
+				tall potentiometers which adjust the constant current and voltage output on the charging board. By tweaking these two
+				potentiometers, I was able to adjust the voltage output to about 12.7V which is necessary for the battery to be charged.
+				The DMM voltage reading figure is shown below.
+
+				<figure>
+					<img src="Team/progress/img/liushuang/w9/chargingboardsetup.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
+					<figcaption style="text-align: center;">
+						<font size="2"><i>8000mAh battery charging board set up</i></font>
+					</figcaption>
+				</figure>
+				<figure>
+					<img src="Team/progress/img/liushuang/w9/DMMreading.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<figcaption style="text-align: center;">
+						<font size="2"><i>DMM reading for the constant voltage output</i></font>
+					</figcaption>
+				</figure>
+				<br>After the initial set-up for the first charging board was successful, I continued to set up the second charging board.
+				There was another different charging board needed to be set up for charging the 3000mAh Li-Po battery, since the 3000mAh
+				battery does not require as much current as the 8000mAh battery. Therefore, the constant current setting for the 3000mAh
+				battery charging board needs to be smaller, comparing to the 8000mAh battery charging board. Next, Qian li and I started
+				to solder the 12AWG wires to the battery charging protection board, the reason for using the 12AWG is like the reason
+				for charging board. The C- pin will be connected to the ground of the charging circuit, the P- pin will be connected
+				to the ground of the power supply system, and the B- pin will be connected to the negative pin of the battery unit. With
+				the battery charging and protection system being set-up, the further testing of the power supply system could be carried
+				on and tested later for prototyping.
+				<figure>
+					<img src="Team/progress/img/liushuang/w9/chargingboard2.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
+					<figcaption style="text-align: center;">
+						<font size="2"><i>3000mAh battery charging board set up</i></font>
+					</figcaption>
+				</figure>
+				<figure>
+					<img src="Team/progress/img/liushuang/w9/charging-board.png" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
+					<figcaption style="text-align: center;">
+						<font size="2"><i>Charging protection board for battery charging</i></font>
+					</figcaption>
+				</figure>
+				<br>Afterward, I started to construct the voltage division circuit which will be used to monitor the battery life by
+				measuring the voltage values in one, two, and three cells of the battery. The battery monitoring circuit is shown below.
+				After the circuit is constructed, I used the in-lab power supply to generate a 12.6V voltage which mirrors the voltage
+				output of the battery unit. Each branch monitors different amounts of cells in the battery. The 6.2Kohm in series with
+				18Kohm branch monitors three cells; the 5.1Kohm in series with 8.2Kohm branch monitors two cells; the 2.4Kohm in series
+				with 680ohm branch monitors one cells. The voltages from different cells will be divided down to about 3.2V to represent
+				the maximum charge of the battery, and the voltage measurements will be measured by the microcontroller’s ADC channels
+				and sent back to user-interface for further interpretation. The measurements of the voltage division circuit will be
+				measured through 6.2Kohm resistor, 5.1Kohm resistor, and the 2.4Kohm resistor with relative to the ground. After the
+				testing with measuring each voltage division outputs, all circuit branches outputted expected voltage measuring of about
+				3.2V, confirming the voltage division method for monitoring the battery life works as expected.
+				<figure>
+					<img src="Team/progress/img/liushuang/w9/BMcircuit.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<figcaption style="text-align: center;">
+						<font size="2"><i>Battery Monitoring Circuit</i></font>
+					</figcaption>
+				</figure>
+				<figure>
+					<img src="Team/progress/img/liushuang/w9/circuitconstruction.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
+					<figcaption style="text-align: center;">
+						<font size="2"><i>Battery Monitoring Circuit constructed</i></font>
+					</figcaption>
+				</figure>
+				<br>Next, with the D-shaft connector being 3D printed, I was able to continue the building process with the conveyor
+				belt. The D-shaft connectors work great on holding the motor in place with the bearing thus providing more grip to the
+				conveyor belt so heavier trashes could be transported upward firmly. Then the connectors were drill with screw holes
+				so that the connector and the bearing bar could be connected more tightly and will not lose tight during the operating
+				phrase. Afterward, the conveyor belt was mounted to the prototype boat that Tianjie and I assembled.
+				<figure>
+					<img src="Team/progress/img/liushuang/w9/boat-prototype.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
+					<figcaption style="text-align: center;">
+						<font size="2"><i>Main frame of the prototyped boat</i></font>
+					</figcaption>
+				</figure>
+				<figure>
+					<img src="Team/progress/img/liushuang/w9/screwhole.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<figcaption style="text-align: center;">
+						<font size="2"><i>Closer look for tighting the connector</i></font>
+					</figcaption>
+				</figure>
+				<br>With the boat’s main frame being constructed and the conveyor belt improved, the plan for next week is to assemble
+				the power supply system, the charging system, and the brushless DC motors to the prototype boat so the boat could be
+				on water and being tested.
+			</div>
 			<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
 			<div id="footer"></div>
 		</div>
