@@ -256,6 +256,48 @@ contact course staff.
 				</figure>
 				<br>Our project also passed the Round 1 of the Cornell Cup and we are accepted as a Semi-Finalist in the Cornell Cup. I plan to work more on integrate the firmware on the microcontroller and work on developing the algorithm on the GUI.
 				<br><br><br>
+				<h4>Week 10:</h4>
+				<b>Date:</b> 10-26-2018
+				<br>
+				<b>Total hours:</b> 10<br>
+				<br>
+				<b>Description of design efforts:</b>
+				<br>
+				This week, I worked on researching the usage of the compass. There is a youtube video I found that is extremely useful for our case. The project was a drone with a compass, motors, GPS, etc. The design is similar to ours in the way that the components used in the project have a large overlap. Link to the video: https://www.youtube.com/watch?v=vPGChdmfKl0
+
+				<br>It first discussed the difference between magnetic north and geographic north. The difference varies in different locations. It also talked about the interference around the sensor. Brushed DC motor and high current wiring will have a significant influence on the compass whereas the brushless DC motors have a relatively low influence. The result for brushed DC motor is shown in the figures below.
+				<figure>
+					<img src="Team/progress/img/peiyuan/brushed.png" style="width:700px; display:block; margin-left: auto; margin-right: auto">
+					<figcaption style="text-align: center;">
+						<font size="1"><i>Brushed DC Motor</i></font>
+					</figcaption>
+				</figure>
+				<br>The algorithm for calculating the geographic north is shown in the figure below.
+				<figure>
+					<img src="Team/progress/img/peiyuan/compass.png" style="width:700px; display:block; margin-left: auto; margin-right: auto">
+					<figcaption style="text-align: center;">
+						<font size="1"><i>Compass Algorithm</i></font>
+					</figcaption>
+				</figure>
+				<br>Calibration is important in this case because of the interference and the difference between the magnetic north and geographic north. Without the calibration, the measured values will not be a perfect circle and thus will result in inaccurate measurements. The difference displayed in the figures below.
+				<div>
+					<figure style="float:left">
+						<img src="Team/progress/img/peiyuan/calibration1.jpg"
+						 width="350">
+						<figcaption style="text-align: center;">
+							<font size="1"><i>With Calibration</i></font>
+						</figcaption>
+					</figure>
+					<figure style="float:right">
+						<img src="Team/progress/img/peiyuan/calibration2.jpg"
+						 width="350">
+						<figcaption style="text-align: center;">
+							<font size="1"><i>Without Calibration</i></font>
+						</figcaption>
+					</figure>
+				</div>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				<br>For the next week, I plan to work on integrating the firmware together. We need to have a boat ready to test in a lake before Thanksgiving. We just started prototyping our boat so I am going to make sure that we have a programmed microcontroller ready to test.<br><br><br>
 
 
 			</div>
