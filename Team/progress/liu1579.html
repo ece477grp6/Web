@@ -594,6 +594,78 @@ contact course staff.
 				<br>For next week, we will start to build the wooden frame of the boat since the team already have all the measurements
 				and specifications for the final product boat.
 			</div>
+
+			<div>
+				<h4>Week 11:</h4>
+				<b>Date:</b> 11/02/2018
+				<br>
+				<b>Total hours:</b> 23
+				<br>
+				<b>Description of design efforts:</b>
+				<br> For this week, I mostly worked on populating the PCB with Qianli Ma and using laser cutter at BIDC to cut out the
+				wooden hull for the boat. To populate the PCB in a orderly manner, I first soldered the XT-60 connectors with fly wires
+				since the PCB’s holes for the XT60 connector are a little bit off thus the XT60 connector could not directly plug into
+				the PCB, which will be fixed for the final product’s PCB. For now, we decided to fly wire the XT60 connector into the
+				PCB since flying wire into the PCB should not affect the XT60 connector’s performance. The picture of soldered XT60 connector
+				with fly wires is shown below. After the soldering with XT60 connector was finished, I started to solder the XT60 connector
+				into the PCB’s holes.
+
+				<figure>
+					<img src="Team/progress/img/liushuang/w11/XT60.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<figcaption style="text-align: center;">
+						<font size="2"><i>XT60 connector</i></font>
+					</figcaption>
+				</figure>
+				<br>Since we decided to solder and test the power supply part of the PCB first, we soldered the three XT60 connector
+				onto the PCB, so the PCB power, conveyor belt, and the PCB power switch could be connected and powered by the battery
+				units or switch. To make the power switch button for the PCB power switch, I utilized a 2-pin latch switch and flied
+				wire with XT60 female connector, so the switch could be connected with the XT60 male connector on the PCB. Afterward,
+				Qianli and I soldered other electronic components onto the PCB such as voltage regulators for 5V and 3.3V, USB female
+				connectors, resistors, and capacitors. Also, we included a red surface-mounted LED to indict the state of the power for
+				the PCB. As the power supply part of the PCB was populated, I started to test the functionality of the power supply unit.
+				By connecting a 3000mAh battery unit into the PCB’s power supply connector, the red LED lighted up as expected, indicting
+				the power supply part of the PCB worked properly. To test the functionality of the voltage regulators, I first connect
+				the DMM in parallel with one of the voltage outputs from the 3.3V voltage regulator, and the DMM’s measurement indicted
+				about 3.3V voltage meaning the voltage regulator successfully regulate the voltage from the battery down to the expected
+				3.3V voltage. After, I connected the Raspberry Pi into the PCB’s USB female connector. The Raspberry Pi turned on as
+				expected indicting the USB provided enough power and voltage to turn on the Raspberry Pi.
+				<figure>
+					<img src="Team/progress/img/liushuang/w11/populatedboard.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
+					<figcaption style="text-align: center;">
+						<font size="2"><i>Power supply part of PCB populated</i></font>
+					</figcaption>
+				</figure>
+				<figure>
+					<img src="Team/progress/img/liushuang/w11/boardTEST.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<figcaption style="text-align: center;">
+						<font size="2"><i>Power testing of the PCB</i></font>
+					</figcaption>
+				</figure>
+				<br>After finishing populated the power supply part of the PCB, I turned my attentions to cutting the wooden hull in
+				BIDC using the laser cutter. To make the wooden hull, I used the CAD files that Tianjie made and utilized the laser cutting
+				machine in BIDC to cut the wooden board into desired shape. With the assistances from the BIDC’s officers, I adapted
+				the use of the laser cutting machine quickly with setting the CAD hull into the desired area of wooden board. The calibrating
+				the laser point took a little more time, but once it was set, the calibration did not have to be changed for the same
+				material. Once the preparation was done, the laser cutting machine could finish the rest of the work. As the pictures
+				shown below, all pieces required to build the wooden boat hull were cut out as expected and did not have deviation between
+				each piece.
+				<figure>
+					<img src="Team/progress/img/liushuang/w11/cut.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<figcaption style="text-align: center;">
+						<font size="2"><i>Wooden board being cut into pieces</i></font>
+					</figcaption>
+				</figure>
+				<figure>
+					<img src="Team/progress/img/liushuang/w11/pieces.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<figcaption style="text-align: center;">
+						<font size="2"><i>All pieces being cut by the laser cutter</i></font>
+					</figcaption>
+				</figure>
+
+				<br>For next week, I will continue to work on populating the PCB and start to build the wooden boat hull with the team.
+
+			</div>
 			<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
 			<div id="footer"></div>
 		</div>
