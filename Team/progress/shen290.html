@@ -56,7 +56,7 @@ contact course staff.
 				<h2>Progress Report for Peiyuan Shen</h2>
 
 				<h4>Week 1:</h4>
-				<b>Date:</b> 08-24-2018
+				<b>Date:</b> 201808-24-20182018 
 				<br>
 				<b>Total hours:</b> 5
 				<br>
@@ -318,6 +318,30 @@ contact course staff.
 				</figure>
 				<br>For the next week, we plan to finish prototyping the boat and I plan on testing the PCB board and programming the micro on the PCB board.
 				<br><br><br>
+
+				<h4>Week 12:</h4>
+				<b>Date:</b> 11-09-2018
+				<br>
+				<b>Total hours:</b> 15<br>
+				<br>
+				<b>Description of design efforts:</b>
+				<br>
+				This week, I worked on implementing the GUI and format the Wi-Fi communication between the boat and the user interface. I also tested the compass outside and recorded sets of data to make plots. The plots looks pretty close to a circle, however, the center of the circle is not at the zero point. One possible solution is to subtract certain amount to all the point such that the center would come back to the zero point and thus there will be an accurate angle measurement.<br>
+
+				<br>For the UI part, I finished formating the command sending to the boat form the UI and the motors can now be controlled through the GUI in manual mode. The program can also interpret the message given by the boat and converting the information. The location information given by the GPS will be converted to decimal unit which is the unit used by google map. The current boat location given through GPS is shown on the GUI constantly and the path is recorded by a blue line as shown in the pictures below.<br>
+				<figure>
+					<img src="Team/progress/img/peiyuan/current_location.png" style="width:700px; display:block; margin-left: auto; margin-right: auto">
+					<figcaption style="text-align: center;">
+						<font size="1"><i>Current Location on the GUI</i></font>
+					</figcaption>
+				</figure>
+				<figure>
+					<img src="Team/progress/img/peiyuan/tcp_terminal.png" style="width:700px; display:block; margin-left: auto; margin-right: auto">
+					<figcaption style="text-align: center;">
+						<font size="1"><i>Message sending, receiving, and interpreting</i></font>
+					</figcaption>
+				</figure>
+				<br>For the next week, I plan to test the micro that is soldered on the PCB board and start working on following route algorithm when have time.<br><br><br>
 
 
 
