@@ -724,6 +724,57 @@ contact course staff.
 				<br>For next week, we will continue to work on building the boat and assemble all electrical part onto the board.
 
 			</div>
+
+			<div>
+				<h4>Week 13:</h4>
+				<b>Date:</b> 11/16/2018
+				<br>
+				<b>Total hours:</b> 25
+				<br>
+				<b>Description of design efforts:</b>
+				<br> Before the week started, Qianli and I continued working on making the boat frame with fiberglass in the BIDC. We
+				also drilled several holes on the fiberglass boat frame, so the waterjet motors and conveyor belt motors could be installed
+				inside later. After the drilling part was finished in the BIDC, we brought the fiberglass frame back to lab and started
+				to assemble the whole boat for the final project. For assembling the boat frame together, we used gorilla glue to assemble
+				the part together. Since the glue takes about ten hours to dry and see the result of the gluing, I turned my focus to
+				test the functionality of our PCB while waiting on the glue to dry.
+
+				<figure>
+					<img src="Team/progress/img/liushuang/w13/Boat.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<figcaption style="text-align: center;">
+						<font size="2"><i>Boat frame being glued and assembled</i></font>
+					</figcaption>
+				</figure>
+				<br>Most of the PCB was populated, so I started the testing the microcontroller first to blink a LED mounted on the PCB.
+				As different programs being sent to the PCB’s micro from the STMF4 Discovery board, we were able to toggle the LED or
+				turn on the LED as an indication that the PCB’s micro is now programmable, and work as expected. After the PCB’s micro
+				was confirmed working, the team moved on to test the Wifi Module interfacing with the PCB’s micro. The Wifi module’s
+				LED blinked the moment we plug in the module into the connector on the PCB indicating the Wifi module received power
+				directly from the PCB. After series of testing through the MCU program, we confirmed that the Wifi module on PCB communicates
+				with the user-interface without problems.
+				<br>The testing problem happened at testing the ADC function of the MCU, and the problem is that the digital data read
+				by the MCU were not the expected values that we tested before. Since the battery life detection and storage room detection
+				both depend on the functionality of ADC, running into problems with MCU’s ADC is something needed to be solved ASAP.
+				To solve the ADC problem, I first measured the test points of voltage output from the voltage division circuit directly
+				with DMM and found out that all voltage output produced the expected voltage value of about 3.2V, meaning that the problem
+				was related to the microcontroller mounted on the PCB. After discussing the problem with the instructors, we decided
+				to take out the microcontroller on the PCB and remount a new micro on the PCB. As the new PCB being mounted on the PCB,
+				we tested the ADC again, but this time another problem appears that test points of voltage division circuit output produced
+				voltage value about 1.9V in one of the test points, but the rest of the test point still produced the same 3.2V expected
+				voltage value. We found out that our program was not modified to input total of 14 analog values and transfer into digital
+				data. After the code was modified to intake total of 14 analog data, we reprogramed the micro on the PCB and tested the
+				ADC functionality. The ADC’s values finally represent the voltage division circuit output which is about 4096 in the
+				ADC’s register value.
+				<figure>
+					<img src="Team/progress/img/liushuang/w13/PCB.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<figcaption style="text-align: center;">
+						<font size="2"><i>PCB populated being tested</i></font>
+					</figcaption>
+				</figure>
+
+				<br>For next week, I will continue test the functionality of the PCB and work on modifying the ESC’s wire to fit the
+				connector of our PCB.
+			</div>
 			<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
 			<div id="footer"></div>
 		</div>
