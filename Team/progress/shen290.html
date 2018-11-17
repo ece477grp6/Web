@@ -351,7 +351,7 @@ contact course staff.
 				<br>
 				<b>Description of design efforts:</b>
 				<br>
-				This week, I worked on programming and testing the micro on the PCB board. The reset circuit was designed wrong and the jumper save for the use of reset is completely useless. To solve the problem, we need to cut three wires on the PCB board and fly another three wires. For now, we are just going to connect the reset wire from the development board directly to the corresponding pin. In order to manually reset the micro, one need to connect a wire from point to point twice. 
+				This week, I worked on programming and testing the micro on the PCB board. The reset circuit was designed wrong and the jumper save for the use of reset is completely useless. To solve the problem, we need to cut three wires on the PCB board and fly another three wires. For now, we are just going to connect the reset wire from the development board directly to the corresponding pin. In order to manually reset the micro, one need to connect a wire from point to point twice. <br>
 
 				<br>I programed the micro and it can now blink a LED, connect to Wi-Fi and  read battery voltage through ADC and send all the corresponding formatted information to the user interface as a string. The PCB board now and the formatted data are as below. We had some issue with ADC DMA reading and I figured out that the problem was that we did not change the ranking of the channels so that there is just one channel that occupied all the ranks. After I changed that, it is working fine now.
 
@@ -368,7 +368,7 @@ contact course staff.
 					</figcaption>
 				</figure>
 				
-				<br>The data received from the boat, seperated by coma, are: GPS x and y coordinates, speed in knots, x and y magnitude of compass, followed by 14 ADC values, including 9 battery voltages and 5 LDR voltages.
+				<br>The data received from the boat, seperated by coma, are: GPS x and y coordinates, speed in knots, x and y magnitude of compass, followed by 14 ADC values, including 9 battery voltages and 5 LDR voltages.<br>
 
 				<br>For the next week, I plan to finish programming the micro and test the micro with GPS and compass information and let the micro control the duty cycle of the PWM for the motors according to the commands received from the user interface. I realized that it is getting cold these days and we really need to let the boat tested on a lake before the lake froze.<br><br><br>
 
