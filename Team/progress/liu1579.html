@@ -61,8 +61,10 @@ contact course staff.
 				<b>Total hours:</b> -Enter the number of hours you worked this week here-
 				<br>
 				<b>Description of design efforts:</b>
-				<br> -Discuss your design efforts here. Remember to follow the guidelines presented in the Progress Report Policy, available
-				<a href="https://engineering.purdue.edu/ece477/Course/Policies/">here</a>. This is a template entry; simply copy/paste
+				<br> -Discuss your design efforts here. Remember to follow the guidelines presented in the Progress Report Policy,
+				available
+				<a href="https://engineering.purdue.edu/ece477/Course/Policies/">here</a>. This is a template entry; simply
+				copy/paste
 				this entry when doing progress reports each week.</br>
 
 				<br>
@@ -74,17 +76,28 @@ contact course staff.
 				<b>Total hours:</b> 6
 				<br>
 				<b>Description of design efforts:</b>
-				<br> During the second week, I mainly worked on identifying major constrains and potential problems that might pose potential
-				obstacles which maybe stymie our progress in the futures. I successfully identified several problems and constrains such
-				as the voltage thresh-hold values potentially for the motors, the size of the battery that the boat might need, and the
-				different modules that the boat might need to communicate with user interface compatibly. After identifying the problems
-				and constrains, I worked with the team to select potential microcontrollers and modules for the design project. To suit
-				the need of transmitting image signal and GPS coordinate signal from the boat to the user interface and meeting the power
-				constrains since the boat would be powered by 18650 batteries, I selected the STM32 low power series as the main microcontroller,
-				but the specific model of STM32 is still under team discussion. With the microcontroller being decided, the LTE cellular
-				module was also being decided, which is STM32-C2C/LTE IoT. With those important microcontroller and modules being selected
-				and putted into order, the next step of mine would be working with the team to design the actual circuit and the physical
-				boat itself. Additionally, I worked on parts of the functional specification assignment with the team which is the team
+				<br> During the second week, I mainly worked on identifying major constrains and potential problems that might pose
+				potential
+				obstacles which maybe stymie our progress in the futures. I successfully identified several problems and constrains
+				such
+				as the voltage thresh-hold values potentially for the motors, the size of the battery that the boat might need, and
+				the
+				different modules that the boat might need to communicate with user interface compatibly. After identifying the
+				problems
+				and constrains, I worked with the team to select potential microcontrollers and modules for the design project. To
+				suit
+				the need of transmitting image signal and GPS coordinate signal from the boat to the user interface and meeting the
+				power
+				constrains since the boat would be powered by 18650 batteries, I selected the STM32 low power series as the main
+				microcontroller,
+				but the specific model of STM32 is still under team discussion. With the microcontroller being decided, the LTE
+				cellular
+				module was also being decided, which is STM32-C2C/LTE IoT. With those important microcontroller and modules being
+				selected
+				and putted into order, the next step of mine would be working with the team to design the actual circuit and the
+				physical
+				boat itself. Additionally, I worked on parts of the functional specification assignment with the team which is the
+				team
 				assignment for the week.
 
 			</div>
@@ -97,19 +110,32 @@ contact course staff.
 				<b>Total hours:</b> 10
 				<br>
 				<b>Description of design efforts:</b>
-				<br> During the first half of the week, I started to identify and select specific electronic components that the project
-				needs and discussed with my team to finalize the candidate lists for each component. With the constraints of voltages
-				of 3.3V to 5V, power limits since the boat and all microcontroller would be powered by the 18650 battery units, numbers
-				of I/O pins, and functions of the microcontroller required because of the nature of the project involving multiple components
-				and modules cooperating with each other. Thus, selecting the brushless DC motors for the boat and the garbage conveyor
-				belt became a crucial step for further selections of the microcontroller with these design constraints in mind. First,
-				I selected the Light Dependent Resistors as the main component of the features of detecting whether the garbage storing
-				unit is full or not. since the other break beam sensors’ sensing distance is either too long or too short for the needs,
-				making an LDR controlled transistor circuit with a red laser beam becomes the best option with easy controlling of the
-				sensing distance. So, I built an LDR circuit making a LED lights on when the LDR could no longer detect the light source.
-				The LED could be replaced by directly connecting to the microcontroller, making the LED into a merely analog output value
-				and could be converting into a digital signal value thus could be further interpreted and processed by the microcontroller.
-				In the circuit shown below, the potentiometer is used to adjust the resistance of the output voltage value so the voltage/power
+				<br> During the first half of the week, I started to identify and select specific electronic components that the
+				project
+				needs and discussed with my team to finalize the candidate lists for each component. With the constraints of
+				voltages
+				of 3.3V to 5V, power limits since the boat and all microcontroller would be powered by the 18650 battery units,
+				numbers
+				of I/O pins, and functions of the microcontroller required because of the nature of the project involving multiple
+				components
+				and modules cooperating with each other. Thus, selecting the brushless DC motors for the boat and the garbage
+				conveyor
+				belt became a crucial step for further selections of the microcontroller with these design constraints in mind.
+				First,
+				I selected the Light Dependent Resistors as the main component of the features of detecting whether the garbage
+				storing
+				unit is full or not. since the other break beam sensors’ sensing distance is either too long or too short for the
+				needs,
+				making an LDR controlled transistor circuit with a red laser beam becomes the best option with easy controlling of
+				the
+				sensing distance. So, I built an LDR circuit making a LED lights on when the LDR could no longer detect the light
+				source.
+				The LED could be replaced by directly connecting to the microcontroller, making the LED into a merely analog output
+				value
+				and could be converting into a digital signal value thus could be further interpreted and processed by the
+				microcontroller.
+				In the circuit shown below, the potentiometer is used to adjust the resistance of the output voltage value so the
+				voltage/power
 				output would not exceed the microcontroller's limit.
 				<figure>
 					<a href="https://www.build-electronic-circuits.com/ldr-circuit-diagram"><img src="Team/progress/img/liushuang/LDR circuit1.jpg"
@@ -119,16 +145,26 @@ contact course staff.
 							</i></font>
 					</figcaption>
 				</figure>
-				<br>Brushless DC motors is selected as the main drivers for the boat and the conveyor belt. The ASR-00016 brushless DC
-				motors is selected as the motor for conveyor belt because of its relatively high torque, motor speed, and low price.
-				Another brushless DC motor featuring Electronic Speed Control becomes the better choice than the brush DC motor, since
-				it would be easier to monitor and control the speed of the boat. 9T 4370KV + waterproof with ESC was picked because this
-				specific module features relatively high ESC continuous and burst current and low price. Its size and weight are also
-				within the constraints of the boat. I also started to do some researches and studies about the ESC and learn about the
-				ESC firmware that would require the interfacing with the microcontroller STM32L4 on boat. The circuit designing for powering
-				and controlling the ESC with microcontroller is also under the way. Beside those tasks, I also helped the team to select
-				other components such as WiFi module, and GPS module. I also started to design the software and firmware algorithm with
-				the team, trying to come up with an algorithm which would constantly adjust the direction of the boat toward a fixed
+				<br>Brushless DC motors is selected as the main drivers for the boat and the conveyor belt. The ASR-00016 brushless
+				DC
+				motors is selected as the motor for conveyor belt because of its relatively high torque, motor speed, and low
+				price.
+				Another brushless DC motor featuring Electronic Speed Control becomes the better choice than the brush DC motor,
+				since
+				it would be easier to monitor and control the speed of the boat. 9T 4370KV + waterproof with ESC was picked because
+				this
+				specific module features relatively high ESC continuous and burst current and low price. Its size and weight are
+				also
+				within the constraints of the boat. I also started to do some researches and studies about the ESC and learn about
+				the
+				ESC firmware that would require the interfacing with the microcontroller STM32L4 on boat. The circuit designing for
+				powering
+				and controlling the ESC with microcontroller is also under the way. Beside those tasks, I also helped the team to
+				select
+				other components such as WiFi module, and GPS module. I also started to design the software and firmware algorithm
+				with
+				the team, trying to come up with an algorithm which would constantly adjust the direction of the boat toward a
+				fixed
 				set coordinate. This algorithm would be performed in the computer through the user-interface.
 				<figure>
 					<a href="https://www.ebay.com/itm/9T-4370KV-Brushless-Motor-60A-ESC-Speed-Controller-Combo-ME720-for-1-10-RC-Car/192601909191?hash=item2cd7f7e7c7:g:kroAAOSwpdBbTw1F"><img
@@ -146,8 +182,10 @@ contact course staff.
 						<font size="2"><i>Sample BLDC circuit I studied to understand the working machenism of BLDC interface</i></font>
 					</figcaption>
 				</figure>
-				<br>With each component being properly selected, the next step would be moving into the actual design stages for powering
-				the BLDC Motors and interface the Electronic Speed Control with the microcontroller, and design and build the actual
+				<br>With each component being properly selected, the next step would be moving into the actual design stages for
+				powering
+				the BLDC Motors and interface the Electronic Speed Control with the microcontroller, and design and build the
+				actual
 				boat with team members.
 
 			</div>
@@ -158,44 +196,65 @@ contact course staff.
 				<b>Total hours:</b> 15
 				<br>
 				<b>Description of design efforts:</b>
-				<br> For the first half of the week, I started to build the prototype circuit of the Light Dependent Resistor for detecting
-				the capacity of the circuit. The design was relatively simple in designing phase involving an essential Light Dependent
-				Resistor connecting with the base of the a 2N3906 PNP transistor and a 1K ohm resistor and a 2K ohm resistor; the emitter
-				end is connected directly to the battery, and the collector is attached with a red LED to indicate the sensing of the
-				Light Dependent Resistor. The PNP transistor on this particular circuit functions more like a switch which will output
-				a low voltage value 0.32V and turn off the LED when the LDR detects a direct light source and output a relatively high
-				voltage value 1.67V and turn on the LED when the LDR could not detect any direct light source. To interface this circuit
-				with the microcontroller and make it work as a capacity indicator, the microcontroller could be connected in parallel
-				with the LED output thus monitoring and recording the analog voltage value. In the microcontroller, the analog voltage
-				output gets converted to the digital data and store in a memory address which will be sent to the user-interface through
-				UART peripheral via WiFi communication. I got the LDR from the ECE supply room, the resistance of the LDR when detecting
-				no light is about 4K ohm and the resistance of the LDR when detect a direct light source is about 0.15K ohm. The PNP
-				transistor used is 2N3906, which is different from the original design component. Thus, the design for the break beam
-				sensing circuit is modified to accommodate the existing components, and the 10K ohm potentiometer is removed since there
-				will be no need to adjust the voltage output of the LED after team discussion about the microcontroller interfacing.
+				<br> For the first half of the week, I started to build the prototype circuit of the Light Dependent Resistor for
+				detecting
+				the capacity of the circuit. The design was relatively simple in designing phase involving an essential Light
+				Dependent
+				Resistor connecting with the base of the a 2N3906 PNP transistor and a 1K ohm resistor and a 2K ohm resistor; the
+				emitter
+				end is connected directly to the battery, and the collector is attached with a red LED to indicate the sensing of
+				the
+				Light Dependent Resistor. The PNP transistor on this particular circuit functions more like a switch which will
+				output
+				a low voltage value 0.32V and turn off the LED when the LDR detects a direct light source and output a relatively
+				high
+				voltage value 1.67V and turn on the LED when the LDR could not detect any direct light source. To interface this
+				circuit
+				with the microcontroller and make it work as a capacity indicator, the microcontroller could be connected in
+				parallel
+				with the LED output thus monitoring and recording the analog voltage value. In the microcontroller, the analog
+				voltage
+				output gets converted to the digital data and store in a memory address which will be sent to the user-interface
+				through
+				UART peripheral via WiFi communication. I got the LDR from the ECE supply room, the resistance of the LDR when
+				detecting
+				no light is about 4K ohm and the resistance of the LDR when detect a direct light source is about 0.15K ohm. The
+				PNP
+				transistor used is 2N3906, which is different from the original design component. Thus, the design for the break
+				beam
+				sensing circuit is modified to accommodate the existing components, and the 10K ohm potentiometer is removed since
+				there
+				will be no need to adjust the voltage output of the LED after team discussion about the microcontroller
+				interfacing.
 				The circuit schematic and graphical demonstrations are shown below.
 
 				<figure>
-					<img src="Team/progress/img/liushuang/LDR-modified.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/LDR-modified.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>Modified break beam sensing circuit</i></font>
 					</figcaption>
 				</figure>
 				<figure>
-					<img src="Team/progress/img/liushuang/LEDon.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/LEDon.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>LED on when no direct light to the LDR</i></font>
 					</figcaption>
 				</figure>
 				<figure>
-					<img src="Team/progress/img/liushuang/LEDoff.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/LEDoff.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>LED off when direct light into the LDR</i></font>
 					</figcaption>
 				</figure>
-				<br>Beside modifying and building the break beam sensing circuit, I also started to design the circuit for connecting
-				the motor with the ESC and to the microcontroller. By researching the brushless DC motor and the ESC, turns out that
-				some ESCs require special receivers to program the ESCs first to drive the motors with the ESCs. More researches and
+				<br>Beside modifying and building the break beam sensing circuit, I also started to design the circuit for
+				connecting
+				the motor with the ESC and to the microcontroller. By researching the brushless DC motor and the ESC, turns out
+				that
+				some ESCs require special receivers to program the ESCs first to drive the motors with the ESCs. More researches
+				and
 				progresses will be made during the weekend to program the ESCs so both motors could be driven by the ESCs.
 				<figure>
 					<a href="http://www.headsuphobby.com/Connecting-an-ESC-to-Motor-Battery-Receiver_ep_55-1.html"><img src="Team/progress/img/liushuang/sample ESC circuit.png"
@@ -204,8 +263,10 @@ contact course staff.
 						<font size="2"><i>Sample ESC circuit I looked up</i></font>
 					</figcaption>
 				</figure>
-				<br>For next week, I will start to work on making the actual boat using wood with teammates. I will also start to interface
-				electrical components with the microcontroller through multiple peripherals once the development environment being set
+				<br>For next week, I will start to work on making the actual boat using wood with teammates. I will also start to
+				interface
+				electrical components with the microcontroller through multiple peripherals once the development environment being
+				set
 				up by the teammates.
 
 			</div>
@@ -217,39 +278,59 @@ contact course staff.
 				<b>Total hours:</b> 15
 				<br>
 				<b>Description of design efforts:</b>
-				<br> During this week, I mainly worked on several tasks involving interfacing ESC and motors with Arduino. Powering the
-				ESC with motor was done by supplying the ESCs with the LiPo battery which will be powering 12V to the ESCs and motors.
-				But simply set up the powering circuit only turn on the ESCs, the motor remained stand-still. After searching online,
-				I found that the ESCs also need to be driven by PWM signal and changing the duty cycle of the PWM signal could change
-				the motor speed as well. Thus, I tried to generate several different PWM signals in various frequencies from the oscilloscope,
-				but the motor still could not be driven. Then I seek the solution of driving the ESCs and motors from Arduino since the
-				Arduino obtains the library called “servo” which could directly output PWM signals to the ESCs. Using the Arduino for
-				outputting PWM signals to the ESCs also has many advantages such that the duty cycles could be adjusted easily by entering
+				<br> During this week, I mainly worked on several tasks involving interfacing ESC and motors with Arduino. Powering
+				the
+				ESC with motor was done by supplying the ESCs with the LiPo battery which will be powering 12V to the ESCs and
+				motors.
+				But simply set up the powering circuit only turn on the ESCs, the motor remained stand-still. After searching
+				online,
+				I found that the ESCs also need to be driven by PWM signal and changing the duty cycle of the PWM signal could
+				change
+				the motor speed as well. Thus, I tried to generate several different PWM signals in various frequencies from the
+				oscilloscope,
+				but the motor still could not be driven. Then I seek the solution of driving the ESCs and motors from Arduino since
+				the
+				Arduino obtains the library called “servo” which could directly output PWM signals to the ESCs. Using the Arduino
+				for
+				outputting PWM signals to the ESCs also has many advantages such that the duty cycles could be adjusted easily by
+				entering
 				numbers in the command window or increasing the duty cycle by utilizing a loop.
 
 				<figure>
-					<img src="Team/progress/img/liushuang/ESCtest1.png" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/ESCtest1.png" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>Modified Arduino sample ESC code 1</i></font>
 					</figcaption>
 				</figure>
-				<br>Utilizing the Arduino and its servo library, I was able to find several example codes that outputs PWM signals to
-				the ESCs and motors. I modified those sample codes, so the codes could be run and tested on the Arduino of our own. The
-				first segment of code only powers up the ESCs and runs the motor in one cycle then stop. The second segment of code allows
-				user to increase or decrease the duty cycle in the command window to control the speed of the motors by entering “u”
-				representing speed up and “d” representing speed down. Both codes ran on the Arduino successfully and drove the motor
+				<br>Utilizing the Arduino and its servo library, I was able to find several example codes that outputs PWM signals
+				to
+				the ESCs and motors. I modified those sample codes, so the codes could be run and tested on the Arduino of our own.
+				The
+				first segment of code only powers up the ESCs and runs the motor in one cycle then stop. The second segment of code
+				allows
+				user to increase or decrease the duty cycle in the command window to control the speed of the motors by entering
+				“u”
+				representing speed up and “d” representing speed down. Both codes ran on the Arduino successfully and drove the
+				motor
 				in its design speed and PWM waveform.
 				<figure>
-					<img src="Team/progress/img/liushuang/ESCtest2.png" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/ESCtest2.png" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>Modified Arduino ESC code with controlling duty of the PWM waveform</i></font>
 					</figcaption>
 				</figure>
-				<br>Next, I turned my attentions to search solutions on how to monitor the battery unit of our project and how to recharge
-				the battery through solar panels. By consulting with the course professor and searching related information online, using
-				PMICs will allow charging the four cells battery easier. I selected the ISL6255 PMIC which allow recharging for 2 – 4
-				cells battery and it was designed to recharge the Lithium-Polymer battery. After selecting the PMIC for our solar battery
-				charger circuit, I searched on designing an sample solar battery charger circuit diagram which utilize a different PMIC,
+				<br>Next, I turned my attentions to search solutions on how to monitor the battery unit of our project and how to
+				recharge
+				the battery through solar panels. By consulting with the course professor and searching related information online,
+				using
+				PMICs will allow charging the four cells battery easier. I selected the ISL6255 PMIC which allow recharging for 2 –
+				4
+				cells battery and it was designed to recharge the Lithium-Polymer battery. After selecting the PMIC for our solar
+				battery
+				charger circuit, I searched on designing an sample solar battery charger circuit diagram which utilize a different
+				PMIC,
 				but the ideas behind this sample circuit was relative the same with our project’s design intention.
 				<figure>
 					<a href="https://www.digikey.com/product-detail/en/renesas-electronics-america-inc/ISL6255AHAZ/ISL6255AHAZ-ND/1976500"><img
@@ -266,8 +347,10 @@ contact course staff.
 						<font size="2"><i>Sample solar charging circuit I looked up</i></font>
 					</figcaption>
 				</figure>
-				<br>For next week, I will start working on design the power supply circuit for recharging the battery and monitoring
-				the levels of the battery units. I will also involve in helping interfacings between different components and microcontroller.
+				<br>For next week, I will start working on design the power supply circuit for recharging the battery and
+				monitoring
+				the levels of the battery units. I will also involve in helping interfacings between different components and
+				microcontroller.
 
 			</div>
 
@@ -278,22 +361,35 @@ contact course staff.
 				<b>Total hours:</b> 14
 				<br>
 				<b>Description of design efforts:</b>
-				<br> During this week, I mainly worked and involved on four tasks. The first task I worked with Qianli Ma to develop
-				and design the power supply system that works particularly for our circuit to power the Brushless DC Motors and other
-				electronic components. After series discussion between the team and Joe, we decided to use two 8000 mAh Li-Po batteries
-				and one 3000 mAh battery instead of several 3000 mAh Li-Po batteries connecting in parallel with each other. Each Li-Po
-				battery contains three cells and powers their responsible circuit accordingly without interrupting other batteries. The
-				8000 mAh Li-Po battery will be designated to power the two brushless DC motors since these two motors will be drawing
-				most of the power. The 3000 mAh battery will be responsible for powering the conveyor belt motors and other electrical
-				components such as the sensing modules, microcontroller, and WiFi module. Since 8000mAh and 3000 mAh batteries will output
-				higher voltage values than what we required, several voltage regulators are selected to tune down the 11.1V voltage from
-				the battery to 5V and 3.3V. The selected voltage regulators for outputting 5V voltage is OKI-78SR-5/1.5-W36-C. The OKI-78SR
-				suites the project’s need because it could take a range of voltage input from 7V to 36V and regulate the voltage to 5V
-				fixed voltage, and it only draws about 8W power from the power supply. For the 3.3V voltage regulator, the LM1117-N surface
+				<br> During this week, I mainly worked and involved on four tasks. The first task I worked with Qianli Ma to
+				develop
+				and design the power supply system that works particularly for our circuit to power the Brushless DC Motors and
+				other
+				electronic components. After series discussion between the team and Joe, we decided to use two 8000 mAh Li-Po
+				batteries
+				and one 3000 mAh battery instead of several 3000 mAh Li-Po batteries connecting in parallel with each other. Each
+				Li-Po
+				battery contains three cells and powers their responsible circuit accordingly without interrupting other batteries.
+				The
+				8000 mAh Li-Po battery will be designated to power the two brushless DC motors since these two motors will be
+				drawing
+				most of the power. The 3000 mAh battery will be responsible for powering the conveyor belt motors and other
+				electrical
+				components such as the sensing modules, microcontroller, and WiFi module. Since 8000mAh and 3000 mAh batteries will
+				output
+				higher voltage values than what we required, several voltage regulators are selected to tune down the 11.1V voltage
+				from
+				the battery to 5V and 3.3V. The selected voltage regulators for outputting 5V voltage is OKI-78SR-5/1.5-W36-C. The
+				OKI-78SR
+				suites the project’s need because it could take a range of voltage input from 7V to 36V and regulate the voltage to
+				5V
+				fixed voltage, and it only draws about 8W power from the power supply. For the 3.3V voltage regulator, the LM1117-N
+				surface
 				mounted regulator is selected since we could find these regulators in school’s electrical shop.
 				<figure>
 					<a href="https://www.digikey.com/product-detail/en/murata-power-solutions-inc/OKI-78SR-5-1.5-W36-C/811-2196-5-ND/2259781?utm_adgroup=Converters&slid=&gclid=Cj0KCQjwuafdBRDmARIsAPpBmVWS79LCsNSjipBvRCDAqgpMf3fNdfnlOLzVvAHiSxjN1CiJxF62YaIaAhVfEALw_wcB"><img
-						 src="Team/progress/img/liushuang/OKI-78SR.png" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+						 src="Team/progress/img/liushuang/OKI-78SR.png" style="display:block; margin-left: auto; margin-right: auto"
+						 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>Selected 5V voltage regulator</i></font>
 					</figcaption>
@@ -306,22 +402,36 @@ contact course staff.
 					</figcaption>
 				</figure>
 
-				<br>To recharge these batteries from the solar panels, the recharging circuit needs to be equipped with charging protection
-				board and Li-Po battery charging board. Since the solar panels offered by school provide lower voltage output and lower
-				current output, it is necessary to boost the DC voltage up to suite the charging voltage of the Li-Po battery. Due to
-				the nature of the solar panels, the voltage and current output to the charging circuit will not be constant thus may
-				damage the batteries that require constant voltage charging. From Taobao, one DC-to-DC constant voltage constant current
-				module is found and selected to be our battery charging protection board. This module also has an automatic voltage and
-				current adjusting mode so the required voltage and current to charge the Li-Po battery could be achieved by boosting
-				the voltage output of the solar panel to the desired voltage of 12.6V for charging the Li-Po battery. Beside the protection
-				board, the project needs another charging board to support the charging of the Li-Po battery since the battery has three
-				cells. This charging module is designed to charge three cells 11.1V Li-Po battery which is exactly what we need. The
-				module also has short circuit protection which will prevent unnecessary damage to the Li-Po battery since Li-Po battery
-				is fragile and could explode if the circuit gets shorted. With these two important charging protection modules being
-				selected, designing the recharging circuit from solar panels to the Li-Po battery becomes relatively safe and easier.
+				<br>To recharge these batteries from the solar panels, the recharging circuit needs to be equipped with charging
+				protection
+				board and Li-Po battery charging board. Since the solar panels offered by school provide lower voltage output and
+				lower
+				current output, it is necessary to boost the DC voltage up to suite the charging voltage of the Li-Po battery. Due
+				to
+				the nature of the solar panels, the voltage and current output to the charging circuit will not be constant thus
+				may
+				damage the batteries that require constant voltage charging. From Taobao, one DC-to-DC constant voltage constant
+				current
+				module is found and selected to be our battery charging protection board. This module also has an automatic voltage
+				and
+				current adjusting mode so the required voltage and current to charge the Li-Po battery could be achieved by
+				boosting
+				the voltage output of the solar panel to the desired voltage of 12.6V for charging the Li-Po battery. Beside the
+				protection
+				board, the project needs another charging board to support the charging of the Li-Po battery since the battery has
+				three
+				cells. This charging module is designed to charge three cells 11.1V Li-Po battery which is exactly what we need.
+				The
+				module also has short circuit protection which will prevent unnecessary damage to the Li-Po battery since Li-Po
+				battery
+				is fragile and could explode if the circuit gets shorted. With these two important charging protection modules
+				being
+				selected, designing the recharging circuit from solar panels to the Li-Po battery becomes relatively safe and
+				easier.
 				<figure>
-					<a href="https://item.taobao.com/item.htm?spm=a1z0d.6639537.1997196601.121.24317484gihGTL&id=561222986592"><img src="Team/progress/img/liushuang/charging-board.png"
-						 style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<a href="https://item.taobao.com/item.htm?spm=a1z0d.6639537.1997196601.121.24317484gihGTL&id=561222986592"><img
+						 src="Team/progress/img/liushuang/charging-board.png" style="display:block; margin-left: auto; margin-right: auto"
+						 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>Battery charging board</i></font>
 					</figcaption>
@@ -334,29 +444,43 @@ contact course staff.
 						<font size="2"><i>Battery protection board with automatic voltage/current adjusting mode</i></font>
 					</figcaption>
 				</figure>
-				<br>For the battery monitoring IC, we decided to jettison the previous selected LTC6811 battery monitoring IC since this
-				particular IC requires about 11V reference voltage if there are less than five cells to monitor, which makes it harder
-				to design a battery monitoring circuit with this IC since the Li-Po battery has a range of voltage from 9V to 12V, therefore
-				it becomes impossible to input the enough reference voltage to the monitoring IC when the battery is low on the voltage.
-				Therefore, we revisited our designs and discussed with Joe to find more practical options for building the battery monitoring
-				circuit. We found that Differential Amplifier INA148 seems to be a good choice for building the monitoring IC since each
-				amplifier could be assigned to monitor one cell of the battery; then the differential amplifier could output voltage
-				difference in each cell based on the reference voltage which will be zero for our design monitoring circuit. The differential
-				output then will go through two 5k resistors which will lower the voltage value to the microcontroller since the microcontroller
-				only support 3.3V voltage input. Each cell outputs about 3.7V during its operating mode, so the two 5k resistor will
-				divide the output from the differential amplifier by half; and half of the output voltage could be connected into the
-				ADC channels of the microcontroller safely. In the microcontroller, the analog signal will be converted into digital
+				<br>For the battery monitoring IC, we decided to jettison the previous selected LTC6811 battery monitoring IC since
+				this
+				particular IC requires about 11V reference voltage if there are less than five cells to monitor, which makes it
+				harder
+				to design a battery monitoring circuit with this IC since the Li-Po battery has a range of voltage from 9V to 12V,
+				therefore
+				it becomes impossible to input the enough reference voltage to the monitoring IC when the battery is low on the
+				voltage.
+				Therefore, we revisited our designs and discussed with Joe to find more practical options for building the battery
+				monitoring
+				circuit. We found that Differential Amplifier INA148 seems to be a good choice for building the monitoring IC since
+				each
+				amplifier could be assigned to monitor one cell of the battery; then the differential amplifier could output
+				voltage
+				difference in each cell based on the reference voltage which will be zero for our design monitoring circuit. The
+				differential
+				output then will go through two 5k resistors which will lower the voltage value to the microcontroller since the
+				microcontroller
+				only support 3.3V voltage input. Each cell outputs about 3.7V during its operating mode, so the two 5k resistor
+				will
+				divide the output from the differential amplifier by half; and half of the output voltage could be connected into
+				the
+				ADC channels of the microcontroller safely. In the microcontroller, the analog signal will be converted into
+				digital
 				signal and timed two to reflect the real output voltage of the cell.
 				<figure>
-					<a href="http://www.ti.com/lit/ds/symlink/ina148.pdf"><img src="Team/progress/img/liushuang/monitor-circuit.png" style="display:block; margin-left: auto; margin-right: auto"
-						 height="350"></a>
+					<a href="http://www.ti.com/lit/ds/symlink/ina148.pdf"><img src="Team/progress/img/liushuang/monitor-circuit.png"
+						 style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>Sample battery monitor circuit for INA148</i></font>
 					</figcaption>
 				</figure>
 
-				<br>For next week, I will continue to work on electrical schematic design and PCB layout with Qianli Ma. Also, I will
-				start to do some researches on the algorithm regarding the route-navigating according to the selected GPS location. Beside
+				<br>For next week, I will continue to work on electrical schematic design and PCB layout with Qianli Ma. Also, I
+				will
+				start to do some researches on the algorithm regarding the route-navigating according to the selected GPS location.
+				Beside
 				these, I will also finish building the conveyor belt for the boat.
 
 			</div>
@@ -367,83 +491,131 @@ contact course staff.
 				<b>Total hours:</b> 20
 				<br>
 				<b>Description of design efforts:</b>
-				<br> For this week, I mainly worked on building the prototype conveyor belt for collecting the garbage and building actual
-				circuit models for testing the functionality of each designed circuit. During the first half of the week, building the
-				prototype conveyor belt was my primary objective. Since building this prototype involved cooperating with the other parts
-				of the boat, I had to look up the CAD models and made the length of the conveyor belt long enough to ensure the smooth
-				transportation of garbage from the water surface to the garbage storing unit. The prototype conveyor belt dimension would
-				be 30cm*28cm; two motors driven by the 5V voltage would be equipped to on the top of the conveyor belt system to ensure
-				maximum torque and rotate the top bearing bar of the conveyor belt. The top and bottom bearing bars were hollow round
-				shape and made of plastic. Only one 30cm long metal bar was needed and inserted into the bottom plastic tube to ensure
-				the rotation of the bottom bar since the top bearing bar was rotated by the motion of the motors. Between the top and
-				bottom bearing bars, I used Polyester Heavy Duty Tablecloth with holes to ensure maximum friction to ensure the transporting
-				garbage could stay on the belt while being lifted up to the top. After finished the building process, Qianli and I tested
-				the capability of the conveyor and confirmed that the conveyor could transport trashes such as water bottle. But after
-				several runs of test, the motors started to lose tight on the plastic nob I used to stabilize and attach the motors to
-				the plastic tube bearing since the motors were only hot glutted to the nobs due to the strong torque posed by the motors.
-				I discovered that the motor was actually D shape; therefore, a special nob with D shape opening needed to be made to
-				suite the motor so the motors will not lose tight to the nob and provide constant strong torque to the top bearing of
+				<br> For this week, I mainly worked on building the prototype conveyor belt for collecting the garbage and building
+				actual
+				circuit models for testing the functionality of each designed circuit. During the first half of the week, building
+				the
+				prototype conveyor belt was my primary objective. Since building this prototype involved cooperating with the other
+				parts
+				of the boat, I had to look up the CAD models and made the length of the conveyor belt long enough to ensure the
+				smooth
+				transportation of garbage from the water surface to the garbage storing unit. The prototype conveyor belt dimension
+				would
+				be 30cm*28cm; two motors driven by the 5V voltage would be equipped to on the top of the conveyor belt system to
+				ensure
+				maximum torque and rotate the top bearing bar of the conveyor belt. The top and bottom bearing bars were hollow
+				round
+				shape and made of plastic. Only one 30cm long metal bar was needed and inserted into the bottom plastic tube to
+				ensure
+				the rotation of the bottom bar since the top bearing bar was rotated by the motion of the motors. Between the top
+				and
+				bottom bearing bars, I used Polyester Heavy Duty Tablecloth with holes to ensure maximum friction to ensure the
+				transporting
+				garbage could stay on the belt while being lifted up to the top. After finished the building process, Qianli and I
+				tested
+				the capability of the conveyor and confirmed that the conveyor could transport trashes such as water bottle. But
+				after
+				several runs of test, the motors started to lose tight on the plastic nob I used to stabilize and attach the motors
+				to
+				the plastic tube bearing since the motors were only hot glutted to the nobs due to the strong torque posed by the
+				motors.
+				I discovered that the motor was actually D shape; therefore, a special nob with D shape opening needed to be made
+				to
+				suite the motor so the motors will not lose tight to the nob and provide constant strong torque to the top bearing
+				of
 				the conveyor belt. The team is still waiting on the special nobs to be 3D printed.
 
 				<figure>
-					<img src="Team/progress/img/liushuang/conveyorbelt.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/conveyorbelt.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>Prototyped Conveyor Belt</i></font>
 					</figcaption>
 				</figure>
-				<br>After building the conveyor belt, the team met a problem with designing a switch that will turn off the conveyor
-				belt motor when the battery output voltage drop down to 9V meaning the battery is low on battery life. When the battery
-				is fully charged, the battery unit could output about 12V; when the battery is on its normal operating voltage, the voltage
-				output will be 11.1V; and when the battery life is low, only about 9V voltage will be outputted by the battery. Since
-				the 5V voltage regulator only requires about 7V-8V of voltage to output constant 5V voltage and the battery runs low
-				voltage output of 9V, the motor would not be shut off by itself when the battery is low on its life. Therefore, a switch
-				that could shut down the conveyor belt motors when the microcontroller detects a 9V low voltage output from the battery
-				is much needed, since we want to avoid drawing voltage from the battery by the motors continuously. I consulted with
-				Joe to discuss our problem and found a solution of utilizing a NMOSFET that could input wide ranges of current and voltage,
-				so the NMOSFET could be turned on when the Gate takes a high voltage or signal (1) and turned off when the Gate receives
-				a low voltage or signal (0). The conveyor belt motors are connected between the input voltage and the Drain of the NMOSFET,
-				and the Source of the NMOSFET will be connected to the ground. By utlizing this switch circuit, the microcontroller could
-				send a simple signal to the Gate of the NMOSFET and turn off the motor when the battery is low on voltage. This circuit
+				<br>After building the conveyor belt, the team met a problem with designing a switch that will turn off the
+				conveyor
+				belt motor when the battery output voltage drop down to 9V meaning the battery is low on battery life. When the
+				battery
+				is fully charged, the battery unit could output about 12V; when the battery is on its normal operating voltage, the
+				voltage
+				output will be 11.1V; and when the battery life is low, only about 9V voltage will be outputted by the battery.
+				Since
+				the 5V voltage regulator only requires about 7V-8V of voltage to output constant 5V voltage and the battery runs
+				low
+				voltage output of 9V, the motor would not be shut off by itself when the battery is low on its life. Therefore, a
+				switch
+				that could shut down the conveyor belt motors when the microcontroller detects a 9V low voltage output from the
+				battery
+				is much needed, since we want to avoid drawing voltage from the battery by the motors continuously. I consulted
+				with
+				Joe to discuss our problem and found a solution of utilizing a NMOSFET that could input wide ranges of current and
+				voltage,
+				so the NMOSFET could be turned on when the Gate takes a high voltage or signal (1) and turned off when the Gate
+				receives
+				a low voltage or signal (0). The conveyor belt motors are connected between the input voltage and the Drain of the
+				NMOSFET,
+				and the Source of the NMOSFET will be connected to the ground. By utlizing this switch circuit, the microcontroller
+				could
+				send a simple signal to the Gate of the NMOSFET and turn off the motor when the battery is low on voltage. This
+				circuit
 				was built and tested as shown, but the microcontroller was not involved in the testing yet.
 				<figure>
-					<img src="Team/progress/img/liushuang/motorswitch.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/motorswitch.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>Motor NMOSFET switch circuit</i></font>
 					</figcaption>
 				</figure>
-				<br>After the switch circuit designing and constructing, I started to work on soldering the circuit for battery monitor
-				IC and USB connector circuit since the team wanted to test their functionalities before finalizing the PCB and schematic
-				designs. The battery monitor IC circuit is constructed utilizing a differential amplifier which output a voltage with
-				1:1 ratio to the input voltage value, the output voltage could be adjusted by inputting a reference voltage. The circuit
-				was built and tested and confirmed the output was matched to the input voltage of 5V using the power supply. After the
-				circuit testing, I found a problem with this particular differential amplifier which requires +/- voltage supply to the
-				differential amplifier which might not be easy to provide by the project’s power supply. Then I discussed this issue
-				with my teammates and decided to simply use two 10kohm resistor as voltage dividers to directly measure the voltage value
-				of the battery cell. It turns out the voltage dividers work fine and communicate with the microcontroller’s ADC without
-				any issues; simply multiply the ADC data by two will recover the voltage value of the battery cell. At the end of this
-				week, I also soldered a breakout board for testing the USB connector which powers the on-board Raspberry Pi and Wifi
-				router. The actual picture of the board and schematic is shown below. By constructing this circuit, the intention is
-				to “trick” the Raspberry Pi and Wifi router to recognize the power from battery as actual power supply. The soldered
+				<br>After the switch circuit designing and constructing, I started to work on soldering the circuit for battery
+				monitor
+				IC and USB connector circuit since the team wanted to test their functionalities before finalizing the PCB and
+				schematic
+				designs. The battery monitor IC circuit is constructed utilizing a differential amplifier which output a voltage
+				with
+				1:1 ratio to the input voltage value, the output voltage could be adjusted by inputting a reference voltage. The
+				circuit
+				was built and tested and confirmed the output was matched to the input voltage of 5V using the power supply. After
+				the
+				circuit testing, I found a problem with this particular differential amplifier which requires +/- voltage supply to
+				the
+				differential amplifier which might not be easy to provide by the project’s power supply. Then I discussed this
+				issue
+				with my teammates and decided to simply use two 10kohm resistor as voltage dividers to directly measure the voltage
+				value
+				of the battery cell. It turns out the voltage dividers work fine and communicate with the microcontroller’s ADC
+				without
+				any issues; simply multiply the ADC data by two will recover the voltage value of the battery cell. At the end of
+				this
+				week, I also soldered a breakout board for testing the USB connector which powers the on-board Raspberry Pi and
+				Wifi
+				router. The actual picture of the board and schematic is shown below. By constructing this circuit, the intention
+				is
+				to “trick” the Raspberry Pi and Wifi router to recognize the power from battery as actual power supply. The
+				soldered
 				circuit worked fine and turned on the Raspberry Pi as expected.
 				<figure>
-					<img src="Team/progress/img/liushuang/IC-connection.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/IC-connection.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>Battery Monitor Differential Amplifier breakout board with connection</i></font>
 					</figcaption>
 				</figure>
 				<figure>
-					<img src="Team/progress/img/liushuang/USBconnector.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/USBconnector.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>USB connector breakout board</i></font>
 					</figcaption>
 				</figure>
 				<figure>
-					<img src="Team/progress/img/liushuang/USBcircuit.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/USBcircuit.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>USB circuit schematic</i></font>
 					</figcaption>
 				</figure>
-				<br>For next week, I plan on preparing the prototype for the Midterm Design Review with my teammates and do more researches
+				<br>For next week, I plan on preparing the prototype for the Midterm Design Review with my teammates and do more
+				researches
 				on designing the algorithm of automatic steering and driving based on the given GPS points.
 
 			</div>
@@ -455,20 +627,34 @@ contact course staff.
 				<b>Total hours:</b> 22
 				<br>
 				<b>Description of design efforts:</b>
-				<br> For this week’s progress, I mainly worked with Qianli Ma to set up the power supply system for our project, so the
-				motors and other relative electronic components could be powered on first for further testing. To set up the power supply
-				system, we needed to configure the powering and charging modules properly first, so Qianli and I went on and configured
-				the charging modules. The charging modules consist two modules: one is the charging board module and another one is the
-				protection board module. The set-up process is relatively simple since the instructions and datasheet illustrating the
-				pin-outs are already given. For setting up the charging board module, I first connected the power supply which outputs
-				regular 24V and 15A with 12AWG wires to the charging board; the reason for using 12AWG wires is that the current flowing
-				through the system is high so the wire needs to be robust and withstands 15A current. After the initial connection to
-				the charging board input pin and ground, the output pin which will be connected to the battery unit was connected to
-				the ground pin of the charging board to short the charging circuit, creating a “charging state” for the charging board
-				so the further adjustments could be made to the charging board. Then a DMM monitoring the current and voltage output
-				was connected to the charging board’s additional four pin-out to measure the current and voltage output. There are two
-				tall potentiometers which adjust the constant current and voltage output on the charging board. By tweaking these two
-				potentiometers, I was able to adjust the voltage output to about 12.7V which is necessary for the battery to be charged.
+				<br> For this week’s progress, I mainly worked with Qianli Ma to set up the power supply system for our project, so
+				the
+				motors and other relative electronic components could be powered on first for further testing. To set up the power
+				supply
+				system, we needed to configure the powering and charging modules properly first, so Qianli and I went on and
+				configured
+				the charging modules. The charging modules consist two modules: one is the charging board module and another one is
+				the
+				protection board module. The set-up process is relatively simple since the instructions and datasheet illustrating
+				the
+				pin-outs are already given. For setting up the charging board module, I first connected the power supply which
+				outputs
+				regular 24V and 15A with 12AWG wires to the charging board; the reason for using 12AWG wires is that the current
+				flowing
+				through the system is high so the wire needs to be robust and withstands 15A current. After the initial connection
+				to
+				the charging board input pin and ground, the output pin which will be connected to the battery unit was connected
+				to
+				the ground pin of the charging board to short the charging circuit, creating a “charging state” for the charging
+				board
+				so the further adjustments could be made to the charging board. Then a DMM monitoring the current and voltage
+				output
+				was connected to the charging board’s additional four pin-out to measure the current and voltage output. There are
+				two
+				tall potentiometers which adjust the constant current and voltage output on the charging board. By tweaking these
+				two
+				potentiometers, I was able to adjust the voltage output to about 12.7V which is necessary for the battery to be
+				charged.
 				The DMM voltage reading figure is shown below.
 
 				<figure>
@@ -479,19 +665,28 @@ contact course staff.
 					</figcaption>
 				</figure>
 				<figure>
-					<img src="Team/progress/img/liushuang/w9/DMMreading.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/w9/DMMreading.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>DMM reading for the constant voltage output</i></font>
 					</figcaption>
 				</figure>
-				<br>After the initial set-up for the first charging board was successful, I continued to set up the second charging board.
-				There was another different charging board needed to be set up for charging the 3000mAh Li-Po battery, since the 3000mAh
-				battery does not require as much current as the 8000mAh battery. Therefore, the constant current setting for the 3000mAh
-				battery charging board needs to be smaller, comparing to the 8000mAh battery charging board. Next, Qian li and I started
-				to solder the 12AWG wires to the battery charging protection board, the reason for using the 12AWG is like the reason
-				for charging board. The C- pin will be connected to the ground of the charging circuit, the P- pin will be connected
-				to the ground of the power supply system, and the B- pin will be connected to the negative pin of the battery unit. With
-				the battery charging and protection system being set-up, the further testing of the power supply system could be carried
+				<br>After the initial set-up for the first charging board was successful, I continued to set up the second charging
+				board.
+				There was another different charging board needed to be set up for charging the 3000mAh Li-Po battery, since the
+				3000mAh
+				battery does not require as much current as the 8000mAh battery. Therefore, the constant current setting for the
+				3000mAh
+				battery charging board needs to be smaller, comparing to the 8000mAh battery charging board. Next, Qian li and I
+				started
+				to solder the 12AWG wires to the battery charging protection board, the reason for using the 12AWG is like the
+				reason
+				for charging board. The C- pin will be connected to the ground of the charging circuit, the P- pin will be
+				connected
+				to the ground of the power supply system, and the B- pin will be connected to the negative pin of the battery unit.
+				With
+				the battery charging and protection system being set-up, the further testing of the power supply system could be
+				carried
 				on and tested later for prototyping.
 				<figure>
 					<img src="Team/progress/img/liushuang/w9/chargingboard2.jpg" style="display:block; margin-left: auto; margin-right: auto"
@@ -507,19 +702,30 @@ contact course staff.
 						<font size="2"><i>Charging protection board for battery charging</i></font>
 					</figcaption>
 				</figure>
-				<br>Afterward, I started to construct the voltage division circuit which will be used to monitor the battery life by
-				measuring the voltage values in one, two, and three cells of the battery. The battery monitoring circuit is shown below.
-				After the circuit is constructed, I used the in-lab power supply to generate a 12.6V voltage which mirrors the voltage
-				output of the battery unit. Each branch monitors different amounts of cells in the battery. The 6.2Kohm in series with
-				18Kohm branch monitors three cells; the 5.1Kohm in series with 8.2Kohm branch monitors two cells; the 2.4Kohm in series
-				with 680ohm branch monitors one cells. The voltages from different cells will be divided down to about 3.2V to represent
-				the maximum charge of the battery, and the voltage measurements will be measured by the microcontroller’s ADC channels
-				and sent back to user-interface for further interpretation. The measurements of the voltage division circuit will be
-				measured through 6.2Kohm resistor, 5.1Kohm resistor, and the 2.4Kohm resistor with relative to the ground. After the
-				testing with measuring each voltage division outputs, all circuit branches outputted expected voltage measuring of about
+				<br>Afterward, I started to construct the voltage division circuit which will be used to monitor the battery life
+				by
+				measuring the voltage values in one, two, and three cells of the battery. The battery monitoring circuit is shown
+				below.
+				After the circuit is constructed, I used the in-lab power supply to generate a 12.6V voltage which mirrors the
+				voltage
+				output of the battery unit. Each branch monitors different amounts of cells in the battery. The 6.2Kohm in series
+				with
+				18Kohm branch monitors three cells; the 5.1Kohm in series with 8.2Kohm branch monitors two cells; the 2.4Kohm in
+				series
+				with 680ohm branch monitors one cells. The voltages from different cells will be divided down to about 3.2V to
+				represent
+				the maximum charge of the battery, and the voltage measurements will be measured by the microcontroller’s ADC
+				channels
+				and sent back to user-interface for further interpretation. The measurements of the voltage division circuit will
+				be
+				measured through 6.2Kohm resistor, 5.1Kohm resistor, and the 2.4Kohm resistor with relative to the ground. After
+				the
+				testing with measuring each voltage division outputs, all circuit branches outputted expected voltage measuring of
+				about
 				3.2V, confirming the voltage division method for monitoring the battery life works as expected.
 				<figure>
-					<img src="Team/progress/img/liushuang/w9/BMcircuit.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/w9/BMcircuit.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>Battery Monitoring Circuit</i></font>
 					</figcaption>
@@ -531,10 +737,14 @@ contact course staff.
 						<font size="2"><i>Battery Monitoring Circuit constructed</i></font>
 					</figcaption>
 				</figure>
-				<br>Next, with the D-shaft connector being 3D printed, I was able to continue the building process with the conveyor
-				belt. The D-shaft connectors work great on holding the motor in place with the bearing thus providing more grip to the
-				conveyor belt so heavier trashes could be transported upward firmly. Then the connectors were drill with screw holes
-				so that the connector and the bearing bar could be connected more tightly and will not lose tight during the operating
+				<br>Next, with the D-shaft connector being 3D printed, I was able to continue the building process with the
+				conveyor
+				belt. The D-shaft connectors work great on holding the motor in place with the bearing thus providing more grip to
+				the
+				conveyor belt so heavier trashes could be transported upward firmly. Then the connectors were drill with screw
+				holes
+				so that the connector and the bearing bar could be connected more tightly and will not lose tight during the
+				operating
 				phrase. Afterward, the conveyor belt was mounted to the prototype boat that Tianjie and I assembled.
 				<figure>
 					<img src="Team/progress/img/liushuang/w9/boat-prototype.jpg" style="display:block; margin-left: auto; margin-right: auto"
@@ -544,13 +754,16 @@ contact course staff.
 					</figcaption>
 				</figure>
 				<figure>
-					<img src="Team/progress/img/liushuang/w9/screwhole.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/w9/screwhole.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>Closer look for tighting the connector</i></font>
 					</figcaption>
 				</figure>
-				<br>With the boat’s main frame being constructed and the conveyor belt improved, the plan for next week is to assemble
-				the power supply system, the charging system, and the brushless DC motors to the prototype boat so the boat could be
+				<br>With the boat’s main frame being constructed and the conveyor belt improved, the plan for next week is to
+				assemble
+				the power supply system, the charging system, and the brushless DC motors to the prototype boat so the boat could
+				be
 				on water and being tested.
 			</div>
 
@@ -561,27 +774,41 @@ contact course staff.
 				<b>Total hours:</b> 15
 				<br>
 				<b>Description of design efforts:</b>
-				<br> For this week’s progress, I mainly worked on assemble the power supply system so different modules could work with
-				each other and power up the PCB at the same time. For instance, the battery unit needs to have separate connections circuit
-				for the purposes of charging and supplying power to the PCB. To achieve those purposes, a wire distributor is needed
-				so the wire coming out of the battery unit could be split into two wires which will be connected to the power supply
-				to the PCB and charging circuit with the charging modules. By doing so, the power and recharging system was finished
+				<br> For this week’s progress, I mainly worked on assemble the power supply system so different modules could work
+				with
+				each other and power up the PCB at the same time. For instance, the battery unit needs to have separate connections
+				circuit
+				for the purposes of charging and supplying power to the PCB. To achieve those purposes, a wire distributor is
+				needed
+				so the wire coming out of the battery unit could be split into two wires which will be connected to the power
+				supply
+				to the PCB and charging circuit with the charging modules. By doing so, the power and recharging system was
+				finished
 				and could be connected to the PCB with XT-60 connectors.
 				<figure>
-					<img src="Team/progress/img/liushuang/w10/supply.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/w10/supply.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>Wire Connectos with Charging modules</i></font>
 					</figcaption>
 				</figure>
 
-				<br>Afterward, the team started to discuss the plan about how to turn the prototype boat into a fine final product. After
-				series of discussions and searching online, the team finalized that using fiberglass as the materials to build the final
-				product boat. Beside that, I worked with Qianli to search how to make an actual RC boat from scratch. To apply the fiberglass
-				materials to form the shape of a boat, a boat hull frame made by wood is advised to be built first. Basically, the boat
-				hull frame is a wooden structure which is constructed by wooden stripes. A sample boat hull is shown below. After the
-				wooden structure is being built, we would wrap the whole frame with plastic sheet, and start to apply the fiberglass
-				layer-by-layer. After the glue between fiberglass is dry, the plastic sheet can be taken out, and the boat would be in
-				shape with robust fiberglass. To do all those plans, the team already finished the trainings from BIDC so the team could
+				<br>Afterward, the team started to discuss the plan about how to turn the prototype boat into a fine final product.
+				After
+				series of discussions and searching online, the team finalized that using fiberglass as the materials to build the
+				final
+				product boat. Beside that, I worked with Qianli to search how to make an actual RC boat from scratch. To apply the
+				fiberglass
+				materials to form the shape of a boat, a boat hull frame made by wood is advised to be built first. Basically, the
+				boat
+				hull frame is a wooden structure which is constructed by wooden stripes. A sample boat hull is shown below. After
+				the
+				wooden structure is being built, we would wrap the whole frame with plastic sheet, and start to apply the
+				fiberglass
+				layer-by-layer. After the glue between fiberglass is dry, the plastic sheet can be taken out, and the boat would be
+				in
+				shape with robust fiberglass. To do all those plans, the team already finished the trainings from BIDC so the team
+				could
 				work in BIDC to do all the wood works and fiberglass works.
 				<figure>
 					<a href="https://www.building-model-boats.com/rc-boat-hull-1.html"><img src="Team/progress/img/liushuang/w10/woodstructure.jpg"
@@ -591,7 +818,8 @@ contact course staff.
 					</figcaption>
 				</figure>
 
-				<br>For next week, we will start to build the wooden frame of the boat since the team already have all the measurements
+				<br>For next week, we will start to build the wooden frame of the boat since the team already have all the
+				measurements
 				and specifications for the final product boat.
 			</div>
 
@@ -602,32 +830,51 @@ contact course staff.
 				<b>Total hours:</b> 23
 				<br>
 				<b>Description of design efforts:</b>
-				<br> For this week, I mostly worked on populating the PCB with Qianli Ma and using laser cutter at BIDC to cut out the
-				wooden hull for the boat. To populate the PCB in a orderly manner, I first soldered the XT-60 connectors with fly wires
-				since the PCB’s holes for the XT60 connector are a little bit off thus the XT60 connector could not directly plug into
-				the PCB, which will be fixed for the final product’s PCB. For now, we decided to fly wire the XT60 connector into the
-				PCB since flying wire into the PCB should not affect the XT60 connector’s performance. The picture of soldered XT60 connector
-				with fly wires is shown below. After the soldering with XT60 connector was finished, I started to solder the XT60 connector
+				<br> For this week, I mostly worked on populating the PCB with Qianli Ma and using laser cutter at BIDC to cut out
+				the
+				wooden hull for the boat. To populate the PCB in a orderly manner, I first soldered the XT-60 connectors with fly
+				wires
+				since the PCB’s holes for the XT60 connector are a little bit off thus the XT60 connector could not directly plug
+				into
+				the PCB, which will be fixed for the final product’s PCB. For now, we decided to fly wire the XT60 connector into
+				the
+				PCB since flying wire into the PCB should not affect the XT60 connector’s performance. The picture of soldered XT60
+				connector
+				with fly wires is shown below. After the soldering with XT60 connector was finished, I started to solder the XT60
+				connector
 				into the PCB’s holes.
 
 				<figure>
-					<img src="Team/progress/img/liushuang/w11/XT60.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/w11/XT60.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>XT60 connector</i></font>
 					</figcaption>
 				</figure>
-				<br>Since we decided to solder and test the power supply part of the PCB first, we soldered the three XT60 connector
-				onto the PCB, so the PCB power, conveyor belt, and the PCB power switch could be connected and powered by the battery
-				units or switch. To make the power switch button for the PCB power switch, I utilized a 2-pin latch switch and flied
-				wire with XT60 female connector, so the switch could be connected with the XT60 male connector on the PCB. Afterward,
-				Qianli and I soldered other electronic components onto the PCB such as voltage regulators for 5V and 3.3V, USB female
-				connectors, resistors, and capacitors. Also, we included a red surface-mounted LED to indict the state of the power for
-				the PCB. As the power supply part of the PCB was populated, I started to test the functionality of the power supply unit.
-				By connecting a 3000mAh battery unit into the PCB’s power supply connector, the red LED lighted up as expected, indicting
-				the power supply part of the PCB worked properly. To test the functionality of the voltage regulators, I first connect
-				the DMM in parallel with one of the voltage outputs from the 3.3V voltage regulator, and the DMM’s measurement indicted
-				about 3.3V voltage meaning the voltage regulator successfully regulate the voltage from the battery down to the expected
-				3.3V voltage. After, I connected the Raspberry Pi into the PCB’s USB female connector. The Raspberry Pi turned on as
+				<br>Since we decided to solder and test the power supply part of the PCB first, we soldered the three XT60
+				connector
+				onto the PCB, so the PCB power, conveyor belt, and the PCB power switch could be connected and powered by the
+				battery
+				units or switch. To make the power switch button for the PCB power switch, I utilized a 2-pin latch switch and
+				flied
+				wire with XT60 female connector, so the switch could be connected with the XT60 male connector on the PCB.
+				Afterward,
+				Qianli and I soldered other electronic components onto the PCB such as voltage regulators for 5V and 3.3V, USB
+				female
+				connectors, resistors, and capacitors. Also, we included a red surface-mounted LED to indict the state of the power
+				for
+				the PCB. As the power supply part of the PCB was populated, I started to test the functionality of the power supply
+				unit.
+				By connecting a 3000mAh battery unit into the PCB’s power supply connector, the red LED lighted up as expected,
+				indicting
+				the power supply part of the PCB worked properly. To test the functionality of the voltage regulators, I first
+				connect
+				the DMM in parallel with one of the voltage outputs from the 3.3V voltage regulator, and the DMM’s measurement
+				indicted
+				about 3.3V voltage meaning the voltage regulator successfully regulate the voltage from the battery down to the
+				expected
+				3.3V voltage. After, I connected the Raspberry Pi into the PCB’s USB female connector. The Raspberry Pi turned on
+				as
 				expected indicting the USB provided enough power and voltage to turn on the Raspberry Pi.
 				<figure>
 					<img src="Team/progress/img/liushuang/w11/populatedboard.jpg" style="display:block; margin-left: auto; margin-right: auto"
@@ -637,33 +884,44 @@ contact course staff.
 					</figcaption>
 				</figure>
 				<figure>
-					<img src="Team/progress/img/liushuang/w11/boardTEST.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/w11/boardTEST.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>Power testing of the PCB</i></font>
 					</figcaption>
 				</figure>
-				<br>After finishing populated the power supply part of the PCB, I turned my attentions to cutting the wooden hull in
-				BIDC using the laser cutter. To make the wooden hull, I used the CAD files that Tianjie made and utilized the laser cutting
-				machine in BIDC to cut the wooden board into desired shape. With the assistances from the BIDC’s officers, I adapted
-				the use of the laser cutting machine quickly with setting the CAD hull into the desired area of wooden board. The calibrating
-				the laser point took a little more time, but once it was set, the calibration did not have to be changed for the same
-				material. Once the preparation was done, the laser cutting machine could finish the rest of the work. As the pictures
-				shown below, all pieces required to build the wooden boat hull were cut out as expected and did not have deviation between
+				<br>After finishing populated the power supply part of the PCB, I turned my attentions to cutting the wooden hull
+				in
+				BIDC using the laser cutter. To make the wooden hull, I used the CAD files that Tianjie made and utilized the laser
+				cutting
+				machine in BIDC to cut the wooden board into desired shape. With the assistances from the BIDC’s officers, I
+				adapted
+				the use of the laser cutting machine quickly with setting the CAD hull into the desired area of wooden board. The
+				calibrating
+				the laser point took a little more time, but once it was set, the calibration did not have to be changed for the
+				same
+				material. Once the preparation was done, the laser cutting machine could finish the rest of the work. As the
+				pictures
+				shown below, all pieces required to build the wooden boat hull were cut out as expected and did not have deviation
+				between
 				each piece.
 				<figure>
-					<img src="Team/progress/img/liushuang/w11/cut.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/w11/cut.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>Wooden board being cut into pieces</i></font>
 					</figcaption>
 				</figure>
 				<figure>
-					<img src="Team/progress/img/liushuang/w11/pieces.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/w11/pieces.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>All pieces being cut by the laser cutter</i></font>
 					</figcaption>
 				</figure>
 
-				<br>For next week, I will continue to work on populating the PCB and start to build the wooden boat hull with the team.
+				<br>For next week, I will continue to work on populating the PCB and start to build the wooden boat hull with the
+				team.
 
 			</div>
 
@@ -674,48 +932,70 @@ contact course staff.
 				<b>Total hours:</b> 35
 				<br>
 				<b>Description of design efforts:</b>
-				<br> For this week, the team mostly worked on fiberglassing the wooden hull we built during the weekend in BIDC. In BIDC,
-				we got a booth with high performance exhaust fan which will help prevent we created too much mass during the process
-				of fiberglassing. To fiberglass, a mold is required first as the ground for applying fiberglass material on top of the
-				mold. Since making a real mold would take a more than week, the team chose an easier way to make a “mold” which was wrapping
-				the wooden hull with plastic sheet. To prevent the fiberglass materials bending into the wooden hull gap during the process
-				of applying, we first warped the wooden hull with a layer of plastic tabletop sheet. This layer was applied because this
-				plastic sheet is thick enough to separate a decent amount of space between the wooden hull and the layer which will be
-				applied fiberglass on. The fiberglass layer was wrapped by plastic window insulation sheet. The reason we chose the plastic
-				window insulation sheet was that once the material was wrapped around the wooden hull tightly, we could use hot gun and
-				blow hot air on the plastic window insulation sheet to further tight the plastic sheet, so the materials would not be
+				<br> For this week, the team mostly worked on fiberglassing the wooden hull we built during the weekend in BIDC. In
+				BIDC,
+				we got a booth with high performance exhaust fan which will help prevent we created too much mass during the
+				process
+				of fiberglassing. To fiberglass, a mold is required first as the ground for applying fiberglass material on top of
+				the
+				mold. Since making a real mold would take a more than week, the team chose an easier way to make a “mold” which was
+				wrapping
+				the wooden hull with plastic sheet. To prevent the fiberglass materials bending into the wooden hull gap during the
+				process
+				of applying, we first warped the wooden hull with a layer of plastic tabletop sheet. This layer was applied because
+				this
+				plastic sheet is thick enough to separate a decent amount of space between the wooden hull and the layer which will
+				be
+				applied fiberglass on. The fiberglass layer was wrapped by plastic window insulation sheet. The reason we chose the
+				plastic
+				window insulation sheet was that once the material was wrapped around the wooden hull tightly, we could use hot gun
+				and
+				blow hot air on the plastic window insulation sheet to further tight the plastic sheet, so the materials would not
+				be
 				bend into the wooden hull.
 
 				<figure>
-					<img src="Team/progress/img/liushuang/w12/woodenhull.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/w12/woodenhull.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>Mold made from hull and wrapped sheet</i></font>
 					</figcaption>
 				</figure>
-				<br>After the “mold” was made, the mold was laid upside down on the top with mold release being brushed on the tabletop
-				first. Applying the mold release was to prevent the fiberglass and mold stuck on the table. The mold was also applied
-				with mold release first, so the mold would not be directly glued with the fiberglass, and the mold could be taken out
-				later. After the mold release being applied, one layer of fiberglass was applied on the mold release as the bottom layer
-				of the fiberglassing. The glue for gluing the fiberglass together was mixed of fiberglass epoxy resin and hardener, with
-				ratio of 5 to 1. The glue was applied on the bottom layer of fiberglass with intension to soak the entire layer of fiberglass.
+				<br>After the “mold” was made, the mold was laid upside down on the top with mold release being brushed on the
+				tabletop
+				first. Applying the mold release was to prevent the fiberglass and mold stuck on the table. The mold was also
+				applied
+				with mold release first, so the mold would not be directly glued with the fiberglass, and the mold could be taken
+				out
+				later. After the mold release being applied, one layer of fiberglass was applied on the mold release as the bottom
+				layer
+				of the fiberglassing. The glue for gluing the fiberglass together was mixed of fiberglass epoxy resin and hardener,
+				with
+				ratio of 5 to 1. The glue was applied on the bottom layer of fiberglass with intension to soak the entire layer of
+				fiberglass.
 				Repeat the same procedure for another layer of fiberglass.
 				<figure>
-					<img src="Team/progress/img/liushuang/w12/fiberglass1.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/w12/fiberglass1.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>Applying fiberglass on mold</i></font>
 					</figcaption>
 				</figure>
 				<figure>
-					<img src="Team/progress/img/liushuang/w12/fiberglass2.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/w12/fiberglass2.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>After fiberglass cool down</i></font>
 					</figcaption>
 				</figure>
-				<br>After several hours, the glue would cooldown and glue the fiberglass together, and make the fiberglass from soft
-				materials into a robust structure. Using electrical grinder, we were able to cut out the excessive part of the fiberglassings
+				<br>After several hours, the glue would cooldown and glue the fiberglass together, and make the fiberglass from
+				soft
+				materials into a robust structure. Using electrical grinder, we were able to cut out the excessive part of the
+				fiberglassings
 				and get rid of the shape edges using the sander. The same procedure was done to the other wooden hull.
 				<figure>
-					<img src="Team/progress/img/liushuang/w12/finished.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/w12/finished.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>One part of boat was finished</i></font>
 					</figcaption>
@@ -732,54 +1012,121 @@ contact course staff.
 				<b>Total hours:</b> 25
 				<br>
 				<b>Description of design efforts:</b>
-				<br> Before the week started, Qianli and I continued working on making the boat frame with fiberglass in the BIDC. We
-				also drilled several holes on the fiberglass boat frame, so the waterjet motors and conveyor belt motors could be installed
-				inside later. After the drilling part was finished in the BIDC, we brought the fiberglass frame back to lab and started
-				to assemble the whole boat for the final project. For assembling the boat frame together, we used gorilla glue to assemble
-				the part together. Since the glue takes about ten hours to dry and see the result of the gluing, I turned my focus to
+				<br> Before the week started, Qianli and I continued working on making the boat frame with fiberglass in the BIDC.
+				We
+				also drilled several holes on the fiberglass boat frame, so the waterjet motors and conveyor belt motors could be
+				installed
+				inside later. After the drilling part was finished in the BIDC, we brought the fiberglass frame back to lab and
+				started
+				to assemble the whole boat for the final project. For assembling the boat frame together, we used gorilla glue to
+				assemble
+				the part together. Since the glue takes about ten hours to dry and see the result of the gluing, I turned my focus
+				to
 				test the functionality of our PCB while waiting on the glue to dry.
 
 				<figure>
-					<img src="Team/progress/img/liushuang/w13/Boat.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/w13/Boat.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>Boat frame being glued and assembled</i></font>
 					</figcaption>
 				</figure>
-				<br>Most of the PCB was populated, so I started the testing the microcontroller first to blink a LED mounted on the PCB.
-				As different programs being sent to the PCB’s micro from the STMF4 Discovery board, we were able to toggle the LED or
-				turn on the LED as an indication that the PCB’s micro is now programmable, and work as expected. After the PCB’s micro
-				was confirmed working, the team moved on to test the Wifi Module interfacing with the PCB’s micro. The Wifi module’s
-				LED blinked the moment we plug in the module into the connector on the PCB indicating the Wifi module received power
-				directly from the PCB. After series of testing through the MCU program, we confirmed that the Wifi module on PCB communicates
+				<br>Most of the PCB was populated, so I started the testing the microcontroller first to blink a LED mounted on the
+				PCB.
+				As different programs being sent to the PCB’s micro from the STMF4 Discovery board, we were able to toggle the LED
+				or
+				turn on the LED as an indication that the PCB’s micro is now programmable, and work as expected. After the PCB’s
+				micro
+				was confirmed working, the team moved on to test the Wifi Module interfacing with the PCB’s micro. The Wifi
+				module’s
+				LED blinked the moment we plug in the module into the connector on the PCB indicating the Wifi module received
+				power
+				directly from the PCB. After series of testing through the MCU program, we confirmed that the Wifi module on PCB
+				communicates
 				with the user-interface without problems.
-				<br>The testing problem happened at testing the ADC function of the MCU, and the problem is that the digital data read
-				by the MCU were not the expected values that we tested before. Since the battery life detection and storage room detection
-				both depend on the functionality of ADC, running into problems with MCU’s ADC is something needed to be solved ASAP.
-				To solve the ADC problem, I first measured the test points of voltage output from the voltage division circuit directly
-				with DMM and found out that all voltage output produced the expected voltage value of about 3.2V, meaning that the problem
-				was related to the microcontroller mounted on the PCB. After discussing the problem with the instructors, we decided
-				to take out the microcontroller on the PCB and remount a new micro on the PCB. As the new PCB being mounted on the PCB,
-				we tested the ADC again, but this time another problem appears that test points of voltage division circuit output produced
-				voltage value about 1.9V in one of the test points, but the rest of the test point still produced the same 3.2V expected
-				voltage value. We found out that our program was not modified to input total of 14 analog values and transfer into digital
-				data. After the code was modified to intake total of 14 analog data, we reprogramed the micro on the PCB and tested the
-				ADC functionality. The ADC’s values finally represent the voltage division circuit output which is about 4096 in the
+				<br>The testing problem happened at testing the ADC function of the MCU, and the problem is that the digital data
+				read
+				by the MCU were not the expected values that we tested before. Since the battery life detection and storage room
+				detection
+				both depend on the functionality of ADC, running into problems with MCU’s ADC is something needed to be solved
+				ASAP.
+				To solve the ADC problem, I first measured the test points of voltage output from the voltage division circuit
+				directly
+				with DMM and found out that all voltage output produced the expected voltage value of about 3.2V, meaning that the
+				problem
+				was related to the microcontroller mounted on the PCB. After discussing the problem with the instructors, we
+				decided
+				to take out the microcontroller on the PCB and remount a new micro on the PCB. As the new PCB being mounted on the
+				PCB,
+				we tested the ADC again, but this time another problem appears that test points of voltage division circuit output
+				produced
+				voltage value about 1.9V in one of the test points, but the rest of the test point still produced the same 3.2V
+				expected
+				voltage value. We found out that our program was not modified to input total of 14 analog values and transfer into
+				digital
+				data. After the code was modified to intake total of 14 analog data, we reprogramed the micro on the PCB and tested
+				the
+				ADC functionality. The ADC’s values finally represent the voltage division circuit output which is about 4096 in
+				the
 				ADC’s register value.
 				<figure>
-					<img src="Team/progress/img/liushuang/w13/PCB.jpg" style="display:block; margin-left: auto; margin-right: auto" height="350"></a>
+					<img src="Team/progress/img/liushuang/w13/PCB.jpg" style="display:block; margin-left: auto; margin-right: auto"
+					 height="350"></a>
 					<figcaption style="text-align: center;">
 						<font size="2"><i>PCB populated being tested</i></font>
 					</figcaption>
 				</figure>
 
-				<br>For next week, I will continue test the functionality of the PCB and work on modifying the ESC’s wire to fit the
+				<br>For next week, I will continue test the functionality of the PCB and work on modifying the ESC’s wire to fit
+				the
 				connector of our PCB.
 			</div>
 			<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
 			<div id="footer"></div>
 		</div>
 	</div>
+	<div>
+		<h4>Week 15:</h4>
+		<b>Date:</b> 11/30/2018
+		<br>
+		<b>Total hours:</b> 35
+		<br>
+		<b>Description of design efforts:</b>
+		<br> For this week’s progress, I mostly worked on testing the PCB’s functionalities and assemble the boat with
+		hardware components and PCB into final product.
 
+
+		<br>The first testing was to test the modified circuit for controlling the on/off the conveyor belt motors. With one
+		NMOS and one PMOS, the team was able to pull-up the 3.3V voltage output served as command “on” from the
+		microcontroller GPIO pins and output 5V regulated voltage to the conveyor belt motors. Then the team got the related
+		PSSC check off by Joe.
+		<br>After all functionalities being checked and successfully demonstrated from the PCB, the team started to assemble
+		the boat to finalize our device. We first mounted the wooden structures into the fiberglass boat body, then mounted
+		the brushless DC motors and ESC on the wooden structures. After that, I glued the LDR resistors and lasers on two
+		sides of the storage unit and tested that the lasers and resistors still worked as expected. With those components
+		being assembled onto the boat, the final product was pretty much finished and ready to be tested on water during the
+		weekend.
+		<figure>
+			<img src="Team/progress/img/liushuang/w15/boat1.jpg" style="display:block; margin-left: auto; margin-right: auto"
+			 height="350"></a>
+			<figcaption style="text-align: center;">
+				<font size="2"><i>final product boat</i></font>
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="Team/progress/img/liushuang/w15/boat2.jpg" style="display:block; margin-left: auto; margin-right: auto"
+			 height="350"></a>
+			<figcaption style="text-align: center;">
+				<font size="2"><i>final product boat</i></font>
+			</figcaption>
+		</figure>
+
+		<br>For next week, the main efforts will be putted on testing the boat in natural and check off final PSSCs.
+	</div>
+	<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
+	<div id="footer"></div>
+	</div>
+	</div>
 
 
 	<!--JS-->
