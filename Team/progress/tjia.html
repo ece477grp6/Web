@@ -478,6 +478,36 @@ contact course staff.
 					</figcaption>
 					</figure>
 				</div>
+				<div>
+					<h4>Week 14:</h4>
+					<b>Date:</b> 11-30-2018
+					<br>
+					<b>Total hours:</b> 15
+					<br>
+					<b>Description of design efforts:</b>
+					<br>
+					In this week, most parts of the project are finalized. We got 4 PSSCs checked off. I helped on software debugging on the microcontroller. Only some time out delay and some trivial parts are modified. I also helped to design a transistor circuit to control the conveyor belt. At first when Qianli design the circuit, he used only one transistor FQD17P06, and he wanted to use the 3V output from microcontroller to open the PMOS and pull up a 11V from VCC. However, I found the if the voltage is 3V at gate of the PMOS, the Vgs is too small to run the transistor. Then I used another NMOS that can use a 3V Vgs to turn on. The reason I kept the original PMOS was that this PMOS can drain more currents than the new NMOS, and the required current to driver the conveyor belt motors should be larger than 0.8A. Thus, I designed the circuit as shown below.
+					<br>
+					<br>Besides those, I also helped on assembling the boat, and test the functionalities of the boat. We are going to test the boat on Sunday, and hopefully check of all the PSSCs by the end of next week.
+					<br>
+					</figure>
+					<figure style="margin:10px">
+					<!-- <a href="https://i.pinimg.com/736x/f5/26/57/f526579928126cfc315b7bf342b38dc9.jpg"> -->
+						<img src="Team/progress/img/tianjie/FQD17P06.png" style="width:900px;margin-right:20px"></img>
+						<!-- </a> -->
+					<figcaption style="text-align: center;">
+						<font size="2"><i>On-Region Characteristics of FQD17P06</i></font>
+					</figcaption>
+					</figure>
+					<figure style="margin:10px">
+					<!-- <a href="https://i.pinimg.com/736x/f5/26/57/f526579928126cfc315b7bf342b38dc9.jpg"> -->
+						<img src="Team/progress/img/tianjie/circuit.png" style="width:900px;margin-right:20px"></img>
+						<!-- </a> -->
+					<figcaption style="text-align: center;">
+						<font size="2"><i>The transistor circuit</i></font>
+					</figcaption>
+					</figure>
+				</div>
 			</div>
 
 			<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
